@@ -1,0 +1,22 @@
+{
+  "title": "RankBoost SEO Services - Jaikalki Technology Pvt Ltd | Boost Your Online Presence",
+  "description": "Elevate your online presence with RankBoost SEO services. Jaikalki Technology Pvt Ltd offers comprehensive SEO solutions, including international SEO, domestic SEO, link building, SEO audit, and more.",
+  "keywords": "RankBoost SEO services, Jaikalki Technology, link building, SEO audit, international SEO, domestic SEO, search engine optimization, SEO services in Mumbai",
+  "robots": "index, follow",
+  "canonical": "https://jaikalki.in/rankboost",
+  "og": {
+    "site_name": "Jaikalki Technology Pvt Ltd",
+    "title": "RankBoost SEO Services | Jaikalki Technology Pvt Ltd",
+    "description": "Comprehensive SEO services by Jaikalki Technology Pvt Ltd to boost your search engine ranking. Offering international SEO, domestic SEO, link building, and SEO audits.",
+    "image": "https://jaikalki.in/static/static/assets_jaikalki/assets/img/about_rankBoost.jpg",
+    "url": "https://jaikalki.in/rankboost",
+    "type": "website"
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "site": "@JaikalkiTech",
+    "title": "RankBoost SEO Services | Jaikalki Technology Pvt Ltd",
+    "description": "Boost your rankings with RankBoost SEO services from Jaikalki Technology Pvt Ltd, including international SEO, domestic SEO, and link building.",
+    "image": "https://jaikalki.in/static/static/assets_jaikalki/assets/img/about_rankBoost.jpg"
+  }
+}

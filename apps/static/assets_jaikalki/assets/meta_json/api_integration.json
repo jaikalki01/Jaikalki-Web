@@ -1,0 +1,22 @@
+{
+  "title": "API Integration Services - Jaikalki Technology Pvt Ltd | Seamless API Solutions",
+  "description": "Jaikalki Technology Pvt Ltd offers seamless API integration services to connect your systems with third-party services, improving functionality and user experience.",
+  "keywords": "API integration, third-party API integration, API solutions, custom API development, API services, Jaikalki Technology Pvt Ltd, REST API, API design, API development company, seamless integration",
+  "robots": "index, follow",
+  "canonical": "https://jaikalki.in/apiintegration",
+  "og": {
+    "site_name": "Jaikalki Technology Pvt Ltd",
+    "title": "API Integration Services | Jaikalki Technology Pvt Ltd",
+    "description": "Seamless API integration services for third-party systems and improved functionality.",
+    "image": "https://jaikalki.in/static/assets_jaikalki/assets/img/jaikalki_api_integration.jpg",
+    "url": "https://jaikalki.in/apiintegration",
+    "type": "website"
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "site": "@JaikalkiTech",
+    "title": "API Integration Services | Jaikalki Technology Pvt Ltd",
+    "description": "Seamless API integration for your system with Jaikalki Technology Pvt Ltd.",
+    "image": "https://jaikalki.in/static/assets_jaikalki/assets/img/jaikalki_api_integration.jpg"
+  }
+}

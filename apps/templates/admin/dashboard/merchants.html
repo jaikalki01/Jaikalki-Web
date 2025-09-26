@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merchant List</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Merchant List</h1>
+        {% if merchants %}
+            <table>
+                <thead>
+                    <tr>
+                        <th>Merchant Name</th>
+                        <th>Email</th>
+                        <th>Mobile</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for merchant in merchants %}
+                        <tr>
+                            <td>{{ merchant.username }}</td>
+                            <td>{{ merchant.email }}</td>
+                            <td>{{ merchant.mobile }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <p>No merchants found.</p>
+        {% endif %}
+    </div>
+
+
+<h1>Your Payout Transactions</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Payout ID</th>
+            <th>Amount</th>
+            <th>B Earned</th>
+            <th>C Earned</th>
+            <th>Date</th>
+            <th>Claim Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for payout in payouts %}
+            <tr>
+                <td>{{ payout.id }}</td>
+                <td>{{ payout.transaction_amount }}</td>
+                <td>{{ payout.b_earned_amount }}</td>
+                <td>{{ payout.c_earned_amount }}</td>
+                <td>{{ payout.transaction_date.strftime('%Y-%m-%d %H:%M:%S') }}</td>
+                <td>{{ 'Claimed' if payout.claim_status else 'Pending' }}</td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">No payouts found.</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<h1>Your Payout Transactions</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Payout ID</th>
+            <th>Amount</th>
+            <th>B Earned</th>
+            <th>C Earned</th>
+            <th>Date</th>
+            <th>Claim Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for payout in payin %}
+            <tr>
+                <td>{{ payout.id }}</td>
+                <td>{{ payout.transaction_amount }}</td>
+                <td>{{ payout.b_earned_amount }}</td>
+                <td>{{ payout.c_earned_amount }}</td>
+                <td>{{ payout.transaction_date.strftime('%Y-%m-%d %H:%M:%S') }}</td>
+                <td>{{ 'Claimed' if payout.claim_status else 'Pending' }}</td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">No payouts found.</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+</body>
+</html>

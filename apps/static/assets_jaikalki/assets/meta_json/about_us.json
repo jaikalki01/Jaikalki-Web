@@ -1,0 +1,22 @@
+{
+  "title": "About Us - Journey of Jaikalki Technology to Jaikalki Technology Pvt Ltd",
+  "description": "Discover the inspiring two-year journey of Jaikalki Technology as it evolved into Jaikalki Technology Pvt Ltd, a leader in web design, development, and digital solutions.",
+  "keywords": "Jaikalki Technology, Jaikalki Technology Pvt Ltd, company journey, web design company, digital solutions, Mumbai, web development, success story",
+  "robots": "index, follow",
+  "canonical": "https://jaikalki.in/about-us",
+  "og": {
+    "site_name": "Jaikalki Technology Pvt Ltd",
+    "title": "The Evolution of Jaikalki Technology - From Startup to Pvt Ltd",
+    "description": "Explore the two-year journey of Jaikalki Technology, transforming into a Pvt Ltd company offering innovative digital solutions across Mumbai and Pan India.",
+    "image": "https://jaikalki.instatic/assets_jaikalki/assets/img/about2_jaikalki.jpg",
+    "url": "https://jaikalki.in/about-us",
+    "type": "website"
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "site": "@JaikalkiTech",
+    "title": "About Us - Jaikalki Technology Pvt Ltd",
+    "description": "Learn how Jaikalki Technology grew into a Pvt Ltd company in just two years, becoming a leader in web design, development, and digital solutions.",
+    "image": "https://jaikalki.in/static/assets_jaikalki/assets/img/about2_jaikalki.jpg"
+  }
+}

@@ -1,0 +1,22 @@
+{
+    "title": "Privacy policy - Jaikalki Technology Pvt Ltd",
+    "description": "Learn more about Privacy policy offered by Jaikalki Technology Pvt Ltd.",
+    "keywords": "privacy policy, Jaikalki Technology",
+    "robots": "index, follow",
+    "canonical": "https://jaikalki.com/privacy_policy",
+    "og": {
+        "site_name": "Jaikalki Technology Pvt Ltd",
+        "title": "Privacy policy - Jaikalki Technology Pvt Ltd",
+        "description": "Learn more about Privacy policy offered by Jaikalki Technology Pvt Ltd.",
+        "image": "",
+        "url": "https://jaikalki.com/privacy_policy",
+        "type": "website"
+    },
+    "twitter": {
+        "card": "summary_large_image",
+        "site": "@JaikalkiTech",
+        "title": "Privacy policy - Jaikalki Technology Pvt Ltd",
+        "description": "Learn more about Privacy policy offered by Jaikalki Technology Pvt Ltd.",
+        "image": ""
+    }
+}

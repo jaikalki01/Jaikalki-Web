@@ -1,0 +1,70 @@
+{
+  "about": {
+    "meta": "Jaikalki Relationship Officer Services - Gravity DigiPayment by Jaikalki Technology Pvt Ltd",
+    "title": "Dedicated Relationship Officer Services for Personalized Business Support",
+    "description1": "At Jaikalki Technology Pvt Ltd, our Gravity DigiPayment services include personalized Relationship Officer services, designed to help businesses manage their payment systems, resolve issues quickly, and ensure smooth payment operations. Our experienced Relationship Officers act as your go-to point of contact, providing tailored solutions and expert advice to meet your business needs.",
+    "description2": "Our Relationship Officers are dedicated to ensuring that your payment processes run smoothly and efficiently. They offer proactive assistance, guiding your business through payment workflows, helping to optimize performance, and providing support during critical moments. Whether you are integrating new systems or troubleshooting issues, our Relationship Officers are here to help.",
+    "description3": "With a focus on customer satisfaction and business success, our Relationship Officer services are an integral part of the Gravity DigiPayment suite. We ensure that your business stays on track with timely, professional support, helping to resolve any challenges related to payment systems, transactions, and integrations.",
+    "features": [
+      {
+        "name": "Dedicated Point of Contact",
+        "description": "Our Relationship Officers serve as a single point of contact, providing direct support and guidance for all your payment-related needs."
+      },
+      {
+        "name": "Proactive Assistance & Support",
+        "description": "We offer proactive support to ensure that your payment systems are running smoothly, addressing issues before they become problems."
+      },
+      {
+        "name": "Tailored Solutions for Business Needs",
+        "description": "Our Relationship Officers provide personalized advice and solutions tailored specifically to your business, ensuring that your payment processes are optimized for success."
+      },
+      {
+        "name": "Expert Guidance for System Integration",
+        "description": "Our experienced officers assist with system integration and troubleshooting, ensuring smooth transitions and seamless operation."
+      }
+    ]
+  },
+  "features": {
+    "title": "Why Choose Jaikalki Technology Pvt Ltd for Relationship Officer Services",
+    "subtitle": "Benefit from personalized, expert support with our dedicated Relationship Officer services under Gravity DigiPayment.",
+    "leftColumn": [
+      {
+        "title": "Personalized Business Support",
+        "description": "Our Relationship Officers provide customized support, ensuring that your specific business needs are met with tailored solutions.",
+        "icon": "bi-person-lines-fill"
+      },
+      {
+        "title": "Proactive Issue Resolution",
+        "description": "We address issues before they escalate, offering proactive solutions that minimize disruptions to your payment processes.",
+        "icon": "bi-shield-lock"
+      },
+      {
+        "title": "Single Point of Contact",
+        "description": "With a dedicated Relationship Officer, you have a single point of contact for all your payment system needs, ensuring seamless communication.",
+        "icon": "bi-telephone"
+      },
+      {
+        "title": "Comprehensive Support Across Payment Systems",
+        "description": "Our Relationship Officers offer support for all aspects of payment systems, from integration to troubleshooting, ensuring comprehensive assistance.",
+        "icon": "bi-gear-fill"
+      }
+    ],
+    "rightColumn": [
+      {
+        "title": "Expert Integration Assistance",
+        "description": "Our team guides you through the integration process, ensuring that all systems work together smoothly and efficiently.",
+        "icon": "bi-plug"
+      },
+      {
+        "title": "Optimized Payment Processes",
+        "description": "We help you optimize your payment processes, ensuring that payments are fast, secure, and compliant with industry standards.",
+        "icon": "bi-speedometer"
+      },
+      {
+        "title": "24/7 Customer Support",
+        "description": "Our Relationship Officers are available round-the-clock, offering continuous support to resolve any issues and ensure business continuity.",
+        "icon": "bi-headset"
+      }
+    ]
+  }
+}

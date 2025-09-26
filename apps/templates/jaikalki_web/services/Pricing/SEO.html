@@ -1,0 +1,77 @@
+{% extends "layouts/jaikalki_layout.html" %}
+
+{% block title %}
+  <meta name="description" content="Boost your online presence with expert SEO services by Jaikalki Technology Pvt Ltd. Improve rankings, drive organic traffic, and grow your business.">
+  <meta name="keywords" content="SEO services, search engine optimization, digital marketing, link building, keyword optimization">
+  <meta property="og:title" content="SEO Services | Jaikalki Technology Pvt Ltd">
+  <meta property="og:description" content="Get top-notch SEO services, including keyword optimization, link building, and technical SEO, to enhance your online visibility.">
+  <meta property="og:image" content="https://jaikalki.com/static/assets_jaikalki/assets/img/seo-services.jpg">
+  <meta property="og:url" content="https://jaikalki.com/seo-services">
+  <title>SEO Services - Jaikalki Technology Pvt Ltd</title>
+{% endblock %}
+
+{% block content %}
+  <main class="main">
+    <div class="page-title light-background">
+      <div class="container">
+        <h1>SEO Services</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/services.html">Services</a></li>
+            <li class="current">Pricing</li>
+            <li class="current">SEO Services</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+
+    <section id="features-2" class="features-2 section py-5 bg-light">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title text-center mb-5">
+          <h2 class="fw-bold text-primary">Why Choose Our SEO Services?</h2>
+          <p class="lead text-muted">Enhance your website’s visibility, drive organic traffic, and rank higher on search engines with our expert SEO services.</p>
+        </div>
+
+        <div class="row align-items-center gy-5">
+          <div class="col-lg-4">
+            <div class="feature-item d-flex flex-column align-items-end text-end mb-4">
+              <h4 class="fw-bold">Keyword Optimization</h4>
+              <p class="text-muted">Target the right keywords to improve search rankings.</p>
+            </div>
+            <div class="feature-item d-flex flex-column align-items-end text-end mb-4">
+              <h4 class="fw-bold">Technical SEO</h4>
+              <p class="text-muted">Enhance website speed, mobile-friendliness, and overall performance.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 text-center">
+            <div class="bg-white shadow rounded p-4">
+              <h3 class="fw-bold text-primary mb-3">SEO Services</h3>
+              <p class="lead text-muted">Improve your website’s search visibility with our expert strategies.</p>
+              <h2 class="fw-bold text-success">₹15,000</h2>
+              <button class="btn btn-primary btn-lg" onclick="addToCart()">Buy Now</button>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="feature-item d-flex flex-column align-items-start mb-4">
+              <h4 class="fw-bold">Link Building</h4>
+              <p class="text-muted">Earn high-quality backlinks to increase domain authority.</p>
+            </div>
+            <div class="feature-item d-flex flex-column align-items-start mb-4">
+              <h4 class="fw-bold">Local & International SEO</h4>
+              <p class="text-muted">Optimize your business for local and global search visibility.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function addToCart() {
+        alert("Payment Method Coming Soon!!!");
+      }
+    </script>
+  </main>
+{% endblock content %}

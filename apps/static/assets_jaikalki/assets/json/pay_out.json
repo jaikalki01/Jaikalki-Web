@@ -1,0 +1,70 @@
+{
+  "about": {
+    "meta": "Jaikalki Pay-Out Solution Services - Gravity DigiPayment by Jaikalki Technology Pvt Ltd",
+    "title": "Seamless Pay-Out Solutions with TSP Technology for Efficient Fund Disbursement",
+    "description1": "As a TSP technology service provider, Jaikalki Technology Pvt Ltd offers advanced Pay-Out Solution services under our Gravity DigiPayment package. We connect with multiple banks and PAPG companies to secure MIDs for merchants, ensuring a streamlined and secure fund disbursement process. Our solutions enable businesses to efficiently manage payouts to customers, partners, or employees.",
+    "description2": "Our Pay-Out solutions support various payout methods, including direct bank transfers and digital wallets. With seamless integration across banks and PAPG platforms, we ensure that transactions are processed securely, accurately, and with minimal delay, providing businesses with reliable disbursement capabilities.",
+    "description3": "Equipped with real-time transaction monitoring, customizable payout options, and advanced security protocols, our Pay-Out solutions cater to businesses of all sizes. Whether you're disbursing funds to vendors, employees, or customers, our solutions are designed to meet your unique business needs and ensure efficient fund management.",
+    "features": [
+      {
+        "name": "Multiple Bank & PAPG Connectivity",
+        "description": "We establish connections with various banks and PAPG companies to acquire MIDs for merchants, enabling seamless Pay-Out operations."
+      },
+      {
+        "name": "Diverse Payout Methods",
+        "description": "Our solutions support multiple payout methods, such as bank transfers and digital wallets, offering flexibility to businesses."
+      },
+      {
+        "name": "Real-Time Transaction Monitoring",
+        "description": "Track and monitor your Pay-Out transactions in real-time, ensuring transparency and enabling immediate issue resolution."
+      },
+      {
+        "name": "Customizable Pay-Out Options",
+        "description": "Tailor your payout workflows to match your business's specific requirements, ensuring flexibility and scalability."
+      }
+    ]
+  },
+  "features": {
+    "title": "Why Choose Jaikalki Technology Pvt Ltd as Your TSP for Pay-Out Solutions",
+    "subtitle": "Experience secure, reliable, and efficient Pay-Out solutions powered by our connections with multiple banks and PAPG companies.",
+    "leftColumn": [
+      {
+        "title": "Bank & PAPG Integration",
+        "description": "We connect with multiple banks and PAPG companies to obtain MIDs, ensuring robust Pay-Out capabilities for merchants.",
+        "icon": "bi-bank"
+      },
+      {
+        "title": "Diverse Payout Methods",
+        "description": "Offer your recipients various payout options, including direct bank transfers and digital wallets, for added convenience.",
+        "icon": "bi-wallet2"
+      },
+      {
+        "title": "Real-Time Monitoring",
+        "description": "Monitor transactions as they happen, gaining visibility into the status of payouts and ensuring smooth operations.",
+        "icon": "bi-eye"
+      },
+      {
+        "title": "Customizable Solutions",
+        "description": "Our Pay-Out solutions can be tailored to your business requirements, ensuring that the workflows align perfectly with your needs.",
+        "icon": "bi-gear"
+      }
+    ],
+    "rightColumn": [
+      {
+        "title": "Seamless System Integration",
+        "description": "Integrate our Pay-Out solutions effortlessly with your existing business systems for a streamlined disbursement process.",
+        "icon": "bi-layers"
+      },
+      {
+        "title": "Secure & Reliable Transactions",
+        "description": "We prioritize transaction security and reliability, ensuring that funds are disbursed securely and on time to recipients.",
+        "icon": "bi-lock"
+      },
+      {
+        "title": "24/7 Customer Support",
+        "description": "Our dedicated customer support team is available round-the-clock to address any Pay-Out-related issues or queries.",
+        "icon": "bi-phone"
+      }
+    ]
+  }
+}

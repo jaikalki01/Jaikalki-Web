@@ -1,0 +1,107 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Add Transaction {% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+  <div class="py-4">
+      <nav aria-label="breadcrumb" class="d-none d-md-inline-block">
+          <ol class="breadcrumb breadcrumb-dark breadcrumb-transparent">
+              <li class="breadcrumb-item">
+                  <a href="#">
+                      <svg class="icon icon-xxs" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                  </a>
+              </li>
+              <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Add Transaction</li>
+          </ol>
+      </nav>
+      <div class="d-flex justify-content-between w-100 flex-wrap">
+          <div class="mb-3 mb-lg-0">
+              <h1 class="h4">Add Transaction</h1>
+                  </div>
+
+      </div>
+  </div>
+
+<div class="container py-4">
+
+
+        <form method="POST" action="">
+    <div class="row">
+        {{ form.hidden_tag() }}
+
+        <!-- Transaction Amount Field -->
+        <div class="col-md-6">
+            <div class="form-group">
+                {{ form.transaction_amount.label(class="form-label") }}
+                {{ form.transaction_amount(class="form-control", value=form.transaction_amount.data if form.transaction_amount.data else '') }}
+                {% if form.transaction_amount.errors %}
+                    <div class="text-danger">
+                        {% for error in form.transaction_amount.errors %}
+                            <span>{{ error }}</span><br>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+
+
+
+        <!-- Transaction Date Field -->
+        <div class="col-md-6">
+            <div class="form-group">
+                {{ form.transaction_date.label(class="form-label") }}
+                {{ form.transaction_date(class="form-control", value=form.transaction_date.data if form.transaction_date.data else '') }}
+                {% if form.transaction_date.errors %}
+                    <div class="text-danger">
+                        {% for error in form.transaction_date.errors %}
+                            <span>{{ error }}</span><br>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="col-md-12 text-center mt-4">
+            <div class="form-group">
+                {{ form.submit(class="btn btn-primary") }}
+            </div>
+        </div>
+    </div>
+</form>
+
+
+</div>
+
+
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const successMessages = {{ get_flashed_messages(with_categories=True) | tojson | safe }};
+
+        // Check for success messages
+        successMessages.forEach(function(message) {
+            if (message[0] === 'success') {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Success!',
+                    text: message[1],
+                    confirmButtonText: 'Okay'
+                });
+            }
+        });
+    });
+</script>
+
+{% endblock javascripts %}

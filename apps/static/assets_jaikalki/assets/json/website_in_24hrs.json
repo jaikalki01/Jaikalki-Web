@@ -1,0 +1,70 @@
+{
+  "about": {
+    "meta": "ABOUT JAIKALKI TECHNOLOGY PVT LTD - URGENT WEBSITE DEVELOPMENT SERVICES",
+    "title": "Fast-Track Website Development and API Integration Services in 24 Hours",
+    "description1": "At Jaikalki Technology Pvt Ltd, we understand the urgency of your business needs. That's why we offer fast-track website development and API integration services, delivering fully functional websites within 24 hours. Our team is equipped with the expertise to integrate powerful APIs, dynamic database solutions, and intuitive admin panels, ensuring your website meets high-quality standards even on an expedited timeline.",
+    "description2": "In March 2023, we expanded our services to include rapid website development, combining quick turnaround with robust API integrations, real-time database management, and custom admin panels. With our 24-hour service model, you can count on us to deliver a seamless, dynamic, and scalable website that fits your business needs.",
+    "description3": "We focus on building fast, responsive websites with integrated APIs and back-end systems that enable smooth data flow. Whether you need a simple website or a complex app, we provide reliable, efficient solutions to get your business online in record time.",
+    "features": [
+      {
+        "name": "Urgent Website Development",
+        "description": "We specialize in delivering fully functional websites within 24 hours, ensuring your business is online without any delays."
+      },
+      {
+        "name": "Fast API Integration",
+        "description": "Our API integration services ensure seamless connectivity between your systems, enabling real-time data exchange in rapid timelines."
+      },
+      {
+        "name": "Dynamic Database Solutions",
+        "description": "We provide back-end database management that ensures your website can handle real-time data updates efficiently, even under tight deadlines."
+      },
+      {
+        "name": "Admin Panel Integration",
+        "description": "Our user-friendly admin panels allow you to manage your website content, user data, and API integrations with ease, even during urgent project timelines."
+      }
+    ]
+  },
+  "features": {
+    "title": "Why Choose Jaikalki Technology Pvt Ltd for Urgent Website Development",
+    "subtitle": "Get your website live in 24 hours with our quick and reliable web development and API integration services.",
+    "leftColumn": [
+      {
+        "title": "24-Hour Website Delivery",
+        "description": "We guarantee website delivery within 24 hours, meeting urgent project requirements without compromising quality.",
+        "icon": "bi-clock"
+      },
+      {
+        "title": "Rapid API Integrations",
+        "description": "Our team delivers fast API integration services, ensuring seamless data synchronization and real-time updates within tight deadlines.",
+        "icon": "bi-plug"
+      },
+      {
+        "title": "Real-Time Database Integration",
+        "description": "We integrate dynamic databases into your website, ensuring smooth and real-time data management for a seamless user experience.",
+        "icon": "bi-database"
+      },
+      {
+        "title": "User-Friendly Admin Panels",
+        "description": "Our easy-to-use admin panels give you full control over your website's content and functionality, even under urgent timelines.",
+        "icon": "bi-house-door"
+      }
+    ],
+    "rightColumn": [
+      {
+        "title": "Quick Turnaround Time",
+        "description": "We pride ourselves on delivering quality websites within 24 hours, ensuring your business is up and running quickly.",
+        "icon": "bi-clock"
+      },
+      {
+        "title": "High-Performance Solutions",
+        "description": "Our websites are fast, responsive, and optimized for performance, ensuring a smooth user experience even on tight schedules.",
+        "icon": "bi-speedometer"
+      },
+      {
+        "title": "Scalable Solutions",
+        "description": "We provide scalable website and API solutions that can grow with your business, adapting to your needs as they evolve.",
+        "icon": "bi-arrow-repeat"
+      }
+    ]
+  }
+}

@@ -1,0 +1,309 @@
+
+
+{% extends "layouts/home_layout.html" %}
+
+{% block title %}  {% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+    <!-- Page Header Start -->
+   <div class="container-fluid page-header mb-5 wow fadeIn" data-wow-delay="0.1s"
+    style="background:url('{{ url_for('static', filename='assets_new/img/about_banner.jpg') }}'); background-size: cover; background-position: center; position: relative;">
+
+    <!-- Overlay -->
+
+    <div class="container" style="position: relative; z-index: 1;">
+        <h1 class="display-3 mb-1 animated slideInDown ">About Us</h1>
+        <nav aria-label="breadcrumb animated slideInDown">
+            <ol class="breadcrumb mb-0">
+                <li class=" breadcrumb-item bold"><a href="/" class="text-dark" >Home</a></li>
+                <li class="breadcrumb-item text-dark active  fw-bold" aria-current="page">About</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+    <!-- Page Header End -->
+
+  <!-- About Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-4 align-items-end mb-4">
+    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+        <img class="img-fluid rounded" src="{{ config.ASSETS_ROOT_NEW }}/img/about.jpg">
+    </div>
+    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+        <p class="d-inline-block border rounded text-primary fw-semi-bold py-1 px-3">About Us</p>
+       <h1 class="display-5 mb-4">Empowering Businesses with Seamless Solutions</h1>
+<p class="mb-4">
+                    As a Technology Service Provider (TSP) under the Gravity DigiPayment division of Jaikalki Technology Pvt Ltd,
+                    we bridge the gap between merchants and financial institutions by connecting with multiple banks and PAPG companies to secure MID (Merchant IDs).
+                </p>
+                <p>
+                    Our Pay-In Solution ensures seamless payment collection services, providing businesses with secure and efficient payment acceptance across multiple platforms.
+                </p>
+ <div class="border-marker rounded p-4">
+            <nav>
+                <div class="nav nav-tabs mb-3" id="nav-tab" role="tablist">
+                    <button class="nav-link fw-semi-bold active" id="nav-story-tab" data-bs-toggle="tab"
+                        data-bs-target="#nav-story" type="button" role="tab" aria-controls="nav-story"
+                        aria-selected="true">Story</button>
+                    <button class="nav-link fw-semi-bold" id="nav-mission-tab" data-bs-toggle="tab"
+                        data-bs-target="#nav-mission" type="button" role="tab" aria-controls="nav-mission"
+                        aria-selected="false">Mission</button>
+                    <button class="nav-link fw-semi-bold" id="nav-vision-tab" data-bs-toggle="tab"
+                        data-bs-target="#nav-vision" type="button" role="tab" aria-controls="nav-vision"
+                        aria-selected="false">Vision</button>
+                </div>
+            </nav>
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-story" role="tabpanel" aria-labelledby="nav-story-tab">
+                    <p>
+                      We bridge the gap between businesses and their financial needs by offering seamless Pay In and Pay Out solutions through a network of trusted partners.
+                    </p>
+                    <p class="mb-0">
+                       Our expertise extends beyond payments, empowering clients with robust web and mobile app development and innovative API integration services.
+                    </p>
+                </div>
+                <div class="tab-pane fade" id="nav-mission" role="tabpanel" aria-labelledby="nav-mission-tab">
+                    <p>
+                        Our mission is to simplify and enhance the financial transaction process for businesses, ensuring efficient, secure, and transparent operations.
+                    </p>
+                    <p class="mb-0">
+                        We strive to be the go-to partner for comprehensive digital solutions that drive growth and success for our clients.
+                    </p>
+                </div>
+                <div class="tab-pane fade" id="nav-vision" role="tabpanel" aria-labelledby="nav-vision-tab">
+                    <p>
+                       We envision a future where every business, regardless of size, can easily navigate their financial landscape with confidence and agility.
+                    </p>
+                    <p class="mb-0">By leveraging cutting-edge technology and partnerships, we aim to revolutionize the payment and app development industry for a connected world.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+           <div class="border-marker rounded p-4 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="row g-4">
+        <div class="col-lg-4 wow fadeIn" data-wow-delay="0.1s">
+            <div class="h-100">
+                <div class="d-flex">
+                    <div class="flex-shrink-0 btn-lg-square rounded-circle bg-primary">
+                       <i class="fa fa-rupee-sign text-white"></i>
+
+                    </div>
+                    <div class="ps-3">
+                        <h4>Transparent Pricing</h4>
+                        <span>We offer transparent pricing with no hidden costs, ensuring you know exactly what you’re paying for.
+
+
+                        </span>
+                    </div>
+                    <div class="border-end d-none d-lg-block"></div>
+                </div>
+                <div class="border-bottom mt-4 d-block d-lg-none"></div>
+            </div>
+        </div>
+        <div class="col-lg-4 wow fadeIn" data-wow-delay="0.3s">
+            <div class="h-100">
+                <div class="d-flex">
+                    <div class="flex-shrink-0 btn-lg-square rounded-circle bg-primary">
+                        <i class="fa fa-users text-white"></i>
+                    </div>
+                    <div class="ps-3">
+                        <h4>Expert Team</h4>
+                        <span>
+                            Our dedicated team is ready to assist your developers with seamless integration for Pay In, Pay Out, or any other API services. We're here to ensure a smooth onboarding process tailored to your needs. </span>
+                    </div>
+                    <div class="border-end d-none d-lg-block"></div>
+                </div>
+                <div class="border-bottom mt-4 d-block d-lg-none"></div>
+            </div>
+        </div>
+        <div class="col-lg-4 wow fadeIn" data-wow-delay="0.5s">
+            <div class="h-100">
+                <div class="d-flex">
+                    <div class="flex-shrink-0 btn-lg-square rounded-circle bg-primary">
+                        <i class="fa fa-headset text-white"></i>
+                    </div>
+                    <div class="ps-3">
+                        <h4>24/7 Support</h4>
+                        <span>We provide round-the-clock support, with a dedicated relationship officer available to assist you at any time. Your success is our priority, and we're always here to help you navigate any challenges.
+
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- Facts Start -->
+    <div class="container-fluid facts my-5 py-5">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.1s">
+                    <i class="fa fa-users fa-3x text-white mb-3"></i>
+                    <h1 class="display-4 text-white" data-toggle="counter-up">640</h1>
+                    <span class="fs-5 text-white">Happy Clients</span>
+                    <hr class="bg-white w-25 mx-auto mb-0">
+                </div>
+                <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.3s">
+                    <i class="fa fa-check fa-3x text-white mb-3"></i>
+                    <h1 class="display-4 text-white" data-toggle="counter-up">106</h1>
+                    <span class="fs-5 text-white">Software Completed</span>
+                    <hr class="bg-white w-25 mx-auto mb-0">
+                </div>
+                <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.5s">
+                    <i class="fa fa-users-cog fa-3x text-white mb-3"></i>
+                    <h1 class="display-4 text-white" data-toggle="counter-up">21</h1>
+                    <span class="fs-5 text-white">Global Partners</span>
+                    <hr class="bg-white w-25 mx-auto mb-0">
+                </div>
+                <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.7s">
+                    <i class="fa fa-percent fa-3x text-white mb-3"></i>
+                    <h1 class="display-4 text-white" data-toggle="counter-up">98</h1>
+                    <span class="fs-5 text-white">Client Satisfaction Rate</span>
+                    <hr class="bg-white w-25 mx-auto mb-0">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Facts End -->
+
+
+    <!-- Features Start -->
+    <div class="container-xxl feature py-5">
+        <div class="container">
+            <div class="row g-5  align-items-center">
+               <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+    <p class="d-inline-block border rounded text-dark fw-bold py-1 px-3">Why Choose Us?</p>
+    <h1 class="display-5 mb-4">Why Choose Gravity DigiPayment Consultancy?</h1>
+<p class="mb-4">Clients choose us because we offer unmatched expertise in Pay-IN and Pay-OUT services through trusted partners, ensuring fast and secure transactions. Our skilled team also delivers tailored software development and API integration solutions to meet your unique business needs and drive lasting growth.</p>
+<a class="btn btn-primary py-3 px-5" href="service.html">Discover Our Solutions</a>
+
+</div>
+                <div class="col-lg-6">
+    <div class="row g-4 align-items-center">
+        <div class="col-md-6">
+            <!-- Feature Box Section -->
+<div class="row g-4">
+    <div class="col-12 wow fadeIn" data-wow-delay="0.3s">
+        <div class="feature-box border-marker rounded p-4">
+            <i class="fa fa-check fa-3x text-primary mb-3"></i>
+            <h4 class="mb-3">Seamless Service Execution</h4>
+            <p class="mb-3">We ensure fast and efficient service execution to keep your business running smoothly and without delays.</p>
+            <a class="fw-semi-bold" href="#" data-bs-toggle="modal" data-bs-target="#serviceExecutionModal">Read More <i class="fa fa-arrow-right ms-1"></i></a>
+        </div>
+    </div>
+    <div class="col-12 wow fadeIn" data-wow-delay="0.5s">
+        <div class="feature-box border-marker rounded p-4">
+            <i class="fa fa-check fa-3x text-primary mb-3"></i>
+            <h4 class="mb-3">Dedicated Relationship Officer</h4>
+            <p class="mb-3">Our dedicated team offers personalized guidance and round-the-clock support.</p>
+            <a class="fw-semi-bold" href="#" data-bs-toggle="modal" data-bs-target="#relationshipOfficerModal">Read More <i class="fa fa-arrow-right ms-1"></i></a>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Service Execution -->
+<div class="modal fade" id="serviceExecutionModal" tabindex="-1" aria-labelledby="serviceExecutionLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="serviceExecutionLabel">Seamless Service Execution</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Our Pay-IN and Pay-OUT services are designed to operate with speed and precision. From initial setup to daily transactions, we ensure every process runs smoothly without any disruptions.</p>
+        <p>Our expert IT professionals continuously monitor the system, ensuring that your business experiences seamless service execution at all times.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for Relationship Officer -->
+<div class="modal fade" id="relationshipOfficerModal" tabindex="-1" aria-labelledby="relationshipOfficerLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="relationshipOfficerLabel">Dedicated Relationship Officer</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Each client is assigned a dedicated Relationship Officer who provides personalized assistance and ensures seamless service integration.</p>
+        <p>Your Relationship Officer will be your point of contact for any support or guidance, ensuring you get the best experience possible.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+        </div>
+        <!-- Feature Box Section -->
+<div class="col-md-6 wow fadeIn" data-wow-delay="0.7s">
+    <div class="feature-box border-marker rounded p-4">
+        <i class="fa fa-check fa-3x text-primary mb-3"></i>
+       <h4 class="mb-3">Trusted Financial Security & Transparency</h4>
+<p class="mb-3">At Gravity DigiPayment Consultancy, your financial transactions are protected with the highest level of security protocols. We ensure transparency in every step, guaranteeing no hidden costs and full control over your finances at all times.</p>
+ <a class="fw-semi-bold" href="#" data-bs-toggle="modal" data-bs-target="#financialSecurityModal">Read More <i class="fa fa-arrow-right ms-1"></i></a>
+    </div>
+</div>
+
+<!-- Modal for Financial Security -->
+<div class="modal fade" id="financialSecurityModal" tabindex="-1" aria-labelledby="financialSecurityLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="financialSecurityLabel">Financial Security & Transparency</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h6>No Hidden Costs</h6>
+        <p>At Gravity DigiPayment Consultancy, we believe in full transparency. Our pricing model is straightforward, with no hidden fees or surprise charges. You can trust that what you see is what you pay.</p>
+
+        <h6>Transparent Transactions</h6>
+        <p>We ensure every transaction is executed with complete transparency, giving you full visibility into the process from start to finish. You’ll always be in control of your financial data.</p>
+
+        <h6>Pricing You Can Trust</h6>
+        <p>Our pricing structure is built on fairness and trust. We offer competitive rates without compromising the security and quality of our services, ensuring you get the best value for your investment.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+    </div>
+</div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Features End -->
+
+
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

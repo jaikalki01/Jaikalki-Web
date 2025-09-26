@@ -1,0 +1,430 @@
+
+{% extends "layouts/jaikalki_layout.html" %}
+
+
+{% block title %}
+
+  <!-- Meta Tags -->
+  <meta name="description" content="Explore WebTech services by Jaikalki Technology Pvt Ltd. From web design and development to mobile app creation, API integration, and REST API construction, we deliver top-notch digital solutions.">
+  <meta name="keywords" content="WebTech services, Jaikalki Technology, web design, web development, mobile app development, API integration, REST API, website in 24 hours">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph (OG) Meta Tags -->
+  <meta property="og:site_name" content="Jaikalki Technology Pvt Ltd">
+  <meta property="og:title" content="WebTech Services | Jaikalki Technology Pvt Ltd">
+  <meta property="og:description" content="Your trusted partner for web design, web development, mobile app development, API integration, and more. Experience quality and efficiency with Jaikalki Technology Pvt Ltd.">
+  <meta property="og:image" content="https://jaikalki.com/static/assets_jaikalki/assets/img/webtech-og-img.jpg">
+  <meta property="og:url" content="https://jaikalki.com/webtech">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@JaikalkiTech">
+  <meta name="twitter:title" content="WebTech Services | Jaikalki Technology Pvt Ltd">
+  <meta name="twitter:description" content="Explore WebTech services including web design, web development, and mobile app solutions by Jaikalki Technology Pvt Ltd.">
+  <meta name="twitter:image" content="https://jaikalki.com/static/assets_jaikalki/assets/img/about_webTech.jpg">
+
+  <!-- Canonical Link -->
+  <link rel="canonical" href="https://jaikalki.com/services/WebTech.html">
+
+  <title>WebTech Services - Jaikalki Technology Pvt Ltd | Your Digital Partner</title>
+
+{% endblock %}
+
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+
+  <main class="main">
+
+   <!-- Page Title -->
+    <div class="page-title light-background">
+      <div class="container">
+        <h1>WebTech</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="/index.html">Home</a></li>
+             <li><a href="/services.html">Services</a></li>
+            <li class="current">WebTech</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+    <!-- About Section -->
+  <section id="about" class="about section">
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+    <div class="row gy-4 align-items-center justify-content-between">
+
+      <div class="col-xl-5" data-aos="fade-up" data-aos-delay="200">
+        <span class="about-meta">ABOUT JAIKALKI WEB TECH</span>
+        <h2 class="about-title">Pioneering Web Tech Solutions for the Future</h2>
+        <p class="about-description">
+          At Jaikalki Technology, we specialize in providing cutting-edge Web Tech solutions that empower businesses to thrive in the digital world. Our team of experts is committed to delivering dynamic, scalable, and user-centric web solutions that cater to a wide range of industries.
+        </p>
+
+      <div class="row feature-list-wrapper">
+  <div class="col-md-6">
+    <ul class="feature-list">
+      <li><i class="bi bi-check-circle-fill"></i> Web Design with a focus on user experience</li>
+      <li><i class="bi bi-check-circle-fill"></i> Custom Web Development tailored to your needs</li>
+      <li><i class="bi bi-check-circle-fill"></i> Mobile App Development for iOS and Android platforms</li>
+    </ul>
+  </div>
+  <div class="col-md-6">
+    <ul class="feature-list">
+      <li><i class="bi bi-check-circle-fill"></i> Seamless API Integration for enhanced functionality</li>
+      <li><i class="bi bi-check-circle-fill"></i> REST API Construction for smooth data interaction</li>
+      <li><i class="bi bi-check-circle-fill"></i> Fast and reliable website delivery in 24 hours</li>
+    </ul>
+  </div>
+</div>
+
+      </div>
+
+      <div class="col-xl-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="image-wrapper">
+          <div class="images position-relative" data-aos="zoom-out" data-aos-delay="400">
+            <img src="{{ config.JAIKALKI_ROOT}}/assets/img/about_webTech.jpg" alt="Business Meeting" class="img-fluid main-image rounded-4">
+           </div>
+          <div class="experience-badge floating">
+            <h3>2+ <span>Years</span></h3>
+            <p>Of excellence in web technology innovation</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section><!-- /About Section -->
+
+
+<section id="features" class="features section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Jaikalki Web Tech Services</h2>
+    <p>Delivering innovative technology solutions that empower businesses and simplify lives.</p>
+  </div><!-- End Section Title -->
+
+  <div class="container">
+
+    <div class="d-flex justify-content-center">
+
+      <ul class="nav nav-tabs" data-aos="fade-up" data-aos-delay="100">
+        <li class="nav-item">
+          <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#features-tab-1">
+            <h4>Web Design</h4>
+          </a>
+        </li><!-- End tab nav item -->
+
+        <li class="nav-item">
+          <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-2">
+            <h4>Web Development</h4>
+          </a><!-- End tab nav item -->
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-3">
+            <h4>Mobile App Development</h4>
+          </a>
+        </li><!-- End tab nav item -->
+
+        <li class="nav-item">
+          <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-4">
+            <h4>API Integration</h4>
+          </a>
+        </li><!-- End tab nav item -->
+
+        <li class="nav-item">
+          <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-5">
+            <h4>Rest API Construction</h4>
+          </a>
+        </li><!-- End tab nav item -->
+
+        <li class="nav-item">
+          <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-6">
+            <h4>Website in 24 Hrs.</h4>
+          </a>
+        </li><!-- End tab nav item -->
+
+      </ul>
+
+    </div>
+
+    <div class="tab-content" data-aos="fade-up" data-aos-delay="200">
+
+      <!-- Web Design Tab Content -->
+      <div class="tab-pane fade active show" id="features-tab-1">
+        <div class="row">
+          <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center">
+            <a href="/services/WebTech/Web-Design.html"><h3>Creative Web Design for Optimal User Experience</h3></a>
+            <p class="fst-italic">
+              We specialize in designing websites with a focus on user experience, ensuring your website is not only visually appealing but also highly functional.
+            </p>
+            <ul>
+              <li><i class="bi bi-check2-all"></i> <span>Responsive and mobile-friendly designs.</span></li>
+              <li><i class="bi bi-check2-all"></i> <span>Custom user interfaces tailored to your brand.</span></li>
+              <li><i class="bi bi-check2-all"></i> <span>UI/UX design focusing on seamless navigation.</span></li>
+            </ul>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2 text-center">
+            <a href="/services/WebTech/Web-Design.html"><img src="{{ config.JAIKALKI_ROOT}}/assets/img/jaikalki_web_design.jpg" alt="Web Design Illustration" style="border: 2px solid black; border-radius: 5%" class="img-fluid rounded-4">
+            </a>
+          </div>
+        </div>
+      </div><!-- End Web Design Tab -->
+
+      <!-- Web Development Tab Content -->
+      <div class="tab-pane fade" id="features-tab-2">
+        <div class="row">
+          <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center">
+            <a href="/services/WebTech/Web-Development.html" ><h3>Custom Web Development Solutions</h3></a>
+          <p class="fst-italic">
+              Our web development services focus on creating robust, scalable, and secure websites that are tailored to your specific needs.
+            </p>
+            <ul>
+              <li><i class="bi bi-check2-all"></i> <span>Full-stack web development with modern technologies.</span></li>
+              <li><i class="bi bi-check2-all"></i> <span>Custom content management systems (CMS).</span></li>
+              <li><i class="bi bi-check2-all"></i> <span>Secured, fast-loading websites.</span></li>
+            </ul>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2 text-center">
+            <a href="/services/WebTech/Web-Development.html"><img src="{{ config.JAIKALKI_ROOT}}/assets/img/jaikalki_web_development.jpg" alt="Web Development Illustration" style="border: 2px solid black; border-radius: 5%" class="img-fluid">
+            </a> </div>
+        </div>
+      </div><!-- End Web Development Tab -->
+
+      <!-- Mobile App Development Tab Content -->
+      <div class="tab-pane fade" id="features-tab-3">
+        <div class="row">
+          <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center">
+            <a href="/services/WebTech/Mobile-App-Development.html"><h3>Mobile App Development for All Platforms</h3></a>
+            <p class="fst-italic">
+              We offer mobile app development for both iOS and Android platforms, ensuring your brand reaches users wherever they are.
+            </p>
+            <ul>
+              <li><i class="bi bi-check2-all"></i> <span>Cross-platform apps with fast performance.</span></li>
+              <li><i class="bi bi-check2-all"></i> <span>User-friendly interfaces for smooth navigation.</span></li>
+              <li><i class="bi bi-check2-all"></i> <span>Integration with backend systems for seamless functionality.</span></li>
+            </ul>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2 text-center">
+            <a href="/services/WebTech/Mobile-App-Development.html"><img src="{{ config.JAIKALKI_ROOT}}/assets/img/jaikalki_mobile_app.jpg" alt="Mobile App Development Illustration" style="border: 2px solid black; border-radius: 5%" class="img-fluid">
+            </a></div>
+        </div>
+      </div><!-- End Mobile App Development Tab -->
+
+      <!-- API Integration Tab Content -->
+      <div class="tab-pane fade" id="features-tab-4">
+        <div class="row">
+          <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center">
+            <a href="/services/WebTech/API-Integration.html"><h3>Seamless API Integration for Enhanced Functionality</h3></a>
+            <p class="fst-italic">
+              We integrate third-party APIs to enhance your application's features, ensuring seamless communication between systems.
+            </p>
+            <ul>
+              <li><i class="bi bi-check2-all"></i> <span>Secure API integrations with payment gateways, CRM, and more.</span></li>
+              <li><i class="bi bi-check2-all"></i> <span>Optimized data flow for better performance.</span></li>
+              <li><i class="bi bi-check2-all"></i> <span>Fully supported and documented APIs.</span></li>
+            </ul>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2 text-center">
+           <a href="/services/WebTech/API-Integration.html"> <img src="{{ config.JAIKALKI_ROOT}}/assets/img/jaikalki_api_integration.jpg" alt="API Integration Illustration" style="border: 2px solid black; border-radius: 5%" class="img-fluid">
+           </a></div>
+        </div>
+      </div><!-- End API Integration Tab -->
+
+      <!-- Rest API Construction Tab Content -->
+      <div class="tab-pane fade" id="features-tab-5">
+        <div class="row">
+          <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center">
+            <a href="/services/WebTech/Rest-API- Construction.html"><h3>Building Robust REST APIs</h3></a>
+            <p class="fst-italic">
+              We specialize in building REST APIs that are efficient, scalable, and easy to integrate with various systems.
+            </p>
+            <ul>
+              <li><i class="bi bi-check2-all"></i> <span>RESTful API development with optimized performance.</span></li>
+              <li><i class="bi bi-check2-all"></i> <span>Support for JSON and XML formats.</span></li>
+              <li><i class="bi bi-check2-all"></i> <span>Secure authentication and data transmission.</span></li>
+            </ul>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2 text-center">
+            <a href="/services/WebTech/Rest-API- Construction.html"><img src="{{ config.JAIKALKI_ROOT}}/assets/img/jaikalki_rest_api.jpg" alt="REST API Construction Illustration" style="border: 2px solid black; border-radius: 5%" class="img-fluid">
+            </a> </div>
+        </div>
+      </div><!-- End Rest API Construction Tab -->
+
+      <!-- Website in 24 Hrs Tab Content -->
+      <div class="tab-pane fade" id="features-tab-6">
+        <div class="row">
+          <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center">
+            <a href="/services/WebTech/website_in_24hrs.html"><h3>Get Your Website Ready in Just 24 Hours</h3></a>
+            <p class="fst-italic">
+              Need a website in a hurry? We offer quick and efficient website development services with delivery within 24 hours.
+            </p>
+            <ul>
+              <li><i class="bi bi-check2-all"></i> <span>Fast turnaround with responsive designs.</span></li>
+              <li><i class="bi bi-check2-all"></i> <span>High-quality, user-friendly websites.</span></li>
+              <li><i class="bi bi-check2-all"></i> <span>Affordable pricing for urgent needs.</span></li>
+            </ul>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2 text-center">
+            <a href="/services/WebTech/website_in_24hrs.html"><img src="{{ config.JAIKALKI_ROOT}}/assets/img/jaikalki_24_hrs_website.jpg" alt="24 Hours Website Illustration" style="border: 2px solid black; border-radius: 5%" class="img-fluid">
+            </a></div>
+        </div>
+      </div><!-- End Website in 24 Hrs Tab -->
+
+    </div><!-- End Tab Content -->
+
+  </div><!-- End Container -->
+
+</section><!-- End Features Section -->
+
+<section id="features-2" class="features-2 section">
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+    <!-- Section Title -->
+    <div class="section-title text-center" data-aos="fade-up" data-aos-delay="100">
+      <h2>Why Choose Web Tech Services from Jaikalki Technology Pvt Ltd</h2>
+      <p>Empowering your digital journey with cutting-edge web technology solutions tailored for success.</p>
+    </div><!-- End Section Title -->
+
+    <div class="row align-items-center">
+
+      <div class="col-lg-4">
+
+        <div class="feature-item text-end mb-5" data-aos="fade-right" data-aos-delay="200">
+          <div class="d-flex align-items-center justify-content-end gap-4">
+            <div class="feature-content">
+              <h3>Custom Web Development</h3>
+              <p>We design and develop websites tailored to meet your unique business objectives and user needs.</p>
+            </div>
+            <div class="feature-icon flex-shrink-0">
+              <i class="bi bi-code-slash"></i>
+            </div>
+          </div>
+        </div><!-- End .feature-item -->
+
+        <div class="feature-item text-end mb-5" data-aos="fade-right" data-aos-delay="300">
+          <div class="d-flex align-items-center justify-content-end gap-4">
+            <div class="feature-content">
+              <h3>Responsive Design</h3>
+              <p>Our websites are optimized for all devices, ensuring a seamless user experience across platforms.</p>
+            </div>
+            <div class="feature-icon flex-shrink-0">
+              <i class="bi bi-phone"></i>
+            </div>
+          </div>
+        </div><!-- End .feature-item -->
+
+        <div class="feature-item text-end" data-aos="fade-right" data-aos-delay="400">
+          <div class="d-flex align-items-center justify-content-end gap-4">
+            <div class="feature-content">
+              <h3>Scalable Solutions</h3>
+              <p>We create scalable websites that grow with your business, adapting to future needs and technologies.</p>
+            </div>
+            <div class="feature-icon flex-shrink-0">
+              <i class="bi bi-bar-chart"></i>
+            </div>
+          </div>
+        </div><!-- End .feature-item -->
+
+      </div>
+
+      <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+        <div class="phone-mockup text-center">
+          <img src="{{ config.JAIKALKI_ROOT}}/assets/img/web_tech_services.jpg" style="border: 2px solid white; border-radius: 5%" alt="Web Tech Services" class="img-fluid">
+        </div>
+      </div><!-- End Phone Mockup -->
+
+      <div class="col-lg-4">
+
+        <div class="feature-item mb-5" data-aos="fade-left" data-aos-delay="200">
+          <div class="d-flex align-items-center gap-4">
+            <div class="feature-icon flex-shrink-0">
+              <i class="bi bi-cloud-arrow-up"></i>
+            </div>
+            <div class="feature-content">
+              <h3>Cloud Integration</h3>
+              <p>Seamlessly integrate your website with cloud services for enhanced performance and accessibility.</p>
+            </div>
+          </div>
+        </div><!-- End .feature-item -->
+
+        <div class="feature-item mb-5" data-aos="fade-left" data-aos-delay="300">
+          <div class="d-flex align-items-center gap-4">
+            <div class="feature-icon flex-shrink-0">
+              <i class="bi bi-speedometer"></i>
+            </div>
+            <div class="feature-content">
+              <h3>Optimized Performance</h3>
+              <p>We ensure your website is fast, efficient, and optimized for search engines to drive traffic and engagement.</p>
+            </div>
+          </div>
+        </div><!-- End .feature-item -->
+
+        <div class="feature-item" data-aos="fade-left" data-aos-delay="400">
+          <div class="d-flex align-items-center gap-4">
+            <div class="feature-icon flex-shrink-0">
+              <i class="bi bi-shield-lock"></i>
+            </div>
+            <div class="feature-content">
+              <h3>Advanced Security</h3>
+              <p>Protect your website and user data with our state-of-the-art security solutions and regular updates.</p>
+            </div>
+          </div>
+        </div><!-- End .feature-item -->
+
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- /Features 2 Section -->
+
+
+  </main>
+
+
+  <!-- Scroll Top -->
+
+ {% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const flashMessages = {{ get_flashed_messages(with_categories=True) | tojson | safe }};
+
+        // Iterate through all flash messages
+        flashMessages.forEach(function(message) {
+            if (message[0] === 'success') {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Success!',
+                    text: message[1],
+                    confirmButtonText: 'Okay'
+                });
+            } else if (message[0] === 'danger') {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error!',
+                    text: message[1],
+                    confirmButtonText: 'Try Again'
+                });
+            }
+        });
+    });
+</script>
+
+{% endblock javascripts %}

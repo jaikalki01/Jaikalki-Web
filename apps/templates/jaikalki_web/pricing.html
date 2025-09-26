@@ -1,0 +1,133 @@
+{% extends "layouts/jaikalki_layout.html" %}
+
+
+{% block title %}
+
+  <!-- Title -->
+  <title>Pricing - Jaikalki Technology Pvt Ltd</title>
+
+  <!-- Meta Tags -->
+  <meta name="description" content="Explore our competitive pricing plans for web design, development, and digital solutions at Jaikalki Technology Pvt Ltd. Get the best value for your investment.">
+  <meta name="keywords" content="Jaikalki Technology pricing, web design pricing, digital solutions cost, affordable web development, Mumbai, pricing plans">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:site_name" content="Jaikalki Technology Pvt Ltd">
+  <meta property="og:title" content="Pricing - Jaikalki Technology Pvt Ltd">
+  <meta property="og:description" content="Check out our pricing plans for web design, development, and digital solutions. Find the perfect plan for your business.">
+  <meta property="og:image" content="https://jaikalki.com/static/assets_jaikalki/assets/img/pricing-og-img.jpg">
+  <meta property="og:url" content="https://jaikalki.com/pricing">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@JaikalkiTech">
+  <meta name="twitter:title" content="Pricing - Jaikalki Technology Pvt Ltd">
+  <meta name="twitter:description" content="Discover transparent and competitive pricing for Jaikalki Technology's web design and digital solutions. Choose the best plan for your business.">
+  <meta name="twitter:image" content="https://jaikalki.com/static/img/pricing.jpg">
+
+  <!-- Canonical Link -->
+  <link rel="canonical" href="https://jaikalki.com/pricing.html">
+
+{% endblock %}
+{% block content %}
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title light-background">
+      <div class="container">
+        <h1>Our Pricing</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="/index.html">Home</a></li>
+            <li class="current">Pricing</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Starter Section Section -->
+<section class="pricing container py-5">
+ <div class="row justify-content-center">
+    <!-- Website Development Plan -->
+    <div class="col-md-4">
+        <div class="pricing-card text-center">
+            <h3>Website Development</h3>
+            <div class="price">
+                <span class="currency">₹</span>
+                <span class="amount">15,000</span>
+            </div>
+            <p class="description">Ideal for businesses seeking a professional website.</p>
+            <ul class="features-list">
+                <li><i class="fa fa-check"></i> Mobile-Friendly Design</li>
+                <li><i class="fa fa-check"></i> SEO Optimization</li>
+                <li><i class="fa fa-check"></i> Free Updates & Maintenance</li>
+                <li><i class="fa fa-check"></i> Contact Form Integration</li>
+                <li><i class="fa fa-check"></i> Social Media Links</li>
+                <li><i class="fa fa-check"></i> Basic Speed Optimization</li>
+            </ul>
+            <button class="btn btn-primary choose-plan">Choose Plan</button>
+        </div>
+    </div>
+
+    <!-- Software Development Plan -->
+    <div class="col-md-4">
+        <div class="pricing-card popular text-center">
+            <span class="popular-badge">Most Popular</span>
+            <h3>Software Development</h3>
+            <div class="price">
+                <span class="currency">₹</span>
+                <span class="amount">45,000</span>
+            </div>
+            <p class="description">Tailored for businesses needing custom software solutions.</p>
+            <ul class="features-list">
+                <li><i class="fa fa-check"></i> Scalable & Secure Architecture</li>
+                <li><i class="fa fa-check"></i> API Integrations</li>
+                <li><i class="fa fa-check"></i> Multi-User Access</li>
+                <li><i class="fa fa-check"></i> Cloud Deployment</li>
+                <li><i class="fa fa-check"></i> Bug Fixes & Maintenance</li>
+                <li><i class="fa fa-check"></i> Dedicated Support</li>
+                <li><i class="fa fa-check"></i> Custom Features as Needed</li>
+            </ul>
+            <button class="btn btn-light choose-plan">Choose Plan</button>
+        </div>
+    </div>
+
+    <!-- RankBoost / SEO Plan -->
+    <div class="col-md-4">
+        <div class="pricing-card text-center">
+            <h3>RankBoost / SEO</h3>
+            <div class="price">
+                <span class="currency">₹</span>
+                <span class="amount">15,000</span>
+                <span class="period">/mo</span>
+            </div>
+            <p class="description">Perfect for improving search rankings & visibility.</p>
+            <ul class="features-list">
+                <li><i class="fa fa-check"></i> On-Page & Off-Page SEO</li>
+                <li><i class="fa fa-check"></i> Keyword Research & Optimization</li>
+                <li><i class="fa fa-check"></i> Competitor Analysis</li>
+                <li><i class="fa fa-check"></i> Monthly Performance Reports</li>
+                <li><i class="fa fa-check"></i> Link Building & Backlinks</li>
+                <li><i class="fa fa-check"></i> Technical SEO Fixes</li>
+                <li><i class="fa fa-check"></i> Local SEO & Google My Business</li>
+            </ul>
+            <button class="btn btn-primary choose-plan">Choose Plan</button>
+        </div>
+    </div>
+</div>
+</section>
+
+  </main>
+
+
+<script>
+    document.querySelectorAll(".choose-plan").forEach(button => {
+        button.addEventListener("click", function() {
+            alert("Payment gateway not integrated yet. We are coming soon with our services!");
+;
+        });
+    });
+</script>
+
+ {% endblock content %}

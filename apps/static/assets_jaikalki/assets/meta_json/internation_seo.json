@@ -1,0 +1,22 @@
+{
+  "title": "International SEO Services - Expand Your Global Reach | Jaikalki Technology Pvt Ltd",
+  "description": "Jaikalki Technology Pvt Ltd offers International SEO services to help businesses expand their online presence across borders, increasing traffic and visibility on global search engines.",
+  "keywords": "international SEO, global SEO, SEO services, international search engine optimization, Jaikalki Technology, global reach, SEO expansion",
+  "robots": "index, follow",
+  "canonical": "https://jaikalki.in/international-seo",
+  "og": {
+    "site_name": "Jaikalki Technology Pvt Ltd",
+    "title": "International SEO Services - Expand Your Global Reach",
+    "description": "Boost your global presence with Jaikalki Technology's expert International SEO services.",
+    "image": "https://jaikalki.in/static/assets_jaikalki/assets/img/jaikalki_international_seo.jpg",
+    "url": "https://jaikalki.in/international-seo",
+    "type": "website"
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "site": "@JaikalkiTech",
+    "title": "International SEO Services - Expand Your Global Reach",
+    "description": "Maximize your global reach with Jaikalki Technology's professional International SEO services.",
+    "image": "https://jaikalki.in/static/assets_jaikalki/assets/img/jaikalki_international_seo.jpg"
+  }
+}

@@ -1,0 +1,197 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
+
+<!-- BOOTSTRAP CSS -->
+<link href="{{ config.JAIKALKI_ROOT }}/assets_minaai/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- FONT ICONS -->
+<link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      rel="stylesheet" crossorigin="anonymous">
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <h2>Invoice</h2>
+
+    <form method="POST" action="{{ url_for('admin_blueprint.add_invoice') }}">
+        {{ form.hidden_tag() }}
+
+        <label>Invoice Type:</label>
+        {{ form.invoice_type(class_="form-control") }}
+
+        <label>Invoice No:</label>
+        {{ form.invoice_no(class_="form-control") }}
+
+        <label>Invoice Date:</label>
+        {{ form.invoice_date(class_="form-control") }}
+
+        <h3>Company Details</h3>
+        <label>Company Name:</label>
+        {{ form.company_name(class_="form-control") }}
+
+        <label>Address:</label>
+        {{ form.address(class_="form-control") }}
+
+        <label>State:</label>
+        {{ form.state(class_="form-control") }}
+
+        <label>Pincode:</label>
+        {{ form.pincode(class_="form-control") }}
+
+        <label>Mobile Number:</label>
+        {{ form.mobile_number(class_="form-control") }}
+
+        <label>Bill to Date:</label>
+        {{ form.bill_to_date(class_="form-control") }}
+
+        <label>Due Date:</label>
+        {{ form.due_date(class_="form-control") }}
+
+        <label>GSTIN:</label>
+        {{ form.gstin(class_="form-control") }}
+
+        <h3>Items</h3>
+        <table id="itemsTable" class="table">
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>HSN/SAC Code</th>
+                    <th>Quantity</th>
+                    <th>Rate</th>
+                    <th>Amount</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+           <tbody>
+    {% for item in form.items %}
+    <tr>
+        {{ item.hidden_tag() }}
+
+        <td><input type="text" class="form-control" name="items-{{ loop.index0 }}-description" value="{{ item.description.data }}"></td>
+<td><input type="text" class="form-control" name="items-{{ loop.index0 }}-hsn_sac_code" value="{{ item.hsn_sac_code.data or '' }}" placeholder="Enter HSN/SAC Code"></td>
+        <td><input type="number" class="form-control" name="items-{{ loop.index0 }}-quantity" value="{{ item.quantity.data }}" oninput="calculateTotal()"></td>
+        <td><input type="number" class="form-control" name="items-{{ loop.index0 }}-rate" value="{{ item.rate.data }}" oninput="calculateTotal()"></td>
+        <td><input type="number" class="form-control amount-field" name="items-{{ loop.index0 }}-amount" value="{{ item.amount.data }}" readonly></td>
+        <td><button type="button" class="btn btn-danger" onclick="removeItem(this)">Remove</button></td>
+    </tr>
+    {% endfor %}
+</tbody>
+
+        </table>
+        <button type="button" class="btn btn-primary" onclick="addItem()">Add Item</button>
+
+        <div class="total-section mt-4">
+            <label>Subtotal:</label>
+            {{ form.subtotal(class_="form-control", readonly=True) }}
+
+            <label>SGST (%):</label>
+            {{ form.sgst_rate(class_="form-control", oninput="calculateTotal()") }}
+
+            <label>CGST (%):</label>
+            {{ form.cgst_rate(class_="form-control", oninput="calculateTotal()") }}
+
+            <label>IGST (%):</label>
+            {{ form.igst_rate(class_="form-control", oninput="calculateTotal()") }}
+
+            <label>Total Tax:</label>
+            {{ form.total_tax(class_="form-control", readonly=True) }}
+
+            <label>Total Amount After Tax:</label>
+            {{ form.total_amount(class_="form-control", readonly=True) }}
+        </div>
+
+        <button type="submit" class="btn btn-success mt-3">Submit Invoice</button>
+    </form>
+</div>
+
+{% endblock content %}
+
+{% block javascripts %}
+<script>
+ document.addEventListener("DOMContentLoaded", function () {
+    updateItemNames();
+    calculateTotal();
+});
+
+function addItem() {
+    let table = document.getElementById("itemsTable").getElementsByTagName('tbody')[0];
+    let index = table.rows.length; // Correct index for naming fields
+
+    let csrfToken = document.querySelector("input[name='csrf_token']").value; // Get CSRF token
+
+    let newRow = table.insertRow();
+    newRow.innerHTML = `
+        <input type="hidden" name="items-${index}-csrf_token" value="${csrfToken}">
+        <td><input type="text" class="form-control" name="items-${index}-description" required></td>
+        <td><input type="text" class="form-control" name="items-${index}-hsn_sac_code" placeholder="Enter HSN/SAC Code"></td>
+        <td><input type="number" class="form-control" name="items-${index}-quantity" required oninput="calculateTotal()"></td>
+        <td><input type="number" class="form-control" name="items-${index}-rate" required oninput="calculateTotal()"></td>
+        <td><input type="number" class="form-control amount-field" name="items-${index}-amount" readonly required></td>
+        <td><button type="button" class="btn btn-danger" onclick="removeItem(this)">Remove</button></td>
+    `;
+
+    updateItemNames(); // Update names for correct indexing
+}
+
+
+
+
+
+
+function removeItem(button) {
+    let row = button.closest("tr");
+    row.parentNode.removeChild(row);
+    updateItemNames();
+    calculateTotal();
+}
+
+function updateItemNames() {
+    let rows = document.querySelectorAll("#itemsTable tbody tr");
+
+    rows.forEach((row, index) => {
+        row.querySelectorAll("input").forEach(input => {
+            let name = input.getAttribute("name");
+            if (name) {
+                let newName = name.replace(/items-\d+-/, `items-${index}-`);
+                input.setAttribute("name", newName);
+            }
+        });
+    });
+}
+
+
+function calculateTotal() {
+    let subtotal = 0;
+    document.querySelectorAll(".amount-field").forEach(field => {
+        let row = field.closest("tr");
+        let quantity = parseFloat(row.querySelector("input[name^='items-'][name$='quantity']")?.value) || 0;
+        let rate = parseFloat(row.querySelector("input[name^='items-'][name$='rate']")?.value) || 0;
+        let amount = quantity * rate;
+        field.value = amount.toFixed(2);
+        subtotal += amount;
+    });
+
+    document.querySelector("input[name='subtotal']").value = subtotal.toFixed(2);
+
+    let sgstRate = parseFloat(document.querySelector("input[name='sgst_rate']").value) || 0;
+    let cgstRate = parseFloat(document.querySelector("input[name='cgst_rate']").value) || 0;
+    let igstRate = parseFloat(document.querySelector("input[name='igst_rate']").value) || 0;
+
+    let sgst = (subtotal * sgstRate) / 100;
+    let cgst = (subtotal * cgstRate) / 100;
+    let igst = (subtotal * igstRate) / 100;
+    let totalTax = sgst + cgst + igst;
+    let totalAmount = subtotal + totalTax;
+
+    document.querySelector("input[name='total_tax']").value = totalTax.toFixed(2);
+    document.querySelector("input[name='total_amount']").value = totalAmount.toFixed(2);
+}
+
+
+</script>
+{% endblock javascripts %}

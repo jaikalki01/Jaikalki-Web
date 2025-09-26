@@ -1,0 +1,22 @@
+{
+  "title": "WebTech Services - Jaikalki Technology Pvt Ltd | Your Digital Partner",
+  "description": "Explore WebTech services by Jaikalki Technology Pvt Ltd. From web design and development to mobile app creation, API integration, and REST API construction, we deliver top-notch digital solutions.",
+  "keywords": "WebTech services, Jaikalki Technology, web design, web development, mobile app development, API integration, REST API, website in 24 hours",
+  "robots": "index, follow",
+  "canonical": "https://jaikalki.in/webtech",
+  "og": {
+    "site_name": "Jaikalki Technology Pvt Ltd",
+    "title": "WebTech Services | Jaikalki Technology Pvt Ltd",
+    "description": "Your trusted partner for web design, web development, mobile app development, API integration, and more. Experience quality and efficiency with Jaikalki Technology Pvt Ltd.",
+    "image": "https://jaikalki.in/static/assets_jaikalki/assets/img/about_webTech.jpg",
+    "url": "https://jaikalki.in/webtech",
+    "type": "website"
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "site": "@JaikalkiTech",
+    "title": "WebTech Services | Jaikalki Technology Pvt Ltd",
+    "description": "Explore WebTech services including web design, web development, and mobile app solutions by Jaikalki Technology Pvt Ltd.",
+    "image": "https://jaikalki.in/static/assets_jaikalki/assets/img/about_webTech.jpg"
+  }
+}

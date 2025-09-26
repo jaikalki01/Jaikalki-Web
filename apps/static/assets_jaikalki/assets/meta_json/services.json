@@ -1,0 +1,104 @@
+{
+  "title": "Our Services - Jaikalki Technology Pvt Ltd",
+  "description": "Explore a wide range of services offered by Jaikalki Technology Pvt Ltd, including web design, web development, mobile app development, API integration, SEO, and digital solutions for businesses in Mumbai and across India.",
+  "keywords": "Web design, web development, mobile app development, API integration, SEO services, digital marketing, local SEO, international SEO, graphic design, Jaikalki Technology services, Mumbai, India",
+  "robots": "index, follow",
+  "canonical": "https://jaikalki.in/services",
+  "og": {
+    "site_name": "Jaikalki Technology Pvt Ltd",
+    "title": "Our Services - Jaikalki Technology Pvt Ltd",
+    "description": "Discover premium services like web design, mobile app development, SEO, and API integration tailored to your business needs by Jaikalki Technology Pvt Ltd.",
+    "image": "https://jaikalki.in/static/assets_jaikalki/assets/img/jaikalki_webtech.jpg",
+    "url": "https://jaikalki.in/services",
+    "type": "website"
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "site": "@JaikalkiTech",
+    "title": "Our Services - Jaikalki Technology Pvt Ltd",
+    "description": "From web design to API integration and SEO, explore Jaikalki Technology Pvt Ltd's comprehensive service offerings.",
+    "image": "https://jaikalki.in/static/assets_jaikalki/assets/img/jaikalki_webtech.jpg"
+  },
+  "services": [
+    {
+      "name": "WebTech",
+      "description": "Expert web design and development services for dynamic, responsive websites.",
+      "url": "https://jaikalki.in/services/webtech"
+    },
+    {
+      "name": "Mobile App Development",
+      "description": "Custom mobile app development for Android and iOS platforms.",
+      "url": "https://jaikalki.in/services/mobile-app-development"
+    },
+    {
+      "name": "API Integration",
+      "description": "Seamless API integration and REST API construction for enhanced functionality.",
+      "url": "https://jaikalki.in/services/api-integration"
+    },
+    {
+      "name": "SEO Services",
+      "subservices": [
+        {
+          "name": "International SEO",
+          "description": "Optimize your global reach with our international SEO solutions.",
+          "url": "https://jaikalki.in/services/international-seo"
+        },
+        {
+          "name": "Domestic/Local SEO",
+          "description": "Boost your visibility in local search results with our local SEO expertise.",
+          "url": "https://jaikalki.in/services/domestic-seo"
+        },
+        {
+          "name": "SEO Audit",
+          "description": "Comprehensive SEO audits to identify and resolve issues affecting your rankings.",
+          "url": "https://jaikalki.in/services/seo-audit"
+        }
+      ]
+    },
+    {
+      "name": "Graphic Design",
+      "description": "Creative graphic design solutions to bring your brand to life.",
+      "url": "https://jaikalki.in/services/graphic-design"
+    },
+    {
+      "name": "Gravity DigiPayment",
+      "subservices": [
+        {
+          "name": "Pay-In Solution",
+          "description": "Streamlined payment solutions for efficient fund collection.",
+          "url": "https://jaikalki.in/services/pay-in-solution"
+        },
+        {
+          "name": "Pay-Out Solution",
+          "description": "Reliable payout solutions for businesses across India.",
+          "url": "https://jaikalki.in/services/pay-out-solution"
+        },
+        {
+          "name": "Relationship Officer",
+          "description": "Dedicated relationship officers for personalized support and guidance.",
+          "url": "https://jaikalki.in/services/relationship-officer"
+        }
+      ]
+    },
+    {
+      "name": "Rank Boost",
+      "subservices": [
+        {
+          "name": "Link Building",
+          "description": "High-quality link-building services to improve your website's authority.",
+          "url": "https://jaikalki.in/services/link-building"
+        }
+      ]
+    },
+    {
+      "name": "WEBSITE IN 24 Hrs.",
+      "description": "Quick and reliable website development services delivered in just 24 hours.",
+      "url": "https://jaikalki.in/services/website-in-24hrs"
+    },
+    {
+      "name": "Jaikalki Research",
+      "description": "Innovative research solutions for data-driven business growth.",
+      "url": "https://jaikalki.in/services/jaikalki-research"
+    }
+  ]
+}

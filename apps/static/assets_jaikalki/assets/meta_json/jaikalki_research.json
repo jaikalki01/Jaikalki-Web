@@ -1,0 +1,22 @@
+{
+  "title": "Jaikalki Research - Advanced Research and Data Analytics Services | Jaikalki Technology Pvt Ltd",
+  "description": "Jaikalki Technology Pvt Ltd offers cutting-edge research services and data analytics solutions to help businesses make data-driven decisions. Unlock insights for better outcomes.",
+  "keywords": "Jaikalki Research, research services, data analytics, business insights, market research, data-driven decisions, advanced research, Jaikalki Technology Pvt Ltd",
+  "robots": "index, follow",
+  "canonical": "https://jaikalki.in/jaikalki-research",
+  "og": {
+    "site_name": "Jaikalki Technology Pvt Ltd",
+    "title": "Jaikalki Research - Research and Data Analytics Services",
+    "description": "Discover the power of data with Jaikalki Research, offering top-tier research services and data analytics.",
+    "image": "https://jaikalki.in/static/assets_jaikalki/assets/img/jaikalki_research.jpg",
+    "url": "https://jaikalki.in/jaikalki-research",
+    "type": "website"
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "site": "@JaikalkiTech",
+    "title": "Jaikalki Research - Advanced Research and Data Analytics",
+    "description": "Leverage powerful research and data analytics for informed decision-making with Jaikalki Research.",
+    "image": "https://jaikalki.in/static/assets_jaikalki/assets/img/jaikalki_research.jpg"
+  }
+}

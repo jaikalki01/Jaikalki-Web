@@ -1,0 +1,77 @@
+{% extends "layouts/jaikalki_layout.html" %}
+
+{% block title %}
+  <meta name="description" content="Get professional website development services by Jaikalki Technology Pvt Ltd. Build a stunning, fast, and user-friendly website for your business.">
+  <meta name="keywords" content="Website development, web design, business website, responsive web development, Jaikalki Technology">
+  <meta property="og:title" content="Website Development Services | Jaikalki Technology Pvt Ltd">
+  <meta property="og:description" content="Boost your online presence with our expert website development services. Get a fast, secure, and SEO-friendly website for your business.">
+  <meta property="og:image" content="https://jaikalki.com/static/assets_jaikalki/assets/img/website-development.jpg">
+  <meta property="og:url" content="https://jaikalki.com/website-development">
+  <title>Website Development Services - Jaikalki Technology Pvt Ltd</title>
+{% endblock %}
+
+{% block content %}
+  <main class="main">
+    <div class="page-title light-background">
+      <div class="container">
+        <h1>Website Development Services</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/services.html">Services</a></li>
+            <li class="current">Pricing</li>
+            <li class="current">Website Development</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+
+    <section id="features-2" class="features-2 section py-5 bg-light">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title text-center mb-5">
+          <h2 class="fw-bold text-primary">Why Choose Our Website Development Services?</h2>
+          <p class="lead text-muted">Create a stunning, fast, and SEO-friendly website that helps grow your business.</p>
+        </div>
+
+        <div class="row align-items-center gy-5">
+          <div class="col-lg-4">
+            <div class="feature-item d-flex flex-column align-items-end text-end mb-4">
+              <h4 class="fw-bold">Custom Website Design</h4>
+              <p class="text-muted">Get a unique, user-friendly, and visually appealing website tailored to your business.</p>
+            </div>
+            <div class="feature-item d-flex flex-column align-items-end text-end mb-4">
+              <h4 class="fw-bold">Responsive & Mobile-Friendly</h4>
+              <p class="text-muted">Your website will be optimized for all devices, ensuring a seamless user experience.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 text-center">
+            <div class="bg-white shadow rounded p-4">
+              <h3 class="fw-bold text-primary mb-3">Website Development</h3>
+              <p class="lead text-muted">Get a modern, fast, and professional website that enhances your online presence.</p>
+              <h2 class="fw-bold text-success">₹15,000</h2>
+              <button class="btn btn-primary btn-lg" onclick="addToCart()">Buy Now</button>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="feature-item d-flex flex-column align-items-start mb-4">
+              <h4 class="fw-bold">SEO & Speed Optimization</h4>
+              <p class="text-muted">Our websites are SEO-friendly and optimized for fast loading speeds.</p>
+            </div>
+            <div class="feature-item d-flex flex-column align-items-start mb-4">
+              <h4 class="fw-bold">Secure & Scalable</h4>
+              <p class="text-muted">We build secure, scalable websites with the latest web technologies.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function addToCart() {
+        alert("Payment Method Coming Soon!!!");
+      }
+    </script>
+  </main>
+{% endblock content %}

@@ -1,0 +1,650 @@
+
+{% extends "layouts/home_layout.html" %}
+
+{% block title %}   {% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0 mb-5 wow fadeIn" data-wow-delay="0.1s">
+    <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img class="w-100" src="{{ config.ASSETS_ROOT_NEW }}/img/banner_new.jpg" alt="Image">
+            <div class="carousel-caption">
+                <div class="container">
+                    <div class="row justify-content-start">
+                        <div class="col-lg-8">
+                            <p class="d-inline-block border border-white rounded text-primary fw-semi-bold py-1 px-3 animated slideInDown">
+                                Welcome to Gravity DigiPayment</p>
+                            <h1 class="display-1 mb-4 animated slideInDown">Comprehensive Payment & API Solutions</h1>
+                            <!--a href="" class="btn btn-primary py-3 px-5 animated slideInDown">Discover Our Services</a-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img class="w-100" src="{{ config.ASSETS_ROOT_NEW }}/img/carousel-2.jpg" alt="Image">
+            <div class="carousel-caption">
+                <div class="container">
+                    <div class="row justify-content-start">
+                        <div class="col-lg-7">
+                            <!--p class="d-inline-block border border-white rounded text-primary fw-semi-bold py-1 px-3 animated slideInDown">
+                                Empowering Businesses</p-->
+                            <h6  class="display-3 mb-4 fw-bold animated slideInDown">Services for Payment Collection and Disbursement Solutions</h6>
+                            <!--a href="" class="btn btn-primary py-3 px-5 animated slideInDown">Explore More</a-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+  </div>
+    <!-- Carousel End -->
+
+
+    <!-- About Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-4 align-items-end mb-4">
+    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+        <img class="img-fluid rounded" src="{{ config.ASSETS_ROOT_NEW }}/img/about.jpg">
+    </div>
+    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+        <p class="d-inline-block border rounded text-primary fw-semi-bold py-1 px-3">About Us</p>
+       <h1 class="display-5 mb-4">Empowering Businesses with Seamless Solutions</h1>
+<p class="mb-4">
+                    As a Technology Service Provider (TSP) under the Gravity DigiPayment division of Jaikalki Technology Pvt Ltd,
+                    we bridge the gap between merchants and financial institutions by connecting with multiple banks and PAPG companies to secure MID (Merchant IDs).
+                </p>
+                <p>
+                    Our Pay-In Solution ensures seamless payment collection services, providing businesses with secure and efficient payment acceptance across multiple platforms.
+                </p> <div class="border-marker rounded p-4">
+
+            <nav>
+                <div class="nav nav-tabs mb-3" id="nav-tab" role="tablist">
+                    <button class="nav-link fw-semi-bold active" id="nav-story-tab" data-bs-toggle="tab"
+                        data-bs-target="#nav-story" type="button" role="tab" aria-controls="nav-story"
+                        aria-selected="true">Story</button>
+                    <button class="nav-link fw-semi-bold" id="nav-mission-tab" data-bs-toggle="tab"
+                        data-bs-target="#nav-mission" type="button" role="tab" aria-controls="nav-mission"
+                        aria-selected="false">Mission</button>
+                    <button class="nav-link fw-semi-bold" id="nav-vision-tab" data-bs-toggle="tab"
+                        data-bs-target="#nav-vision" type="button" role="tab" aria-controls="nav-vision"
+                        aria-selected="false">Vision</button>
+                </div>
+            </nav>
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-story" role="tabpanel" aria-labelledby="nav-story-tab">
+                    <p>
+                      We bridge the gap between businesses and their financial needs by offering seamless Pay In and Pay Out solutions through a network of trusted partners.
+                    </p>
+                    <p class="mb-0">
+                       Our expertise extends beyond payments, empowering clients with robust web and mobile app development and innovative API integration services.
+                    </p>
+                </div>
+                <div class="tab-pane fade" id="nav-mission" role="tabpanel" aria-labelledby="nav-mission-tab">
+                    <p>
+                        Our mission is to simplify and enhance the financial transaction process for businesses, ensuring efficient, secure, and transparent operations.
+                    </p>
+                    <p class="mb-0">
+                        We strive to be the go-to partner for comprehensive digital solutions that drive growth and success for our clients.
+                    </p>
+                </div>
+                <div class="tab-pane fade" id="nav-vision" role="tabpanel" aria-labelledby="nav-vision-tab">
+                    <p>
+                       We envision a future where every business, regardless of size, can easily navigate their financial landscape with confidence and agility.
+                    </p>
+                    <p class="mb-0">By leveraging cutting-edge technology and partnerships, we aim to revolutionize the payment and app development industry for a connected world.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+           <div class="border-marker rounded p-4 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="row g-4">
+        <div class="col-lg-4 wow fadeIn" data-wow-delay="0.1s">
+            <div class="h-100">
+                <div class="d-flex">
+                    <div class="flex-shrink-0 btn-lg-square rounded-circle bg-primary">
+                       <i class="fa fa-rupee-sign text-white"></i>
+
+                    </div>
+                    <div class="ps-3">
+                        <h4>Transparent Pricing</h4>
+                        <span>We offer transparent pricing with no hidden costs, ensuring you know exactly what you’re paying for.
+
+
+                        </span>
+                    </div>
+                    <div class="border-end d-none d-lg-block"></div>
+                </div>
+                <div class="border-bottom mt-4 d-block d-lg-none"></div>
+            </div>
+        </div>
+        <div class="col-lg-4 wow fadeIn" data-wow-delay="0.3s">
+            <div class="h-100">
+                <div class="d-flex">
+                    <div class="flex-shrink-0 btn-lg-square rounded-circle bg-primary">
+                        <i class="fa fa-users text-white"></i>
+                    </div>
+                    <div class="ps-3">
+                        <h4>Expert Team</h4>
+                        <span>
+                            Our dedicated team is ready to assist your developers with seamless integration for Pay In, Pay Out, or any other API services. We're here to ensure a smooth onboarding process tailored to your needs. </span>
+                    </div>
+                    <div class="border-end d-none d-lg-block"></div>
+                </div>
+                <div class="border-bottom mt-4 d-block d-lg-none"></div>
+            </div>
+        </div>
+        <div class="col-lg-4 wow fadeIn" data-wow-delay="0.5s">
+            <div class="h-100">
+                <div class="d-flex">
+                    <div class="flex-shrink-0 btn-lg-square rounded-circle bg-primary">
+                        <i class="fa fa-headset text-white"></i>
+                    </div>
+                    <div class="ps-3">
+                        <h4>24/7 Support</h4>
+                        <span>We provide round-the-clock support, with a dedicated relationship officer available to assist you at any time. Your success is our priority, and we're always here to help you navigate any challenges.
+
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- Facts Start -->
+    <div class="container-fluid facts my-5 py-5">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.1s">
+                    <i class="fa fa-users fa-3x text-white mb-3"></i>
+                    <h1 class="display-4 text-white" data-toggle="counter-up">640</h1>
+                    <span class="fs-5 text-white">
+
+Happy Clients
+</span>
+                    <hr class="bg-white w-25 mx-auto mb-0">
+                </div>
+                <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.3s">
+                    <i class="fa fa-check fa-3x text-white mb-3"></i>
+                    <h1 class="display-4 text-white" data-toggle="counter-up">106</h1>
+                    <span class="fs-5 text-white">Software Completed</span>
+                    <hr class="bg-white w-25 mx-auto mb-0">
+                </div>
+                <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.5s">
+                    <i class="fa fa-users-cog fa-3x text-white mb-3"></i>
+                    <h1 class="display-4 text-white" data-toggle="counter-up">21</h1>
+                    <span class="fs-5 text-white">Global Partners</span>
+                    <hr class="bg-white w-25 mx-auto mb-0">
+                </div>
+                <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.7s">
+                    <i class="fa fa-percent fa-3x text-white mb-3"></i>
+                    <h1 class="display-4 text-white" data-toggle="counter-up">98</h1>
+                    <span class="fs-5 text-white">Client Satisfaction Rate</span>
+                    <hr class="bg-white w-25 mx-auto mb-0">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Facts End -->
+
+
+    <!-- Features Start -->
+    <div class="container-xxl feature py-5">
+        <div class="container">
+            <div class="row g-5  align-items-center">
+               <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+    <p class="d-inline-block border rounded text-dark fw-bold py-1 px-3">Why Choose Us?</p>
+    <h1 class="display-5 mb-4">Why Choose Gravity DigiPayment Consultancy?</h1>
+<p class="mb-4">Clients choose us because we offer unmatched expertise in Pay-IN and Pay-OUT services through trusted partners, ensuring fast and secure transactions. Our skilled team also delivers tailored software development and API integration solutions to meet your unique business needs and drive lasting growth.</p>
+<a class="btn btn-primary py-3 px-5" href="service.html">Discover Our Solutions</a>
+
+</div>
+                <div class="col-lg-6">
+    <div class="row g-4 align-items-center">
+        <div class="col-md-6">
+            <!-- Feature Box Section -->
+<div class="row g-4">
+    <div class="col-12 wow fadeIn" data-wow-delay="0.3s">
+        <div class="feature-box border-marker rounded p-4">
+            <i class="fa fa-check fa-3x text-primary mb-3"></i>
+            <h4 class="mb-3">Seamless Service Execution</h4>
+            <p class="mb-3">We ensure fast and efficient service execution to keep your business running smoothly and without delays.</p>
+            <a class="fw-semi-bold" href="#" data-bs-toggle="modal" data-bs-target="#serviceExecutionModal">Read More <i class="fa fa-arrow-right ms-1"></i></a>
+        </div>
+    </div>
+    <div class="col-12 wow fadeIn" data-wow-delay="0.5s">
+        <div class="feature-box border-marker rounded p-4">
+            <i class="fa fa-check fa-3x text-primary mb-3"></i>
+            <h4 class="mb-3">Dedicated Relationship Officer</h4>
+            <p class="mb-3">Our dedicated team offers personalized guidance and round-the-clock support.</p>
+            <a class="fw-semi-bold" href="#" data-bs-toggle="modal" data-bs-target="#relationshipOfficerModal">Read More <i class="fa fa-arrow-right ms-1"></i></a>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Service Execution -->
+<div class="modal fade" id="serviceExecutionModal" tabindex="-1" aria-labelledby="serviceExecutionLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="serviceExecutionLabel">Seamless Service Execution</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Our Pay-IN and Pay-OUT services are designed to operate with speed and precision. From initial setup to daily transactions, we ensure every process runs smoothly without any disruptions.</p>
+        <p>Our expert IT professionals continuously monitor the system, ensuring that your business experiences seamless service execution at all times.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for Relationship Officer -->
+<div class="modal fade" id="relationshipOfficerModal" tabindex="-1" aria-labelledby="relationshipOfficerLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="relationshipOfficerLabel">Dedicated Relationship Officer</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Each client is assigned a dedicated Relationship Officer who provides personalized assistance and ensures seamless service integration.</p>
+        <p>Your Relationship Officer will be your point of contact for any support or guidance, ensuring you get the best experience possible.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+        </div>
+        <!-- Feature Box Section -->
+<div class="col-md-6 wow fadeIn" data-wow-delay="0.7s">
+    <div class="feature-box border-marker rounded p-4">
+        <i class="fa fa-check fa-3x text-primary mb-3"></i>
+       <h4 class="mb-3">Trusted Financial Security & Transparency</h4>
+<p class="mb-3">At Gravity DigiPayment Consultancy, your financial transactions are protected with the highest level of security protocols. We ensure transparency in every step, guaranteeing no hidden costs and full control over your finances at all times.</p>
+ <a class="fw-semi-bold" href="#" data-bs-toggle="modal" data-bs-target="#financialSecurityModal">Read More <i class="fa fa-arrow-right ms-1"></i></a>
+    </div>
+</div>
+
+<!-- Modal for Financial Security -->
+<div class="modal fade" id="financialSecurityModal" tabindex="-1" aria-labelledby="financialSecurityLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="financialSecurityLabel">Financial Security & Transparency</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h6>No Hidden Costs</h6>
+        <p>At Gravity DigiPayment Consultancy, we believe in full transparency. Our pricing model is straightforward, with no hidden fees or surprise charges. You can trust that what you see is what you pay.</p>
+
+        <h6>Transparent Transactions</h6>
+        <p>We ensure every transaction is executed with complete transparency, giving you full visibility into the process from start to finish. You’ll always be in control of your financial data.</p>
+
+        <h6>Pricing You Can Trust</h6>
+        <p>Our pricing structure is built on fairness and trust. We offer competitive rates without compromising the security and quality of our services, ensuring you get the best value for your investment.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+    </div>
+</div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Features End -->
+
+
+    <!-- Service Start -->
+<div class="container-xxl service py-5">
+    <div class="container">
+        <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+            <p class="d-inline-block border rounded text-primary fw-semi-bold py-1 px-3">Our Services</p>
+            <h1 class="display-5 mb-5">Comprehensive Digital Payment Solutions for Your Business</h1>
+        </div>
+        <div class="row g-4 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="col-lg-4  ">
+                <div class="nav nav-pills d-flex justify-content-between w-100 h-100 me-4">
+                    <button class="nav-link w-100 d-flex align-items-center text-start border p-4 mb-4 active"
+                        data-bs-toggle="pill" data-bs-target="#tab-pane-1" type="button">
+                        <h5 class="m-0"><i class="fa fa-bars text-primary me-3"></i>Payment Collection</h5>
+                    </button>
+                    <button class="nav-link w-100 d-flex align-items-center text-start border p-4 mb-4"
+                        data-bs-toggle="pill" data-bs-target="#tab-pane-2" type="button">
+                        <h5 class="m-0"><i class="fa fa-bars text-primary me-3"></i>Payment Disbursement</h5>
+                    </button>
+                    <button class="nav-link w-100 d-flex align-items-center text-start border p-4 mb-4"
+                        data-bs-toggle="pill" data-bs-target="#tab-pane-3" type="button">
+                        <h5 class="m-0"><i class="fa fa-bars text-primary me-3"></i>Software Development</h5>
+                    </button>
+                    <button class="nav-link w-100 d-flex align-items-center text-start border p-4 mb-0"
+                        data-bs-toggle="pill" data-bs-target="#tab-pane-4" type="button">
+                        <h5 class="m-0"><i class="fa fa-bars text-primary me-3"></i>API Integration</h5>
+                    </button>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <div class="tab-content w-100">
+                    <div class="tab-pane fade show active" id="tab-pane-1">
+                        <div class="row g-4">
+                            <div class="col-md-6" style="min-height: 350px;">
+                                <div class="position-relative h-100">
+                                    <img class="position-absolute border-marker rounded w-100 h-100" src="{{ config.ASSETS_ROOT_NEW }}/img/service-1.jpg"
+                                        style="object-fit: cover;" alt="Pay-IN Solutions">
+                                </div>
+                            </div>
+                            <div class="col-md-6 ">
+                                <h3 class="mb-4">Efficient Pay-IN Services for Seamless Transactions</h3>
+                                <p class="mb-4">Our Pay-IN solutions streamline your payment acceptance, ensuring quick and secure transactions across multiple platforms.</p>
+                                <p><i class="fa fa-check text-primary me-3"></i>Fast and Secure Transactions</p>
+                                <p><i class="fa fa-check text-primary me-3"></i>Multi-Platform Integration</p>
+                                <p><i class="fa fa-check text-primary me-3"></i>Comprehensive Support for Hassle-Free Transactions from Our Expert Team</p>
+                                <button class="btn btn-primary py-3 px-5 mt-3" data-bs-toggle="modal" data-bs-target="#modalPayIn">Read More</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="tab-pane-2">
+                        <div class="row g-4">
+                            <div class="col-md-6" style="min-height: 350px;">
+                                <div class="position-relative h-100">
+                                    <img class="position-absolute border-marker rounded w-100 h-100" src="{{ config.ASSETS_ROOT_NEW }}/img/service-2.jpg"
+                                        style="object-fit: cover;" alt="Pay-OUT Solutions">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <h3 class="mb-4">Reliable Pay-OUT Solutions for Your Business</h3>
+                                <p class="mb-4">Our Pay-OUT services provide secure and fast disbursement solutions, ensuring hassle-free payouts to your stakeholders.</p>
+                                <p><i class="fa fa-check text-primary me-3"></i>Instant Payout Processing</p>
+                                <p><i class="fa fa-check text-primary me-3"></i>Secure Disbursement Channels</p>
+                                <p><i class="fa fa-check text-primary me-3"></i>Comprehensive Reporting and Tracking</p>
+                                <button class="btn btn-primary py-3 px-5 mt-3" data-bs-toggle="modal" data-bs-target="#modalPayOut">Read More</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="tab-pane-3">
+                        <div class="row g-4">
+                            <div class="col-md-6" style="min-height: 350px;">
+                                <div class="position-relative h-100">
+                                    <img class="position-absolute border-marker rounded w-100 h-100" src="{{ config.ASSETS_ROOT_NEW }}/img/service-3.jpg"
+                                        style="object-fit: cover;" alt="Software Development">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <h3 class="mb-4">Custom Software Development Solutions</h3>
+                                <p class="mb-4">We specialize in creating tailored software solutions that enhance your operational efficiency and meet your unique business needs.</p>
+                                <p><i class="fa fa-check text-primary me-3"></i>Scalable Solutions</p>
+                                <p><i class="fa fa-check text-primary me-3"></i>Custom Application Development</p>
+                                <p><i class="fa fa-check text-primary me-3"></i>Cloud-Based Solutions</p>
+                                <button class="btn btn-primary py-3 px-5 mt-3" data-bs-toggle="modal" data-bs-target="#modalSoftwareDev">Read More</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="tab-pane-4">
+                        <div class="row g-4">
+                            <div class="col-md-6" style="min-height: 350px;">
+                                <div class="position-relative h-100">
+                                    <img class="position-absolute border-marker rounded w-100 h-100" src="{{ config.ASSETS_ROOT_NEW }}/img/service-4.jpg"
+                                        style="object-fit: cover;" alt="API Integration">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <h3 class="mb-4">Seamless API Integration Services</h3>
+                                <p class="mb-4">Our API integration services ensure seamless connectivity between your systems, enabling smooth data exchange and enhancing overall efficiency.</p>
+                                <p><i class="fa fa-check text-primary me-3"></i>Third-Party Integration</p>
+                                <p><i class="fa fa-check text-primary me-3"></i>Custom API Solutions</p>
+                                <p><i class="fa fa-check text-primary me-3"></i>Efficient Data Management</p>
+                                <button class="btn btn-primary py-3 px-5 mt-3" data-bs-toggle="modal" data-bs-target="#modalAPIIntegration">Read More</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Service End -->
+
+<!-- Modals -->
+<!-- Pay-IN Modal -->
+<div class="modal fade" id="modalPayIn" tabindex="-1" aria-labelledby="modalPayInLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalPayInLabel">Pay-IN Solutions</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h6>Why Choose Our Pay-IN Solutions?</h6>
+                <p>Our Pay-IN services are designed to facilitate smooth and efficient payment acceptance for your business. We focus on:</p>
+                <ul>
+                    <li>Rapid transaction processing with industry-leading security measures.</li>
+                    <li>Integration across various platforms to cater to your specific needs.</li>
+                    <li>24/7 customer support to address any issues that may arise.</li>
+                </ul>
+                <p>With our commitment to transparency, we ensure no hidden costs, enabling you to trust our solutions for all your payment needs.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Pay-OUT Modal -->
+<div class="modal fade" id="modalPayOut" tabindex="-1" aria-labelledby="modalPayOutLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalPayOutLabel">Pay-OUT Solutions</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h6>Why Choose Our Pay-OUT Solutions?</h6>
+                <p>Our Pay-OUT solutions ensure that your stakeholders receive their payments quickly and securely. Key features include:</p>
+                <ul>
+                    <li>Immediate processing of payouts to enhance operational efficiency.</li>
+                    <li>Robust security measures to safeguard sensitive data.</li>
+                    <li>Detailed reporting for comprehensive tracking of all transactions.</li>
+                </ul>
+                <p>Our goal is to provide a reliable Pay-OUT service that meets the demands of your business.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Software Development Modal -->
+<div class="modal fade" id="modalSoftwareDev" tabindex="-1" aria-labelledby="modalSoftwareDevLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalSoftwareDevLabel">Software Development Solutions</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h6>Why Choose Our Software Development Solutions?</h6>
+                <p>We offer customized software development services tailored to your unique business needs:</p>
+                <ul>
+                    <li>Dedicated teams focused on delivering scalable software solutions.</li>
+                    <li>Integration of the latest technologies to enhance your business processes.</li>
+                    <li>Comprehensive support throughout the development cycle and beyond.</li>
+                </ul>
+                <p>Your satisfaction is our priority as we strive to provide the best solutions for your business.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- API Integration Modal -->
+<div class="modal fade" id="modalAPIIntegration" tabindex="-1" aria-labelledby="modalAPIIntegrationLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalAPIIntegrationLabel">API Integration Services</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h6>Why Choose Our API Integration Services?</h6>
+                <p>We provide robust API integration solutions to streamline your business processes:</p>
+                <ul>
+                    <li>Custom integrations tailored to your existing systems and workflows.</li>
+                    <li>Support for various APIs to ensure seamless data flow.</li>
+                    <li>Expert guidance to help you navigate the complexities of integration.</li>
+                </ul>
+                <p>Our team is dedicated to ensuring a smooth and efficient integration experience.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Callback Start -->
+<div class="container-fluid callback my-5 pt-5">
+    <div class="container pt-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-7">
+                <div class="bg-white border-marker rounded p-4 p-sm-5 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                        <p class="d-inline-block border rounded text-primary fw-semi-bold py-1 px-3">Get In Touch</p>
+                        <h1 class="display-5 mb-5">Request A Call-Back</h1>
+                    </div>
+                {% set math = ''|math_problem %} <!-- Generate the math problem -->
+      <form id="contactForm" action="{{ url_for('home_blueprint.submit_form') }}"  data-aos="fade-up" data-aos-delay="200">
+                  <div class="row g-3">
+                            <div class="col-sm-6">
+                                <div class="form-floating">
+                                   <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                                    <label >Your Name</label>
+
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-floating">
+                                <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+           <label >Your Email</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-floating">
+                                    <input type="number" name="mobile" class="form-control" placeholder="Mobile" required>
+           <label >Your Mobile</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-floating">
+                                      <input type="text" name="subject" class="form-control" placeholder="Subject" required>
+          <label >Subject</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                <textarea name="message" class="form-control" rows="6" placeholder="Message" required></textarea>
+             <label >Message</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+            <label for="mathProblem">Solve this problem to submit the form:</label>
+            <div id="mathProblem">
+                <strong>{{ math.num1 }} + {{ math.num2 }} = ?</strong>
+            </div>
+            <input type="number" name="math_answer" class="form-control" placeholder="Your Answer" required>
+            <input type="hidden" name="correct_answer" value="{{ math.correct_answer }}">
+        </div>
+                            <div class="col-12 text-center">
+                          <button type="submit" class="btn btn-primary">Send Message</button>
+        </div>
+                        </div>
+                    </form>
+
+          </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Callback End -->
+
+
+
+
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+   document.getElementById('contactForm').addEventListener('submit', async function (e) {
+    e.preventDefault(); // Prevent default form submission
+
+    // Get form data
+    const formData = new FormData(this);
+    const jsonData = {};
+    formData.forEach((value, key) => {
+        jsonData[key] = value;
+    });
+
+    try {
+        const response = await fetch(this.action, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(jsonData),
+        });
+
+        if (response.ok) {
+            const data = await response.json();
+            Swal.fire('Success', data.message, 'success');
+            this.reset(); // Reset form after submission
+        } else {
+            const errorData = await response.json();
+            Swal.fire('Error', errorData.error || 'Something went wrong!', 'error');
+        }
+    } catch (error) {
+        Swal.fire('Error', 'Unable to submit your request. Please try again later.', 'error');
+    }
+});
+
+</script>
+
+{% endblock javascripts %}
+

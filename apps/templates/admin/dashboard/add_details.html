@@ -1,0 +1,225 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Add Details {% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+  <div class="py-4">
+      <nav aria-label="breadcrumb" class="d-none d-md-inline-block">
+          <ol class="breadcrumb breadcrumb-dark breadcrumb-transparent">
+              <li class="breadcrumb-item">
+                  <a href="#">
+                      <svg class="icon icon-xxs" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                  </a>
+              </li>
+              <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Registration</li>
+          </ol>
+      </nav>
+      <div class="d-flex justify-content-between w-100 flex-wrap">
+          <div class="mb-3 mb-lg-0">
+              <h1 class="h4">Registration</h1>
+                  </div>
+
+      </div>
+  </div>
+
+<div class="container py-4">
+
+
+        <form method="POST" action="">
+    <div class="row">
+        <!-- Hidden CSRF Token -->
+        {{ form.hidden_tag() }}
+
+        <!-- First Name Field -->
+        <div class="col-md-6">
+            <div class="form-group">
+                {{ form.firstName.label(class="form-label") }}
+                {{ form.firstName(class="form-control", value=form.firstName.data if form.firstName.data else '') }}
+                {% if form.firstName.errors %}
+                    <div class="text-danger">
+                        {% for error in form.firstName.errors %}
+                            <span>{{ error }}</span><br>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+
+        <!-- Middle Name Field -->
+        <div class="col-md-6">
+            <div class="form-group">
+                {{ form.middleName.label(class="form-label") }}
+                {{ form.middleName(class="form-control", value=form.middleName.data if form.middleName.data else '') }}
+                {% if form.middleName.errors %}
+                    <div class="text-danger">
+                        {% for error in form.middleName.errors %}
+                            <span>{{ error }}</span><br>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+
+        <!-- Last Name Field -->
+        <div class="col-md-6">
+            <div class="form-group">
+                {{ form.lastName.label(class="form-label") }}
+                {{ form.lastName(class="form-control", value=form.lastName.data if form.lastName.data else '') }}
+                {% if form.lastName.errors %}
+                    <div class="text-danger">
+                        {% for error in form.lastName.errors %}
+                            <span>{{ error }}</span><br>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+
+        <!-- Date of Birth Field -->
+        <div class="col-md-6">
+            <div class="form-group">
+                {{ form.dob.label(class="form-label") }}
+                {{ form.dob(class="form-control", type="date", value=form.dob.data if form.dob.data else '') }}
+                {% if form.dob.errors %}
+                    <div class="text-danger">
+                        {% for error in form.dob.errors %}
+                            <span>{{ error }}</span><br>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+
+        <!-- Address Field -->
+        <div class="col-md-12">
+            <div class="form-group">
+                {{ form.address.label(class="form-label") }}
+                {{ form.address(class="form-control", value=form.address.data if form.address.data else '') }}
+                {% if form.address.errors %}
+                    <div class="text-danger">
+                        {% for error in form.address.errors %}
+                            <span>{{ error }}</span><br>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+
+        <!-- City Field -->
+        <div class="col-md-6">
+            <div class="form-group">
+                {{ form.city.label(class="form-label") }}
+                {{ form.city(class="form-control", value=form.city.data if form.city.data else '') }}
+                {% if form.city.errors %}
+                    <div class="text-danger">
+                        {% for error in form.city.errors %}
+                            <span>{{ error }}</span><br>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+
+        <!-- State Field -->
+        <div class="col-md-6">
+            <div class="form-group">
+                {{ form.state.label(class="form-label") }}
+                {{ form.state(class="form-control", value=form.state.data if form.state.data else '') }}
+                {% if form.state.errors %}
+                    <div class="text-danger">
+                        {% for error in form.state.errors %}
+                            <span>{{ error }}</span><br>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+
+        <!-- Pincode Field -->
+        <div class="col-md-6">
+            <div class="form-group">
+                {{ form.pincode.label(class="form-label") }}
+                {{ form.pincode(class="form-control", value=form.pincode.data if form.pincode.data else '') }}
+                {% if form.pincode.errors %}
+                    <div class="text-danger">
+                        {% for error in form.pincode.errors %}
+                            <span>{{ error }}</span><br>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+
+        <!-- Business Name Field -->
+        <div class="col-md-6">
+            <div class="form-group">
+                {{ form.business_name.label(class="form-label") }}
+                {{ form.business_name(class="form-control", value=form.business_name.data if form.business_name.data else '') }}
+                {% if form.business_name.errors %}
+                    <div class="text-danger">
+                        {% for error in form.business_name.errors %}
+                            <span>{{ error }}</span><br>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+
+         <div class="col-md-6">
+            <div class="form-group">
+                {{ form.gender.label(class="form-label") }}
+                {{ form.gender(class="form-control", value=form.gender.data if form.gender.data else '') }}
+                {% if form.pincode.errors %}
+                    <div class="text-danger">
+                        {% for error in form.pincode.errors %}
+                            <span>{{ error }}</span><br>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="col-md-12 text-center mt-4">
+            <div class="form-group">
+                {{ form.submit(class="btn btn-primary") }}
+            </div>
+        </div>
+    </div>
+</form>
+
+
+</div>
+
+
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const successMessages = {{ get_flashed_messages(with_categories=True) | tojson | safe }};
+
+        // Check for success messages
+        successMessages.forEach(function(message) {
+            if (message[0] === 'success') {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Success!',
+                    text: message[1],
+                    confirmButtonText: 'Okay'
+                });
+            }
+        });
+    });
+</script>
+
+{% endblock javascripts %}

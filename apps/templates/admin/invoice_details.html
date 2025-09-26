@@ -1,0 +1,164 @@
+{% block title %} {% endblock %}
+
+{% block content %}
+<style>
+    .container {
+        margin: 20px auto;
+        padding: 2px;
+        border: 0.2px solid #333;
+        border-radius: 10px;
+        font-family: Arial, sans-serif;
+    }
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: -21px;
+    }
+
+    .column {
+        padding: 10px;
+        margin-top: -24px;
+    }
+
+    h1 {
+        font-size: 20px;
+        color: #333;
+        margin-bottom: 5px;
+    }
+
+    p, small {
+        font-size: 12px;
+        color: #555;
+        line-height: 1.5;
+        margin: 5px 0;
+    }
+
+    .column:last-child {
+        text-align: justify;
+    }
+
+    .container1, .container2 {
+        width: 100%;
+        margin: 20px auto;
+        text-align: center;
+        border: 0.2px solid #333;
+        border-radius: 10px;
+        font-family: Arial, sans-serif;
+    }
+</style>
+
+<div style="text-align: center; height: 57px;">
+    <img src="{{ config.JAIKALKI_ROOT }}/assets/img/invoice_logo.png" alt="Centered Image" style="height: 57px;">
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="column" style="padding-top: 20px;">
+            <h1>JAIKALKI TECHNOLOGY PVT. LTD.</h1>
+            <p>Add: Sh N B1/A Grd Flr Mahavir Ngr,<br>
+               Deepak Hospital, Mira Road,<br>
+               Thane, Maharashtra-401107</p><br>
+        </div>
+        <div class="column">
+            <h1>Proforma Invoice</h1>
+            <p><strong>Invoice No:</strong> {{ invoice.invoice_no }}</p>
+            <p><strong>Date:</strong> {{ invoice.invoice_date }}</p>
+            <p><strong>Company GSTIN:</strong> 27AAGCJ7035F1ZK</p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="column" style="width: 40%; padding-bottom: 25px;">
+            <h4 style="margin-bottom:0px">Bill To:</h4>
+            <small>
+                <strong>{{ invoice.company_name }}</strong><br>
+                {{ invoice.address }}<br>
+                {{ invoice.state }} - {{ invoice.pincode }}<br>
+                MOB: 9833537266
+            </small>
+        </div>
+
+        <div class="column">
+            <p><strong>Invoice Date:</strong> {{ invoice.invoice_date }}</p>
+            <p><strong>Due Date:</strong> {{ invoice.due_date or 'N/A' }}</p>
+            <p><strong>Customer GSTIN:</strong> {{ invoice.gstin or 'N/A' }}</p>
+        </div>
+    </div>
+</div>
+
+<table class="container1">
+    <thead>
+        <tr>
+            <th>S.No.</th>
+            <th style="text-align: left;">Description</th>
+            <th>HSN/SAC Code</th>
+            <th>Quantity</th>
+            <th>Rate (₹)</th>
+            <th>Amount (₹)</th>
+        </tr>
+    </thead>
+   <tbody>
+    {% for item in items %}
+    <tr>
+        <td><p>{{ loop.index }}</p></td>
+        <td style="text-align: left;"><p>{{ item.description }}</p></td>
+        <td><p>{{ item.hsn_sac_code }}</p></td>
+        <td><p>{{ item.quantity }}</p></td>
+        <td><p>{{ item.rate }}</p></td>
+        <td><p>{{ item.amount }}</p></td>
+    </tr>
+    {% endfor %}
+    <tr>
+        <td colspan="3"></td>
+        <td></td> <!-- Empty cell to maintain alignment -->
+        <td style="text-align: center;"><h4>Subtotal</h4></td>
+        <td><h4>{{ invoice.subtotal }}</h4></td>
+    </tr>
+</tbody>
+
+</table>
+
+<table class="container1">
+    <tbody>
+        <tr>
+            <td colspan="4" style="text-align: right;"><p>SGST ({{ invoice.sgst_rate }}%)</p></td>
+            <td><p>{{ (invoice.subtotal * invoice.sgst_rate) / 100 }}</p></td>
+        </tr>
+        <tr>
+            <td colspan="4" style="text-align: right;"><p>CGST ({{ invoice.cgst_rate }}%)</p></td>
+            <td><p>{{ (invoice.subtotal * invoice.cgst_rate) / 100 }}</p></td>
+        </tr>
+        <tr>
+            <td colspan="4" style="text-align: right;"><p>IGST ({{ invoice.igst_rate }}%)</p></td>
+            <td><p>{{ (invoice.subtotal * invoice.igst_rate) / 100 }}</p></td>
+        </tr>
+        <tr>
+            <td colspan="4" style="text-align: right;"><p></p><h4>Tax</h4></td>
+            <td><p><h4>{{ invoice.total_tax }}</h4></p></td>
+        </tr>
+        <tr>
+            <td colspan="4" style="text-align: right;"><p></p><h4>Total</h4></td>
+            <td><p><h4>{{ invoice.total_amount }}</h4></p></td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="container2" style="padding-top:5px; padding-bottom:5px">
+    <div class="row">
+        <div class="column">
+            <h1>Payment Options</h1>
+            <p><strong>Bank Account Name:</strong> JAIKALKI TECHNOLOGY PRIVATE LIMITED</p>
+            <p><strong>Account Number:</strong> 200002778159</p>
+            <p><strong>Bank Name:</strong> Equitas Small Finance Bank</p>
+            <p><strong>IFSC Code:</strong> ESFB0009154</p>
+        </div>
+    </div>
+</div>
+
+<h3 style="text-align: center;">*This is a computer-generated receipt. No signature required.</h3>
+
+{% endblock %}

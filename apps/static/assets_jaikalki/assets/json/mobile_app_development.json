@@ -1,0 +1,61 @@
+{
+  "about": {
+    "meta": "ABOUT JAIKALKI TECHNOLOGY PVT LTD - MOBILE APP DEVELOPMENT SERVICES",
+    "title": "Building Dynamic Mobile Apps with Database Integration and Admin Panels",
+    "description1": "At Jaikalki Technology Pvt Ltd, we specialize in developing dynamic mobile applications that are powerful, scalable, and user-centric. Our journey began with a focus on providing robust mobile solutions, and today, we are proud to offer fully integrated mobile app development services, including real-time database integration and intuitive admin panels.",
+    "description2": "In March 2023, we expanded our expertise to develop mobile apps that seamlessly interact with back-end databases, ensuring dynamic content management and real-time data updates. Our mobile apps come equipped with integrated admin panels, giving you full control over the app's content and user management.",
+    "description3": "Our team focuses on building mobile apps that are not only functionally rich but also provide an exceptional user experience. We strive to create apps that meet the unique needs of your business, ensuring seamless performance and user engagement.",
+    "features": [
+      {
+        "name": "Dynamic Mobile App Development",
+        "description": "We build mobile apps with real-time data integration and dynamic functionality, offering an engaging user experience."
+      },
+      {
+        "name": "Database-Driven Apps",
+        "description": "Our apps are powered by databases, allowing for efficient data storage, retrieval, and management in real time."
+      },
+      {
+        "name": "Admin Panel Integration",
+        "description": "We integrate user-friendly admin panels, allowing businesses to manage app content, user data, and app performance effortlessly."
+      }
+    ]
+  },
+  "features": {
+    "title": "Why Choose Jaikalki Technology Pvt Ltd for Mobile App Development",
+    "subtitle": "Empower your business with our dynamic, scalable, and user-friendly mobile app solutions.",
+    "leftColumn": [
+      {
+        "title": "Custom Mobile App Solutions",
+        "description": "We offer tailor-made mobile apps that align with your business goals and provide real-time interactivity.",
+        "icon": "bi-phone"
+      },
+      {
+        "title": "Seamless Database Integration",
+        "description": "Our apps are powered by integrated databases, ensuring real-time data synchronization and seamless performance.",
+        "icon": "bi-database"
+      },
+      {
+        "title": "User-Friendly Admin Panels",
+        "description": "Our intuitive admin panels give you complete control over content, user management, and app performance.",
+        "icon": "bi-house-door"
+      }
+    ],
+    "rightColumn": [
+      {
+        "title": "Real-Time Data Updates",
+        "description": "Our mobile apps offer real-time data updates, ensuring your users always see the latest content and information.",
+        "icon": "bi-clock"
+      },
+      {
+        "title": "High-Performance Apps",
+        "description": "We develop fast, responsive apps that offer a smooth user experience, regardless of the device or platform.",
+        "icon": "bi-speedometer"
+      },
+      {
+        "title": "Scalable & Flexible Solutions",
+        "description": "Our mobile apps are designed to scale with your business, adapting to new features and functionalities as your needs grow.",
+        "icon": "bi-arrow-repeat"
+      }
+    ]
+  }
+}

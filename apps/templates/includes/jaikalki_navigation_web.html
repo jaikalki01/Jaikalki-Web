@@ -1,0 +1,116 @@
+<header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+        <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+            <!-- Uncomment the line below if you also wish to use an image logo -->
+            <img src="{{ config.JAIKALKI_ROOT}}/assets/img/Jaikalki_transparent_Logo.gif"
+                 alt="Jaikalki Technology Logo">
+
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+            <ul>
+                <li><a href="/index.html" class="{% if 'index' in segment %} active {% endif %}">Home</a></li>
+                <li><a href="/about.html" class="{% if 'about' in segment %} active {% endif %}">About</a></li>
+
+                <li class="dropdown">
+                    <a href="/services.html"
+                       class="{% if 'Pay-In-Solution' in segment or 'Pay-Out-Solution' in segment or 'Relation-Officer' in segment or'Graphic-Design' in segment or 'SEO-Audit' in segment or'Domestic-Local-SEO' in segment or 'Internation-SEO' in segment or 'Link-Building' in segment or 'Jaikalki-Research' in segment or 'services' in segment or 'WebTech' in segment or 'RankBoost' in segment or 'GurutvaPay' in segment or 'Web-Design' in segment or 'Web-Development' in segment or 'Mobile-App-Development' in segment or 'API-Integration' in segment or 'Rest-API-Construction' in segment or 'website_in_24hrs' in segment %} active {% endif %}">
+                        <span>Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i>
+                    </a>
+                    <ul>
+                        <li class="dropdown">
+                            <a href="/services/GurutvaPay.html"
+                               class="{% if 'GurutvaPay' in segment or 'Pay-In-Solution' in segment or 'Pay-Out-Solution' in segment or 'Relation-Officer' in segment %} active {% endif %}">
+                                <span>Gurutvapay</span> <i class="bi bi-chevron-down toggle-dropdown"></i>
+                            </a>
+                            <ul>
+                                <li><a href="/services/GurutvaPay/Pay-In-Solution.html"
+                                       class="{% if 'Pay-In-Solution' in segment %} active {% endif %}">Pay-In
+                                    Solution</a></li>
+                                <li><a href="/services/GurutvaPay/Pay-Out-Solution.html"
+                                       class="{% if 'Pay-Out-Solution' in segment %} active {% endif %}">Pay-Out
+                                    Solution</a></li>
+                                <li><a href="/services/GurutvaPay/Relation-Officer.html"
+                                       class="{% if 'Relation-Officer' in segment %} active {% endif %}">Relationship
+                                    Officer</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="/services/WebTech.html"
+                               class="{% if 'WebTech' in segment or 'Web-Design' in segment or 'Web-Development' in segment or 'Mobile-App-Development' in segment or 'API-Integration' in segment or 'Rest-API-Construction' in segment or 'website_in_24hrs' in segment %} active {% endif %}">
+                                <span>WebTech</span> <i class="bi bi-chevron-down toggle-dropdown"></i>
+                            </a>
+                            <ul>
+                                <li><a href="/services/WebTech/Web-Design.html"
+                                       class="{% if 'Web-Design' in segment %} active {% endif %}">Web Design</a></li>
+                                <li><a href="/services/WebTech/Web-Development.html"
+                                       class="{% if 'Web-Development' in segment %} active {% endif %}">Web
+                                    Development</a></li>
+                                <li><a href="/services/WebTech/Mobile-App-Development.html"
+                                       class="{% if 'Mobile-App-Development' in segment %} active {% endif %}">Mobile
+                                    App Development</a></li>
+                                <li><a href="/services/WebTech/API-Integration.html"
+                                       class="{% if 'API-Integration' in segment %} active {% endif %}">API
+                                    Integration</a></li>
+                                <li><a href="/services/WebTech/Rest-API- Construction.html"
+                                       class="{% if 'Rest-API-Construction' in segment %} active {% endif %}">Rest API
+                                    Construction</a></li>
+                                <li><a href="/services/WebTech/website_in_24hrs.html"
+                                       class="{% if 'website_in_24hrs' in segment %} active {% endif %}">WEBSITE IN 24
+                                    Hrs.</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="/services/RankBoost.html"
+                               class="{% if 'RankBoost' in segment or 'Jaikalki-Research' in segment or 'Link-Building' in segment or 'Internation-SEO' in segment or 'Domestic-Local-SEO' in segment or 'SEO-Audit' in segment or 'Graphic-Design' in segment %} active {% endif %}">
+                                <span>Rank Boost</span> <i class="bi bi-chevron-down toggle-dropdown"></i>
+                            </a>
+                            <ul>
+                                <li><a href="/services/RankBoost/Jaikalki-Research.html"
+                                       class="{% if 'Jaikalki-Research' in segment %} active {% endif %}">Jaikalki
+                                    Research</a></li>
+                                <li><a href="/services/RankBoost/Link-Building.html"
+                                       class="{% if 'Link-Building' in segment %} active {% endif %}">Link Building</a>
+                                </li>
+                                <li><a href="/services/RankBoost/Internation-SEO.html"
+                                       class="{% if 'Internation-SEO' in segment %} active {% endif %}">International
+                                    SEO</a></li>
+                                <li><a href="/services/RankBoost/Domestic-Local-SEO.html"
+                                       class="{% if 'Domestic-Local-SEO' in segment %} active {% endif %}">Domestic/Local
+                                    SEO</a></li>
+                                <li><a href="/services/RankBoost/SEO-Audit.html"
+                                       class="{% if 'SEO-Audit' in segment %} active {% endif %}">SEO Audit</a></li>
+                                <li><a href="/services/RankBoost/Graphic-Design.html"
+                                       class="{% if 'Graphic-Design' in segment %} active {% endif %}">Graphic
+                                    Design</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li><a href="https://gurutvapay.com/">Gurutvapay</a></li>
+                <li class="dropdown">
+                    <a href="#"
+                       class="{% if 'terms' in segment or 'privacy' in segment or 'refund' in segment %} active {% endif %}">
+                        <span>Company</span> <i class="bi bi-chevron-down toggle-dropdown"></i>
+                    </a>
+                    <ul>
+                        <li><a href="/terms.html">Terms of Service</a></li>
+                        <li><a href="/privacy.html">Privacy Policy</a></li>
+                        <li><a href="/refund.html">Refund Policy</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="/contact.html" class="{% if 'contact' in segment %} active {% endif %}">Contact</a></li>
+<!--                <li><a href="/pricing.html" class="{% if 'pricing' in segment %} active {% endif %}">Pricing</a></li>-->
+
+            </ul>
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+<a  href="/pricing.html" class="btn-getstarted {% if 'pricing' in segment %} active {% endif %}">Pricing</a>
+<!--<a class="btn-getstarted" href="{{url_for('authentication_blueprint.login')}}">Login</a>-->
+
+    </div>
+</header>
+

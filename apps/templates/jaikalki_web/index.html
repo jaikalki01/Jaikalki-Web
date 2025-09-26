@@ -1,0 +1,863 @@
+
+{% extends "layouts/jaikalki_layout.html" %}
+
+{% block title %}
+
+<!-- Meta Information -->
+<title>Web Design, Development, and Digital Solutions - Jaikalki Technology Pvt Ltd</title>
+<meta name="description" content="Your trusted partner for web design, development, mobile apps, API integration, and digital solutions across Mumbai and Pan India.">
+<meta name="keywords" content="web design, web development, mobile app development, API integration, REST API construction, website in 24 hrs, rank boost, Jaikalki research, link building, international SEO, local SEO, SEO audit, graphic design, pay-in solution, pay-out solution, Gurutvapay DigiPayment, division-wise relation officer">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://jaikalki.com">
+
+<!-- Open Graph Meta Tags -->
+<meta property="og:site_name" content="Jaikalki Technology Pvt Ltd">
+<meta property="og:title" content="Web Design, Development, and Digital Solutions in Mumbai - Jaikalki Technology">
+<meta property="og:description" content="We provide cutting-edge web design, mobile app development, SEO, and API integration services. Elevate your business with Jaikalki Technology Pvt Ltd.">
+<meta property="og:image" content="https://jaikalki.com/static/assets_jaikalki/assets/img/home-og-img.jpg">
+<meta property="og:url" content="https://jaikalki.com">
+<meta property="og:type" content="website">
+
+<!-- Twitter Card Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@JaikalkiTech">
+<meta name="twitter:title" content="Web Design, Development, and Digital Solutions - Jaikalki Technology Pvt Ltd">
+<meta name="twitter:description" content="Boost your online presence with Jaikalki Technology Pvt Ltd. We offer web design, development, mobile apps, SEO, and API services across Mumbai and Pan India.">
+<meta name="twitter:image" content="https://jaikalki.com/static/assets_jaikalki/assets/img/jaikalki_banner.jpg">
+
+{% endblock title %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}
+<style>
+    @keyframes slide {
+        from { transform: translateX(0); }
+        to { transform: translateX(-50%); } /* Move by half so it looks continuous */
+    }
+</style>
+
+{% endblock stylesheets %}
+
+{% block content %}
+
+
+  <main class="main">
+
+  <!-- Hero Section -->
+<section id="hero" class="hero section">
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <div class="hero-content" data-aos="fade-up" data-aos-delay="200">
+          <div class="company-badge mb-4">
+            <i class="bi bi-gear-fill me-2"></i>
+            Driving Digital Success, One Solution at a Time
+          </div>
+
+          <h1 class="mb-4">
+            Welcome to <br>
+            <span class="accent-text">Jaikalki Technology Pvt Ltd</span>
+          </h1>
+
+          <p class="mb-4 mb-md-5">
+            Innovating with purpose to empower businesses! We specialize in Web Development, SEO, API Services, and Payment Solutions. Let’s build your future together.
+          </p>
+
+          <ul class="list-unstyled mb-4">
+            <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Responsive Web Design in 24 Hours</li>
+            <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Seamless Pay-IN and Pay-OUT Solutions</li>
+            <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Advanced SEO and Rank Boost Services</li>
+            <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Robust API Integration and Development</li>
+          </ul>
+
+          <div class="hero-buttons">
+            <a href="#about" class="btn btn-primary me-0 me-sm-2 mx-1">Learn More</a>
+            <a href="#services" class="btn btn-link mt-2 mt-sm-0">
+              <i class="bi bi-grid-3x3-gap-fill me-1"></i>
+              Explore Services
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="hero-image" data-aos="zoom-out" data-aos-delay="300">
+          <img src="{{ config.JAIKALKI_ROOT}}/assets/img/jaikalki_banner.jpg" style="border: 2px solid white; border-radius: 5%" alt="Jaikalki Technology" class="img-fluid">
+        </div>
+      </div>
+    </div>
+
+    <div class="row stats-row gy-4 mt-5" data-aos="fade-up" data-aos-delay="500">
+      <div class="col-lg-3 col-md-6">
+        <div class="stat-item">
+          <div class="stat-icon">
+            <i class="bi bi-trophy"></i>
+          </div>
+          <div class="stat-content">
+            <h4>3+ Years of Expertise</h4>
+            <p class="mb-0">Shaping digital transformation</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="stat-item">
+          <div class="stat-icon">
+            <i class="bi bi-briefcase"></i>
+          </div>
+          <div class="stat-content">
+            <h4>600+ Successful Projects</h4>
+            <p class="mb-0">Bringing ideas to life</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="stat-item">
+          <div class="stat-icon">
+            <i class="bi bi-graph-up"></i>
+          </div>
+          <div class="stat-content">
+            <h4>21+ Skilled Experts</h4>
+            <p class="mb-0">Committed to your growth</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="stat-item">
+          <div class="stat-icon">
+            <i class="bi bi-award"></i>
+          </div>
+          <div class="stat-content">
+            <h4>5+ Industry Awards</h4>
+            <p class="mb-0">Recognized for excellence</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+    <!-- About Section -->
+ <section id="about" class="about section">
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+    <div class="row gy-4 align-items-center justify-content-between">
+
+      <div class="col-xl-5" data-aos="fade-up" data-aos-delay="200">
+        <span class="about-meta">ABOUT JAIKALKI TECHNOLOGY PVT LTD</span>
+        <h2 class="about-title">A Journey of Innovation and Growth</h2>
+        <p class="about-description">
+          Every great journey begins with a small step. For Jaikalki Technology, that step was taken two years ago as a proprietorship specializing in web development. In March 2023, driven by passion and dedication, we transitioned into Jaikalki Technology Pvt Ltd, a powerhouse offering a diverse range of IT services.
+        </p>
+        <p class="about-description">
+          From our humble beginnings as freelancers to a thriving Private Limited entity, we have consistently delivered innovative solutions to meet the unique demands of our clients. Today, Jaikalki Technology Pvt Ltd is proud to offer three specialized divisions:
+        </p>
+
+        <ul class="feature-list">
+          <li><i class="bi bi-check-circle-fill"></i> <strong>WebTech</strong> – Redefining digital presence with cutting-edge web solutions.</li>
+          <li><i class="bi bi-check-circle-fill"></i> <strong>Rank Boost</strong> – Elevating brands with top-notch SEO strategies and digital marketing.</li>
+          <li><i class="bi bi-check-circle-fill"></i> <strong>Gurutvapay DigiPayment</strong> – Simplifying financial transactions for businesses with seamless payment solutions.</li>
+        </ul>
+
+        <p class="about-description">
+          At Jaikalki Technology Pvt Ltd, we treat our clients like family, prioritizing long-term relationships and delivering superior solutions that drive growth.
+        </p>
+      </div>
+
+      <div class="col-xl-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="image-wrapper">
+          <div class="images position-relative" data-aos="zoom-out" data-aos-delay="400">
+            <img src="{{ config.JAIKALKI_ROOT}}/assets/img/about_jaikalki.jpg" alt="Business Meeting" class="img-fluid main-image rounded-4">
+            <img src="{{ config.JAIKALKI_ROOT}}/assets/img/about2_jaikalki.jpg" alt="Team Discussion" class="img-fluid small-image rounded-4">
+          </div>
+          <div class="experience-badge floating">
+            <h3>2+ <span>Years</span></h3>
+            <p>Of innovation and excellence</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+    <!-- /About Section -->
+
+ <!-- Features Section -->
+<section id="features" class="features section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Our Services & Offers</h2>
+    <p>Delivering innovative technology solutions that empower businesses and simplify lives.</p>
+  </div><!-- End Section Title -->
+
+  <div class="container">
+
+    <div class="d-flex justify-content-center">
+
+      <ul class="nav nav-tabs" data-aos="fade-up" data-aos-delay="100">
+         <li class="nav-item">
+          <a class="nav-link  active show" data-bs-toggle="tab" data-bs-target="#features-tab-3">
+            <h4>Gurutvapay</h4>
+          </a>
+        </li><!-- End tab nav item -->
+
+        <li class="nav-item">
+          <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-1">
+            <h4>WebTech</h4>
+          </a>
+        </li><!-- End tab nav item -->
+
+        <li class="nav-item">
+          <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-2">
+            <h4>Rank Boost</h4>
+          </a>
+        </li><!-- End tab nav item -->
+
+
+      </ul>
+
+    </div>
+
+    <div class="tab-content" data-aos="fade-up" data-aos-delay="200">
+
+      <div class="tab-pane fade" id="features-tab-1">
+        <div class="row">
+          <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center">
+           <a href="/services/WebTech.html"><h3>WebTech</h3></a>
+
+            <p class="fst-italic">
+              Redefining digital presence with cutting-edge web solutions tailored to meet your unique needs.
+            </p>
+            <ul>
+              <li><i class="bi bi-check2-all"></i> <span>Custom web design and development services.</span></li>
+              <li><i class="bi bi-check2-all"></i> <span>Responsive and user-friendly websites.</span></li>
+              <li><i class="bi bi-check2-all"></i> <span>Seamless integration with third-party systems.</span></li>
+            </ul>
+
+
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2 text-center">
+            <a href="/services/WebTech.html"><img src="{{ config.JAIKALKI_ROOT}}/assets/img/jaikalki_webtech.jpg" alt="WebTech Illustration" style="border: 2px solid black; border-radius: 5%" class="img-fluid rounded-4">
+            </a> </div>
+        </div>
+      </div><!-- End tab content item -->
+
+      <div class="tab-pane fade" id="features-tab-2">
+        <div class="row">
+          <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center">
+            <a href="/services/RankBoost.html"><h3>Rank Boost</h3></a>
+
+            <p class="fst-italic">
+              Elevating brands with top-notch SEO strategies and innovative digital marketing solutions.
+            </p>
+            <ul>
+              <li><i class="bi bi-check2-all"></i> <span>Data-driven SEO strategies to improve search rankings.</span></li>
+              <li><i class="bi bi-check2-all"></i> <span>Comprehensive digital marketing campaigns.</span></li>
+              <li><i class="bi bi-check2-all"></i> <span>Boosting online visibility and audience engagement.</span></li>
+            </ul>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2 text-center">
+            <a href="/services/RankBoost.html"> <img src="{{ config.JAIKALKI_ROOT}}/assets/img/jaikalki_rankboost.jpg" alt="Rank Boost Illustration" style="border: 2px solid black; border-radius: 5%" class="img-fluid">
+            </a></div>
+        </div>
+      </div><!-- End tab content item -->
+
+      <div class="tab-pane fade  active show" id="features-tab-3">
+        <div class="row">
+          <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center">
+            <a href="https://jaikalki.com/services/GurutvaPay.html"> <h3>Gurutvapay</h3></a>
+
+                   <p class="fst-italic">
+  At Gurutvapay , a division of Jaikalki Technology Pvt Ltd, we revolutionize the way businesses manage payments by providing seamless, secure Pay-In solutions. Through our strategic collaborations with multiple banks and PAPG companies, we enable businesses to easily acquire Merchant IDs (MIDs) and offer fast, reliable, and scalable payment processing solutions.
+</p>
+<ul>
+  <li><i class="bi bi-check2-all"></i> <span>Advanced, secure, and highly reliable Pay-In payment processing systems, designed to ensure fast, efficient, and secure transactions for businesses across all industries.</span></li>
+  <li><i class="bi bi-check2-all"></i> <span>Customizable Pay-In solutions tailored to meet the unique needs of businesses in various sectors, ensuring flexibility and scalability in payment processing.</span></li>
+  <li><i class="bi bi-check2-all"></i> <span>Effortless merchant onboarding and integration, leveraging our partnerships with leading banks and PAPG companies to streamline the process of acquiring MIDs and starting payment acceptance.</span></li>
+  <li><i class="bi bi-check2-all"></i> <span>Optimized workflows that help businesses save time, reduce errors, and enhance the overall customer payment experience through automated and streamlined processes.</span></li>
+  <li><i class="bi bi-check2-all"></i> <span>Comprehensive reporting and analytics tools that allow businesses to track their payment transactions, monitor performance, and make data-driven decisions with ease.</span></li>
+  <li><i class="bi bi-check2-all"></i> <span>24/7 customer support and expert assistance to guide businesses through every step of the Pay-In process, from onboarding to transaction management and troubleshooting.</span></li>
+</ul>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2 text-center">
+             <a href="https://jaikalki.com/services/GurutvaPay.html"> <img src="{{ config.JAIKALKI_ROOT}}/assets/img/jaikalki_digipayment.jpg" alt="Gurutvapay DigiPayment Illustration" style="border: 2px solid black; border-radius: 5%" class="img-fluid">
+             </a> </div>
+        </div>
+      </div><!-- End tab content item -->
+
+    </div>
+
+  </div>
+
+</section><!-- /Features Section -->
+
+<!-- Features 2 Section -->
+<section id="features-2" class="features-2 section">
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+    <!-- Section Title -->
+    <div class="section-title text-center" data-aos="fade-up" data-aos-delay="100">
+      <h2>Why Choose Jaikalki Technology Pvt Ltd</h2>
+      <p>Unlock the potential of your business with our innovative, reliable, and client-focused technology solutions.</p>
+    </div><!-- End Section Title -->
+
+    <div class="row align-items-center">
+
+      <div class="col-lg-4">
+
+        <div class="feature-item text-end mb-5" data-aos="fade-right" data-aos-delay="200">
+          <div class="d-flex align-items-center justify-content-end gap-4">
+            <div class="feature-content">
+              <h3>Industry Expertise</h3>
+              <p>With years of experience, we offer deep insights and tailored solutions to meet diverse industry needs effectively.</p>
+            </div>
+            <div class="feature-icon flex-shrink-0">
+              <i class="bi bi-lightbulb"></i>
+            </div>
+          </div>
+        </div><!-- End .feature-item -->
+
+        <div class="feature-item text-end mb-5" data-aos="fade-right" data-aos-delay="300">
+          <div class="d-flex align-items-center justify-content-end gap-4">
+            <div class="feature-content">
+              <h3>Client-Centric Approach</h3>
+              <p>We prioritize our clients' goals, delivering personalized support and solutions that align perfectly with their vision.</p>
+            </div>
+            <div class="feature-icon flex-shrink-0">
+              <i class="bi bi-people"></i>
+            </div>
+          </div>
+        </div><!-- End .feature-item -->
+
+        <div class="feature-item text-end" data-aos="fade-right" data-aos-delay="400">
+          <div class="d-flex align-items-center justify-content-end gap-4">
+            <div class="feature-content">
+              <h3>Innovative Solutions</h3>
+              <p>We leverage the latest technologies to create cutting-edge solutions that drive growth and competitiveness.</p>
+            </div>
+            <div class="feature-icon flex-shrink-0">
+              <i class="bi bi-gear"></i>
+            </div>
+          </div>
+        </div><!-- End .feature-item -->
+
+      </div>
+
+      <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+        <div class="phone-mockup text-center">
+          <img src="{{ config.JAIKALKI_ROOT}}/assets/img/jaikalki_choice.jpg" style="border: 2px solid white; border-radius: 5%" alt="Phone Mockup" class="img-fluid">
+        </div>
+      </div><!-- End Phone Mockup -->
+
+      <div class="col-lg-4">
+
+        <div class="feature-item mb-5" data-aos="fade-left" data-aos-delay="200">
+          <div class="d-flex align-items-center gap-4">
+            <div class="feature-icon flex-shrink-0">
+              <i class="bi bi-shield"></i>
+            </div>
+            <div class="feature-content">
+              <h3>Data Security</h3>
+              <p>Our robust security measures ensure the confidentiality and integrity of your business data at every step.</p>
+            </div>
+          </div>
+        </div><!-- End .feature-item -->
+
+        <div class="feature-item mb-5" data-aos="fade-left" data-aos-delay="300">
+          <div class="d-flex align-items-center gap-4">
+            <div class="feature-icon flex-shrink-0">
+              <i class="bi bi-speedometer2"></i>
+            </div>
+            <div class="feature-content">
+              <h3>Efficient Performance</h3>
+              <p>We deliver high-performance solutions that maximize efficiency and productivity for your business operations.</p>
+            </div>
+          </div>
+        </div><!-- End .feature-item -->
+
+        <div class="feature-item" data-aos="fade-left" data-aos-delay="400">
+          <div class="d-flex align-items-center gap-4">
+            <div class="feature-icon flex-shrink-0">
+              <i class="bi bi-trophy"></i>
+            </div>
+            <div class="feature-content">
+              <h3>Proven Track Record</h3>
+              <p>Our success stories and long-term partnerships speak volumes about our dedication and capability to deliver results.</p>
+            </div>
+          </div>
+        </div><!-- End .feature-item -->
+
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- /Features 2 Section -->
+
+<!-- Features Cards Section -->
+<section id="features-cards" class="features-cards section">
+
+  <div class="container">
+
+    <!-- Section Title -->
+    <div class="section-title" data-aos="fade-up">
+      <h2>Why Choose Jaikalki for Its Services</h2>
+      <p>Discover the exceptional qualities that make Jaikalki Technology Pvt Ltd your trusted partner in innovation, growth, and success.</p>
+    </div><!-- End Section Title -->
+
+    <div class="row gy-4">
+
+      <div class="col-xl-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+        <div class="feature-box orange">
+          <i class="bi bi-award"></i>
+          <h4>WebTech</h4>
+          <p>Delivering innovative and tailored web solutions to create a powerful digital presence for your business.</p>
+        </div>
+      </div><!-- End Feature Box -->
+
+      <div class="col-xl-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+        <div class="feature-box blue">
+          <i class="bi bi-patch-check"></i>
+          <h4>Rank Boost</h4>
+          <p>Transforming your online visibility with expert SEO strategies and result-driven digital marketing services.</p>
+        </div>
+      </div><!-- End Feature Box -->
+
+      <div class="col-xl-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+        <div class="feature-box green">
+          <i class="bi bi-sunrise"></i>
+          <h4>Gurutvapay DigiPayment</h4>
+          <p>Streamlining business transactions with seamless, secure, and efficient payment solutions tailored for your needs.</p>
+        </div>
+      </div><!-- End Feature Box -->
+
+      <div class="col-xl-3 col-md-6" data-aos="zoom-in" data-aos-delay="400">
+        <div class="feature-box red">
+          <i class="bi bi-shield-check"></i>
+          <h4>Client-Centric Approach</h4>
+          <p>We prioritize building long-term relationships by delivering exceptional services and personalized support.</p>
+        </div>
+      </div><!-- End Feature Box -->
+
+    </div>
+
+  </div>
+
+</section><!-- /Features Cards Section -->
+
+  <!-- Call To Action Section -->
+<section id="call-to-action" class="call-to-action section">
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="row content justify-content-center align-items-center position-relative">
+      <div class="col-lg-8 mx-auto text-center">
+        <h2 class="display-4 mb-4">LET'S COLLABORATE!</h2>
+        <p class="mb-4">Your website is the tireless salesperson that works round the clock, even when you rest. We are eager to understand and fulfill your requirements.</p>
+        <a href="https://wa.me/919136914963?text=Hi,%20I%20would%20like%20to%20request%20a%20call%20to%20discuss%20my%20requirements." target="_blank" class="btn btn-cta">Request A Call</a>
+      </div>
+
+      <!-- Abstract Background Elements -->
+      <div class="shape shape-1">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <path d="M47.1,-57.1C59.9,-45.6,68.5,-28.9,71.4,-10.9C74.2,7.1,71.3,26.3,61.5,41.1C51.7,55.9,35,66.2,16.9,69.2C-1.3,72.2,-21,67.8,-36.9,57.9C-52.8,48,-64.9,32.6,-69.1,15.1C-73.3,-2.4,-69.5,-22,-59.4,-37.1C-49.3,-52.2,-32.8,-62.9,-15.7,-64.9C1.5,-67,34.3,-68.5,47.1,-57.1Z" transform="translate(100 100)"></path>
+        </svg>
+      </div>
+
+      <div class="shape shape-2">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <path d="M41.3,-49.1C54.4,-39.3,66.6,-27.2,71.1,-12.1C75.6,3,72.4,20.9,63.3,34.4C54.2,47.9,39.2,56.9,23.2,62.3C7.1,67.7,-10,69.4,-24.8,64.1C-39.7,58.8,-52.3,46.5,-60.1,31.5C-67.9,16.4,-70.9,-1.4,-66.3,-16.6C-61.8,-31.8,-49.7,-44.3,-36.3,-54C-22.9,-63.7,-8.2,-70.6,3.6,-75.1C15.4,-79.6,28.2,-58.9,41.3,-49.1Z" transform="translate(100 100)"></path>
+        </svg>
+      </div>
+
+      <!-- Dot Pattern Groups -->
+      <div class="dots dots-1">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <pattern id="dot-pattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+            <circle cx="2" cy="2" r="2" fill="currentColor"></circle>
+          </pattern>
+          <rect width="100" height="100" fill="url(#dot-pattern)"></rect>
+        </svg>
+      </div>
+
+      <div class="dots dots-2">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <pattern id="dot-pattern-2" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+            <circle cx="2" cy="2" r="2" fill="currentColor"></circle>
+          </pattern>
+          <rect width="100" height="100" fill="url(#dot-pattern-2)"></rect>
+        </svg>
+      </div>
+
+      <div class="shape shape-3">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <path d="M43.3,-57.1C57.4,-46.5,71.1,-32.6,75.3,-16.2C79.5,0.2,74.2,19.1,65.1,35.3C56,51.5,43.1,65,27.4,71.7C11.7,78.4,-6.8,78.3,-23.9,72.4C-41,66.5,-56.7,54.8,-65.4,39.2C-74.1,23.6,-75.8,4,-71.7,-13.2C-67.6,-30.4,-57.7,-45.2,-44.3,-56.1C-30.9,-67,-15.5,-74,0.7,-74.9C16.8,-75.8,33.7,-70.7,43.3,-57.1Z" transform="translate(100 100)"></path>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+   <section id="services" class="services section light-background">
+
+  <!-- Section Title for Services -->
+<div class="container section-title" data-aos="fade-up">
+  <h2>Our Services</h2>
+  <p>Innovative technology solutions tailored to drive your business forward</p>
+</div><!-- End Section Title -->
+<div class="container section-title" data-aos="fade-up">
+  <a href="https://jaikalki.com/services/GurutvaPay.html"> <h2>Gurutvapay DigiPayment</h2></a>
+</div><!-- End Gurutvapay DigiPayment Title -->
+
+<div class="container mb-4" data-aos="fade-up" data-aos-delay="100">
+  <div class="row g-4">
+    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+      <div class="service-card d-flex">
+        <div class="icon flex-shrink-0">
+          <i class="bi bi-credit-card"></i>
+        </div>
+        <div>
+          <h3>Pay-In Solution</h3>
+          <p>Revolutionizing payment acceptance for businesses with seamless integration across multiple platforms, powered by our strategic connections with leading banks and PAPG companies to provide MIDs to merchants.</p>
+          <a href="https://jaikalki.com/services/GurutvaPay/Pay-In-Solution.html" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+      <div class="service-card d-flex">
+        <div class="icon flex-shrink-0">
+          <i class="bi bi-wallet"></i>
+        </div>
+        <div>
+          <h3>Pay-Out Solution</h3>
+          <p>Efficient and secure disbursements, ensuring fast and reliable payouts to stakeholders, integrated with advanced banking systems for enhanced speed and security.</p>
+          <a href="https://jaikalki.com/services/GurutvaPay/Pay-Out-Solution.html" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+      <div class="service-card d-flex">
+        <div class="icon flex-shrink-0">
+          <i class="bi bi-person"></i>
+        </div>
+        <div>
+          <h3>Relationship Officer</h3>
+          <p>Experience personalized assistance with expert guidance for smooth service integration. Our team helps businesses efficiently navigate the process of acquiring MIDs and integrating payment solutions.</p>
+          <a href="https://jaikalki.com/services/GurutvaPay/Relation-Officer.html" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!-- End Gurutvapay DigiPayment Section -->
+
+<!-- Web Tech Section -->
+<div class="container section-title" data-aos="fade-up">
+  <a href="/services/WebTech.html"><h2>WebTech</h2></a>
+</div><!-- End Web Tech Title -->
+
+<div class="container mb-4" data-aos="fade-up" data-aos-delay="100">
+  <div class="row g-4">
+    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+      <div class="service-card d-flex">
+        <div class="icon flex-shrink-0">
+          <i class="bi bi-laptop"></i>
+        </div>
+        <div>
+          <h3>Web Design</h3>
+          <p>Eye-catching, responsive designs that captivate your audience.</p>
+          <a href="/services/WebTech/Web-Design.html" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+      <div class="service-card d-flex">
+        <div class="icon flex-shrink-0">
+          <i class="bi bi-laptop"></i>
+        </div>
+        <div>
+          <h3>Web Development</h3>
+          <p>Robust, scalable websites tailored to your business needs.</p>
+          <a href="/services/WebTech/Web-Development.html" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+      <div class="service-card d-flex">
+        <div class="icon flex-shrink-0">
+          <i class="bi bi-phone"></i>
+        </div>
+        <div>
+          <h3>Mobile App Development</h3>
+          <p>Innovative apps with seamless user experiences.</p>
+          <a href="/services/WebTech/Mobile-App-Development.html" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+      <div class="service-card d-flex">
+        <div class="icon flex-shrink-0">
+          <i class="bi bi-shield-check"></i>
+        </div>
+        <div>
+          <h3>API Integration</h3>
+          <p>Ensuring smooth connectivity between systems.</p>
+          <a href="/services/WebTech/API-Integration.html" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="500">
+      <div class="service-card d-flex">
+        <div class="icon flex-shrink-0">
+          <i class="bi bi-shield-check"></i>
+        </div>
+        <div>
+          <h3>REST API Construction</h3>
+          <p>Custom APIs for optimized performance and security.</p>
+          <a href="/services/WebTech/Rest-API- Construction.html" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="600">
+      <div class="service-card d-flex">
+        <div class="icon flex-shrink-0">
+          <i class="bi bi-clock"></i>
+        </div>
+        <div>
+          <h3>Website in 24 Hours</h3>
+          <p>Need a website urgently? We’ve got you covered!</p>
+          <a href="/services/WebTech/website_in_24hrs.html" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!-- End Web Tech Section -->
+
+<!-- Rank Boost Section -->
+<div class="container section-title" data-aos="fade-up">
+  <a href="/services/RankBoost.html"><h2>Rank Boost</h2></a>
+</div><!-- End Rank Boost Title -->
+
+<div class="container mb-4" data-aos="fade-up" data-aos-delay="100">
+  <div class="row g-4">
+    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+      <div class="service-card d-flex">
+        <div class="icon flex-shrink-0">
+          <i class="bi bi-graph-up"></i>
+        </div>
+        <div>
+          <h3>Jaikalki Research</h3>
+          <p>In-depth analysis to identify opportunities for growth.</p>
+          <a href="/services/RankBoost/Jaikalki-Research.html" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+      <div class="service-card d-flex">
+        <div class="icon flex-shrink-0">
+          <i class="bi bi-link-45deg"></i>
+        </div>
+        <div>
+          <h3>Link Building</h3>
+          <p>High-quality backlinks to improve search engine rankings.</p>
+          <a href="/services/RankBoost/Link-Building.html" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+      <div class="service-card d-flex">
+        <div class="icon flex-shrink-0">
+          <i class="bi bi-globe"></i>
+        </div>
+        <div>
+          <h3>International SEO</h3>
+          <p>Expand your reach globally with targeted strategies.</p>
+          <a href="/services/RankBoost/Internation-SEO.html" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+      <div class="service-card d-flex">
+        <div class="icon flex-shrink-0">
+          <i class="bi bi-search"></i>
+        </div>
+        <div>
+          <h3>Domestic/Local SEO</h3>
+          <p>Dominate local search results and attract nearby customers.</p>
+          <a href="/services/RankBoost/Domestic-Local-SEO.html" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="500">
+      <div class="service-card d-flex">
+        <div class="icon flex-shrink-0">
+          <i class="bi bi-pie-chart"></i>
+        </div>
+        <div>
+          <h3>SEO Audit</h3>
+          <p>Comprehensive audits to optimize your website’s performance.</p>
+          <a href="/services/RankBoost/SEO-Audit.html" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="600">
+      <div class="service-card d-flex">
+        <div class="icon flex-shrink-0">
+          <i class="bi bi-image"></i>
+        </div>
+        <div>
+          <h3>Graphic Design</h3>
+          <p>Visual content that captures attention and tells your story.</p>
+          <a href="/services/RankBoost/Graphic-Design.html" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!-- End Rank Boost Section -->
+
+
+</section><!-- /Services Section -->
+
+    <!--Slider Section -->
+  <section class="py-5">
+    <div class=" text-center">
+        <h2 class="mb-4">Our Business Partners</h2>
+        <div style="width: 100%; overflow: hidden; position: relative;">
+            <div class="faq-item faq-active" style="
+                display: flex;
+                width: max-content;
+                animation: slide 10s linear infinite;"
+            >
+                <!-- Logos (Duplicated for seamless infinite effect) -->
+                <img src="{{ config.JAIKALKI_ROOT}}/assets/img/logo/airpay-text.svg" style="width: 150px; height: 80px; object-fit: contain; margin: 0 15px;" alt="Image 1">
+              <img src="{{ config.JAIKALKI_ROOT}}/assets/img/logo/Bharti_Airtel_Logo.svg.png" style="width: 150px; height: 80px; object-fit: contain; margin: 0 15px;" alt="Image 3">
+              <img src="{{ config.JAIKALKI_ROOT}}/assets/img/logo/apE2tIqb1SpkFBcRkZky8sCio.gif" style="width: 150px; height: 80px; object-fit: contain; margin: 0 15px;" alt="Image 2">
+                <img src="{{ config.JAIKALKI_ROOT}}/assets/img/logo/phonepay.svg" style="width: 150px; height: 80px; object-fit: contain; margin: 0 15px;" alt="Image 5">
+                <img src="{{ config.JAIKALKI_ROOT}}/assets/img/logo/Reliance_Jio_Logo.svg.webp" style="width: 150px; height: 80px; object-fit: contain; margin: 0 15px;" alt="Image 6">
+
+                <!-- Duplicate logos to create a seamless loop -->
+                <img src="{{ config.JAIKALKI_ROOT}}/assets/img/logo/airpay-text.svg" style="width: 150px; height: 80px; object-fit: contain; margin: 0 15px;" alt="Image 1">
+              <img src="{{ config.JAIKALKI_ROOT}}/assets/img/logo/Bharti_Airtel_Logo.svg.png" style="width: 150px; height: 80px; object-fit: contain; margin: 0 15px;" alt="Image 3">
+              <img src="{{ config.JAIKALKI_ROOT}}/assets/img/logo/apE2tIqb1SpkFBcRkZky8sCio.gif" style="width: 150px; height: 80px; object-fit: contain; margin: 0 15px;" alt="Image 2">
+                <img src="{{ config.JAIKALKI_ROOT}}/assets/img/logo/phonepay.svg" style="width: 150px; height: 80px; object-fit: contain; margin: 0 15px;" alt="Image 5">
+                <img src="{{ config.JAIKALKI_ROOT}}/assets/img/logo/Reliance_Jio_Logo.svg.webp" style="width: 150px; height: 80px; object-fit: contain; margin: 0 15px;" alt="Image 6">
+
+                              <!-- Duplicate logos to create a seamless loop -->
+              <img src="{{ config.JAIKALKI_ROOT}}/assets/img/logo/airpay-text.svg" style="width: 150px; height: 80px; object-fit: contain; margin: 0 15px;" alt="Image 1">
+              <img src="{{ config.JAIKALKI_ROOT}}/assets/img/logo/Bharti_Airtel_Logo.svg.png" style="width: 150px; height: 80px; object-fit: contain; margin: 0 15px;" alt="Image 3">
+              <img src="{{ config.JAIKALKI_ROOT}}/assets/img/logo/apE2tIqb1SpkFBcRkZky8sCio.gif" style="width: 150px; height: 80px; object-fit: contain; margin: 0 15px;" alt="Image 2">
+                <img src="{{ config.JAIKALKI_ROOT}}/assets/img/logo/phonepay.svg" style="width: 150px; height: 80px; object-fit: contain; margin: 0 15px;" alt="Image 5">
+                <img src="{{ config.JAIKALKI_ROOT}}/assets/img/logo/Reliance_Jio_Logo.svg.webp" style="width: 150px; height: 80px; object-fit: contain; margin: 0 15px;" alt="Image 6">
+
+                              <!-- Duplicate logos to create a seamless loop -->
+              <img src="{{ config.JAIKALKI_ROOT}}/assets/img/logo/airpay-text.svg" style="width: 150px; height: 80px; object-fit: contain; margin: 0 15px;" alt="Image 1">
+              <img src="{{ config.JAIKALKI_ROOT}}/assets/img/logo/Bharti_Airtel_Logo.svg.png" style="width: 150px; height: 80px; object-fit: contain; margin: 0 15px;" alt="Image 3">
+              <img src="{{ config.JAIKALKI_ROOT}}/assets/img/logo/apE2tIqb1SpkFBcRkZky8sCio.gif" style="width: 150px; height: 80px; object-fit: contain; margin: 0 15px;" alt="Image 2">
+                <img src="{{ config.JAIKALKI_ROOT}}/assets/img/logo/phonepay.svg" style="width: 150px; height: 80px; object-fit: contain; margin: 0 15px;" alt="Image 5">
+                <img src="{{ config.JAIKALKI_ROOT}}/assets/img/logo/Reliance_Jio_Logo.svg.webp" style="width: 150px; height: 80px; object-fit: contain; margin: 0 15px;" alt="Image 6">
+
+            </div>
+        </div>
+    </div>
+</section>
+   <!-- /End Slider Section -->
+
+  <!-- Faq Section -->
+<section class="faq-9 faq section light-background" id="faq">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5" data-aos="fade-up">
+        <h2 class="faq-title">Have a question? Check out the FAQ</h2>
+        <p class="faq-description">At Jaikalki Technology Pvt Ltd, we strive to address your queries and provide insights into our cutting-edge technology solutions.</p>
+        <div class="faq-arrow d-none d-lg-block" data-aos="fade-up" data-aos-delay="200">
+          <svg class="faq-arrow" width="200" height="211" viewBox="0 0 200 211" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M198.804 194.488C189.279 189.596 179.529 185.52 169.407 182.07L169.384 182.049C169.227 181.994 169.07 181.939 168.912 181.884C166.669 181.139 165.906 184.546 167.669 185.615C174.053 189.473 182.761 191.837 189.146 195.695C156.603 195.912 119.781 196.591 91.266 179.049C62.5221 161.368 48.1094 130.695 56.934 98.891C84.5539 98.7247 112.556 84.0176 129.508 62.667C136.396 53.9724 146.193 35.1448 129.773 30.2717C114.292 25.6624 93.7109 41.8875 83.1971 51.3147C70.1109 63.039 59.63 78.433 54.2039 95.0087C52.1221 94.9842 50.0776 94.8683 48.0703 94.6608C30.1803 92.8027 11.2197 83.6338 5.44902 65.1074C-1.88449 41.5699 14.4994 19.0183 27.9202 1.56641C28.6411 0.625793 27.2862 -0.561638 26.5419 0.358501C13.4588 16.4098 -0.221091 34.5242 0.896608 56.5659C1.8218 74.6941 14.221 87.9401 30.4121 94.2058C37.7076 97.0203 45.3454 98.5003 53.0334 98.8449C47.8679 117.532 49.2961 137.487 60.7729 155.283C87.7615 197.081 139.616 201.147 184.786 201.155L174.332 206.827C172.119 208.033 174.345 211.287 176.537 210.105C182.06 207.125 187.582 204.122 193.084 201.144C193.346 201.147 195.161 199.887 195.423 199.868C197.08 198.548 193.084 201.144 195.528 199.81C196.688 199.192 197.846 198.552 199.006 197.935C200.397 197.167 200.007 195.087 198.804 194.488ZM60.8213 88.0427C67.6894 72.648 78.8538 59.1566 92.1207 49.0388C98.8475 43.9065 106.334 39.2953 114.188 36.1439C117.295 34.8947 120.798 33.6609 124.168 33.635C134.365 33.5511 136.354 42.9911 132.638 51.031C120.47 77.4222 86.8639 93.9837 58.0983 94.9666C58.8971 92.6666 59.783 90.3603 60.8213 88.0427Z" fill="currentColor"></path>
+          </svg>
+        </div>
+      </div>
+
+      <div class="col-lg-7" data-aos="fade-up" data-aos-delay="300">
+        <div class="faq-container">
+
+          <div class="faq-item faq-active">
+            <h3>What services does Jaikalki Technology Pvt Ltd provide?</h3>
+            <div class="faq-content">
+              <p>We specialize in IT consultancy, software development, cloud solutions, data analytics, and AI-driven applications tailored to meet the unique needs of businesses across various industries.</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div><!-- End Faq item-->
+
+          <div class="faq-item">
+            <h3>How can I contact Jaikalki Technology Pvt Ltd for support?</h3>
+            <div class="faq-content">
+              <p>You can reach out through our contact form on the website or email us at <strong>support@jaikalkitechnology.com</strong>. Our team is ready to assist you promptly.</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div><!-- End Faq item-->
+
+          <div class="faq-item">
+            <h3>Do you offer cloud migration services?</h3>
+            <div class="faq-content">
+              <p>Yes, we provide comprehensive cloud migration services to help businesses transition smoothly to cloud platforms, ensuring minimal disruption and maximum efficiency.</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div><!-- End Faq item-->
+
+          <div class="faq-item">
+            <h3>What industries do you cater to?</h3>
+            <div class="faq-content">
+              <p>We serve diverse industries including healthcare, retail, manufacturing, education, and financial services. Our solutions are designed to address industry-specific challenges effectively.</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div><!-- End Faq item-->
+
+          <div class="faq-item">
+            <h3>What is your approach to project timelines?</h3>
+            <div class="faq-content">
+              <p>We collaborate with clients to define clear project milestones and timelines, ensuring transparency and timely delivery. The duration varies based on project scope and complexity.</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div><!-- End Faq item-->
+
+          <div class="faq-item">
+            <h3>Can you assist with advanced data analytics?</h3>
+            <div class="faq-content">
+              <p>Yes, our team specializes in data analytics, providing insights that empower businesses to make data-driven decisions and optimize performance effectively.</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div><!-- End Faq item-->
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section><!-- /Faq Section -->
+
+   <!-- Call To Action 2 Section -->
+
+
+  </main>
+
+
+  <!-- Scroll Top -->
+
+ {% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+
+
+{% endblock javascripts %}

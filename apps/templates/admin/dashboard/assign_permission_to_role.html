@@ -1,0 +1,12 @@
+<form method="POST">
+    {{ form.hidden_tag() }}
+    <div class="form-group">
+        {{ form.role_id.label }} {{ form.role_id() }}
+    </div>
+    <div class="form-group">
+        {{ form.permission_id.label }} {{ form.permission_id() }}
+    </div>
+    <div class="form-group">
+        {{ form.submit() }}
+    </div>
+</form>

@@ -1,0 +1,70 @@
+{
+  "about": {
+    "meta": "Jaikalki Domestic SEO Services - Rank Boost Solutions by Jaikalki Technology Pvt Ltd",
+    "title": "Domestic SEO Solutions with Jaikalki Technology Pvt Ltd",
+    "description1": "At Jaikalki Technology Pvt Ltd, we understand the importance of being visible in local search results. Our Domestic SEO services under the Rank Boost package are tailored to help your business dominate the local market by improving your search engine rankings within your country or region. We focus on optimizing your website for local search queries, ensuring your business gains maximum visibility in your targeted geographic area.",
+    "description2": "Our Domestic SEO services include localized keyword targeting, local backlink building, and optimization of your website for local search engines to ensure that your business ranks well in the geographic locations that matter most. Whether you are a small business or a large enterprise, we provide SEO solutions that meet your specific local needs.",
+    "description3": "With our Domestic SEO services, we help you attract more local customers and increase your presence in your market. Our expert team optimizes your website to appear in local searches, Google Maps, and local directories, ensuring your business gets the recognition it deserves in the region you serve.",
+    "features": [
+      {
+        "name": "Local Keyword Targeting",
+        "description": "We optimize your website with localized keywords that are relevant to your target market, ensuring your site ranks for local search queries."
+      },
+      {
+        "name": "Local Link Building",
+        "description": "Our local link building strategies focus on acquiring backlinks from trusted local sources, boosting your authority in local search results."
+      },
+      {
+        "name": "Google My Business Optimization",
+        "description": "We optimize your Google My Business profile, helping your business appear in local search results and on Google Maps for increased visibility."
+      },
+      {
+        "name": "Optimizing for Local Directories",
+        "description": "We ensure your business is listed correctly in local directories and online listings, helping you reach a broader local audience."
+      }
+    ]
+  },
+  "features": {
+    "title": "Why Choose Jaikalki Technology Pvt Ltd for Domestic SEO",
+    "subtitle": "Boost your local presence and attract more local customers with our comprehensive Domestic SEO services under Rank Boost.",
+    "leftColumn": [
+      {
+        "title": "Local Keyword Optimization",
+        "description": "We focus on local keyword research and optimization to ensure your website ranks for region-specific search queries, driving local traffic.",
+        "icon": "bi-search"
+      },
+      {
+        "title": "Local Link Building",
+        "description": "Our link building strategies focus on earning high-quality backlinks from trusted local websites, increasing your website's authority and rankings.",
+        "icon": "bi-link"
+      },
+      {
+        "title": "Google My Business (GMB) Optimization",
+        "description": "We enhance your Google My Business profile to ensure your business shows up in local search results and on Google Maps.",
+        "icon": "bi-geo-alt"
+      },
+      {
+        "title": "Local Directory Listings",
+        "description": "We ensure your business is accurately listed in relevant local directories, increasing your visibility and improving local SEO rankings.",
+        "icon": "bi-card-list"
+      }
+    ],
+    "rightColumn": [
+      {
+        "title": "Increase Local Traffic",
+        "description": "With our Domestic SEO strategies, we help you attract more local customers by improving your website's ranking in local searches.",
+        "icon": "bi-graph-up"
+      },
+      {
+        "title": "Improve Local Visibility",
+        "description": "Our services ensure that your business is visible in local search results, Google Maps, and local listings, making it easier for local customers to find you.",
+        "icon": "bi-eye"
+      },
+      {
+        "title": "Dominate Local Search Rankings",
+        "description": "We optimize your website to rank at the top of local search results, ensuring you stand out from your competitors in your region.",
+        "icon": "bi-trophy"
+      }
+    ]
+  }
+}

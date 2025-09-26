@@ -1,0 +1,70 @@
+{
+  "about": {
+    "meta": "Jaikalki Graphic Design Services - Rank Boost Solutions by Jaikalki Technology Pvt Ltd",
+    "title": "Creative Graphic Design Services to Boost Your Brand's Online Presence",
+    "description1": "At Jaikalki Technology Pvt Ltd, we provide innovative graphic design services under our Rank Boost package to enhance your brand’s visual identity. Our expert designers craft visually appealing, high-quality graphics that resonate with your target audience and align with your business goals. Whether it's for your website, social media, or marketing materials, our designs are tailored to boost engagement and improve your online visibility.",
+    "description2": "Our graphic design services are centered around creating engaging visuals that help you communicate your brand’s message effectively. We specialize in creating custom designs for websites, social media campaigns, logos, banners, advertisements, and more, ensuring consistency across all your digital touchpoints.",
+    "description3": "With a focus on creativity and brand consistency, our graphic design services are designed to captivate your audience, enhance user experience, and increase conversions. We help businesses build a strong, memorable online presence through high-quality, professional designs.",
+    "features": [
+      {
+        "name": "Custom Graphic Design",
+        "description": "We create tailor-made, visually appealing graphics that align with your brand and marketing objectives."
+      },
+      {
+        "name": "Social Media Graphics",
+        "description": "Our team designs eye-catching graphics for your social media platforms, helping you stand out and engage with your audience."
+      },
+      {
+        "name": "Website Design & UI/UX",
+        "description": "We design user-friendly websites and interfaces that provide an intuitive experience, enhancing user interaction and engagement."
+      },
+      {
+        "name": "Logo & Branding Design",
+        "description": "We help you create a strong and memorable brand identity with custom logo design and consistent branding materials."
+      }
+    ]
+  },
+  "features": {
+    "title": "Why Choose Jaikalki Technology Pvt Ltd for Graphic Design Services",
+    "subtitle": "Enhance your brand's visual appeal with our creative, high-quality graphic design services under Rank Boost.",
+    "leftColumn": [
+      {
+        "title": "Custom Logo & Branding Design",
+        "description": "We design distinctive logos and branding materials that reflect your business values and create a lasting impression.",
+        "icon": "bi-palette"
+      },
+      {
+        "title": "Engaging Social Media Visuals",
+        "description": "Our team crafts compelling graphics for your social media platforms to engage your audience and drive brand awareness.",
+        "icon": "bi-facebook"
+      },
+      {
+        "title": "Web & App Design",
+        "description": "We design responsive websites and apps with a strong focus on user experience, ensuring seamless navigation and interaction.",
+        "icon": "bi-device-laptop"
+      },
+      {
+        "title": "Professional Marketing Materials",
+        "description": "We create high-quality marketing materials such as banners, flyers, posters, and ads to promote your business effectively.",
+        "icon": "bi-briefcase"
+      }
+    ],
+    "rightColumn": [
+      {
+        "title": "Brand Consistency",
+        "description": "We ensure all designs are consistent with your brand’s identity, making your business easily recognizable across all platforms.",
+        "icon": "bi-puzzle"
+      },
+      {
+        "title": "Creative Designs for Maximum Impact",
+        "description": "Our designs are strategically crafted to capture your audience’s attention and drive engagement with your brand.",
+        "icon": "bi-lightbulb"
+      },
+      {
+        "title": "High-Quality Graphics",
+        "description": "We use the latest design tools and techniques to create high-quality, professional graphics that elevate your brand’s online presence.",
+        "icon": "bi-image"
+      }
+    ]
+  }
+}

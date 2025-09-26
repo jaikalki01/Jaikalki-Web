@@ -1,0 +1,22 @@
+{
+    "title": "Services - Jaikalki Technology Pvt Ltd",
+    "description": "Learn more about Services offered by Jaikalki Technology Pvt Ltd.",
+    "keywords": "services, Jaikalki Technology",
+    "robots": "index, follow",
+    "canonical": "https://jaikalki.com/services",
+    "og": {
+        "site_name": "Jaikalki Technology Pvt Ltd",
+        "title": "Services - Jaikalki Technology Pvt Ltd",
+        "description": "Learn more about Services offered by Jaikalki Technology Pvt Ltd.",
+        "image": "",
+        "url": "https://jaikalki.com/services",
+        "type": "website"
+    },
+    "twitter": {
+        "card": "summary_large_image",
+        "site": "@JaikalkiTech",
+        "title": "Services - Jaikalki Technology Pvt Ltd",
+        "description": "Learn more about Services offered by Jaikalki Technology Pvt Ltd.",
+        "image": ""
+    }
+}

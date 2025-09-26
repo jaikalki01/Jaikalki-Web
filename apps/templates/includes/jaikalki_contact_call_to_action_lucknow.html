@@ -1,0 +1,154 @@
+<!-- Contact Section -->
+<section id="call-to-action-2" class="call-to-action-2 section dark-background" xmlns="http://www.w3.org/1999/html">
+
+  <div class="container">
+    <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
+      <div class="col-xl-10">
+        <div class="text-center">
+          <h3>Transform Your Business with Jaikalki Technology</h3>
+          <p>At Jaikalki Technology, we specialize in innovative solutions that help businesses thrive in a digital-first world. Whether you're looking to improve your IT infrastructure or develop cutting-edge software, our team is here to help you succeed.</p>
+          <a class="cta-btn" href="https://wa.me/917738225369?text=Hi,%20I%20would%20like%20to%20request%20a%20call%20to%20discuss%20my%20requirements." target="_blank" >Get Started Today</a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section><!-- /Call To Action 2 Section -->
+<section id="contact" class="contact section light-background">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Contact Jaikalki Technology</h2>
+    <p>Let us help you build solutions that drive success. Reach out today for a consultation.</p>
+  </div><!-- End Section Title -->
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+    <div class="row g-4 g-lg-5">
+      <div class="col-lg-5">
+        <div class="info-box" data-aos="fade-up" data-aos-delay="200">
+          <h3>Our Contact Info</h3>
+          <p>Get in touch with Jaikalki Technology for your digital transformation needs.</p>
+
+          <div class="info-item" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon-box">
+              <i class="bi bi-geo-alt"></i>
+            </div>
+            <div class="content">
+              <h4>Our Location</h4>
+              <p>Jaikalki Technology Pvt Ltd</p>
+              <p>M.G Marg, Lal Baugh, Lucknow, UP- 226001</p>
+            </div>
+          </div>
+
+          <div class="info-item" data-aos="fade-up" data-aos-delay="400">
+            <div class="icon-box">
+              <i class="bi bi-telephone"></i>
+            </div>
+            <div class="content">
+              <h4>Phone Number</h4>
+              <p>+91 77 382 25 369</p>
+              <p>+91 86 049 32 569</p>
+            </div>
+          </div>
+
+          <div class="info-item" data-aos="fade-up" data-aos-delay="500">
+            <div class="icon-box">
+              <i class="bi bi-envelope"></i>
+            </div>
+            <div class="content">
+              <h4>Email Address</h4>
+              <p>anas.jaikalki@gmail.com</p>
+              <p>rajdesaigravitydigi@gmail.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-7">
+        <div class="contact-form" data-aos="fade-up" data-aos-delay="300">
+          <h3>Get In Touch</h3>
+          <p>We would love to hear about your project and how we can help you achieve your business goals. Fill out the form below and our team will reach out to you soon.</p>
+
+      {% set math = ''|math_problem %} <!-- Generate the math problem -->
+<form id="contactForm" action="{{ url_for('home_blueprint.submit_form') }}" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+    <div class="row gy-4">
+        <div class="col-md-6">
+            <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+        </div>
+        <div class="col-md-6">
+            <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+        </div>
+         <div class="col-12">
+            <input type="text" name="subject" class="form-control" placeholder="Subject" required>
+        </div>
+        <div class="col-12">
+            <input type="number" name="mobile" class="form-control" placeholder="Mobile" required>
+        </div>
+
+        <div class="col-12">
+            <textarea name="message" class="form-control" rows="6" placeholder="Message" required></textarea>
+        </div>
+        <!-- Math Problem Section -->
+        <div class="col-12">
+            <label for="mathProblem">Solve this problem to submit the form:</label>
+            <div id="mathProblem">
+                <strong>{{ math.num1 }} + {{ math.num2 }} = ?</strong>
+            </div>
+            <input type="number" name="math_answer" class="form-control" placeholder="Your Answer" required>
+            <input type="hidden" name="correct_answer" value="{{ math.correct_answer }}">
+        </div>
+        <div class="col-12 text-center">
+            <button type="submit" class="btn">Send Message</button>
+        </div>
+    </div>
+</form>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+    document.getElementById('contactForm').addEventListener('submit', async function (e) {
+        e.preventDefault(); // Prevent default form submission
+
+        // Get the user-provided math answer and the correct answer from the form fields
+        const userAnswer = parseInt(document.querySelector('[name="math_answer"]').value, 10);
+        const correctAnswer = parseInt(document.querySelector('[name="correct_answer"]').value, 10);
+
+        // Validate the math problem
+        if (userAnswer !== correctAnswer) {
+            Swal.fire('Error', 'Incorrect answer to the math problem. Please try again.', 'error');
+            return; // Stop form submission if the answer is incorrect
+        }
+
+        // Gather form data
+        const formData = new FormData(this);
+
+        try {
+            const response = await fetch(this.action, {
+                method: 'POST',
+                body: formData
+            });
+
+            if (response.ok) {
+                const data = await response.json();
+                Swal.fire('Success', data.message, 'success');
+                this.reset(); // Reset form after submission
+            } else {
+                const errorData = await response.json();
+                Swal.fire('Error', errorData.error || 'Something went wrong!', 'error');
+            }
+        } catch (error) {
+            Swal.fire('Error', 'Unable to submit your request. Please try again later.', 'error');
+        }
+    });
+</script>
+
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section><!-- /Contact Section -->

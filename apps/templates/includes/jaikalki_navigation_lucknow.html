@@ -1,0 +1,32 @@
+ <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <img src="{{ config.JAIKALKI_ROOT}}/assets/img/Jaikalki_transparent_Logo.gif" alt="Jaikalki Technology Logo">
+
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="/index.html" class="{% if 'index' in segment %} active {% endif %}">Home</a></li>
+          <li><a href="/about.html" class="{% if 'about' in segment %} active {% endif %}">About</a></li>
+
+
+<a href="/services.html">Services</a>
+
+
+
+
+
+
+
+          <li><a href="/contact.html"  class="{% if 'contact' in segment %} active {% endif %}">Contact</a></li>
+              </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="https://jaikalki.com/login">Login</a>
+
+    </div>
+  </header>

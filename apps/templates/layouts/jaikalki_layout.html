@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+
+<!-- ----------   schema starts here  ----------- -->
+
+<!-- ----------   Website Schema  ----------- -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Jaikalki Technology Pvt Ltd",
+  "url": "https://jaikalki.com/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://jaikalki.com/search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+
+<!-- ----------    Breadcrumb Schema  ----------- -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://jaikalki.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "About Us",
+      "item": "https://jaikalki.com/about.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Services",
+      "item": "https://jaikalki.com/services.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Contact",
+      "item": "https://jaikalki.com/contact.html"
+    }
+  ]
+}
+</script>
+
+<!-- ----------    FAQ Schema  ----------- -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What services does Jaikalki Technology Pvt Ltd offer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Jaikalki Technology Pvt Ltd specializes in Web Development, SEO, API Services, and Payment Solutions. Our divisions include WebTech, Rank Boost, and Gravity DigiPayment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I contact Jaikalki Technology Pvt Ltd?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can contact us via email at info@jaikalki.com or call us at +91 9136914963 or +91 2235039927. Our office is located at Anand India Business Hub, Mira Road, Mumbai, India."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where is Jaikalki Technology Pvt Ltd located?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our office is located at Anand India Business Hub, Mira Road, Mumbai, India."
+      }
+    }
+  ]
+}
+</script>
+
+
+<!-- ----------     Business Info Schema  ----------- -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Jaikalki Technology Pvt Ltd",
+  "url": "https://jaikalki.com/",
+  "logo": "https://jaikalki.com/static/assets_jaikalki/assets/img/Jaikalki_transparent_Logo.gif",
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "telephone": "+91 2235039927",
+      "contactType": "customer service",
+      "email": "info@jaikalki.in",
+      "areaServed": "IN",
+      "availableLanguage": ["English", "Hindi"]
+    }
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Anand India Business Hub, Mira Road",
+    "addressLocality": "Mumbai",
+    "addressRegion": "Maharashtra",
+    "postalCode": "401107",
+    "addressCountry": "IN"
+  },
+  "sameAs": [
+    "https://www.facebook.com/JaikalkiTechnologyPvtLtd/",
+    "https://www.instagram.com/jaikalki_technology_pvt_ltd/",
+    "https://www.linkedin.com/company/jaikalki-technology/"
+  ]
+}
+</script>
+
+
+
+
+
+  {% block title %}
+  {% endblock title %}
+  <!-- Favicons -->
+  {% block stylesheets %}
+
+  {% endblock stylesheets %}
+    <link href="{{ config.JAIKALKI_ROOT}}/assets/img/favicon.png" rel="icon">
+  <link href="{{ config.JAIKALKI_ROOT}}/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{{ config.JAIKALKI_ROOT}}/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="{{ config.JAIKALKI_ROOT}}/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="{{ config.JAIKALKI_ROOT}}/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="{{ config.JAIKALKI_ROOT}}/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="{{ config.JAIKALKI_ROOT}}/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="{{ config.JAIKALKI_ROOT}}/assets/css/main.css" rel="stylesheet">
+
+  <!-- Google search console Tags -->
+ <meta name="google-site-verification" content="votjLVbeVkhqp7uoFCMybBNdpXLTjLLlnkGFZQrZ4i4" />
+
+
+ <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W8R5SBR23Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-W8R5SBR23Z');
+</script>
+
+
+
+</head>
+<body class="index-page">
+
+
+
+
+{% include 'includes/jaikalki_navigation_web.html' %}
+
+
+      {% block content %}
+
+
+{% endblock content %}
+
+ {% include 'includes/jaikalki_contact_call_to_action_web.html'%}
+
+      {% include 'includes/jaikalki_footer_web.html' %}
+
+
+<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  {% include 'includes/scripts_jaikalki.html' %}
+
+  <!-- Specific Page JS goes HERE  -->
+  {% block javascripts %}{% endblock javascripts %}
+
+</body>
+</html>

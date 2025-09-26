@@ -1,0 +1,191 @@
+{% extends "layouts/base-fullscreen.html" %}
+
+{% block title %} Page Lock {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <main>
+        <section class="vh-lg-100 mt-5 mt-lg-0 bg-soft d-flex align-items-center">
+            <div class="container">
+                <a href="{{url_for('admin_blueprint.dashboard')}}" class="d-flex align-items-center justify-content-center mb-4">
+                    <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l2.293 2.293a1 1 0 010 1.414z" clip-rule="evenodd"></path></svg>
+                    Back to homepage
+                </a>
+                <div class="row justify-content-center form-bg-image" data-background-lg="{{ config.ASSETS_ROOT }}/img/illustrations/signin.svg">
+                    <div class="col-12 d-flex align-items-center justify-content-center">
+                        <div class="bg-white shadow border-0 rounded p-4 p-lg-5 w-100 fmxw-500">
+                            <div class="text-center text-md-center mb-4 mt-md-0">
+                                <div class="avatar avatar-lg mx-auto mb-3"><img class="rounded-circle" alt="Image placeholder" src="{{ config.ASSETS_ROOT }}/img/team/profile-picture-3.jpg"></div>
+                                <h1 class="h3">{{ current_user.username }}</h1>
+                                <p class="text-gray">Better to be safe than sorry.</p>
+                            </div>
+             <form class="mt-5" action="{{ url_for('admin_blueprint.unlock') }}" method="post" id="unlockPinForm">
+    <!-- Form -->
+    <div class="form-group mb-4">
+        <label for="pin">Your 6-Digit Pin</label>
+        <div class="input-group">
+            <div class="d-flex justify-content-center">
+                <input type="password" maxlength="1" class="form-control pin-box" id="pin1" autocomplete="off">
+                <input type="password" maxlength="1" class="form-control pin-box" id="pin2" autocomplete="off">
+                <input type="password" maxlength="1" class="form-control pin-box" id="pin3" autocomplete="off">
+                <input type="password" maxlength="1" class="form-control pin-box" id="pin4" autocomplete="off">
+                <input type="password" maxlength="1" class="form-control pin-box" id="pin5" autocomplete="off">
+                <input type="password" maxlength="1" class="form-control pin-box" id="pin6" autocomplete="off">
+            </div>
+            <input type="hidden" name="pin" id="fullPin">
+
+        </div>
+    </div>
+    <!-- End of Form -->
+
+    <!-- Submit Button -->
+    <div class="d-grid mt-3">
+        <button type="submit" class="btn btn-gray-800">Unlock</button>
+    </div>
+
+    <!-- Forgot Pin Button -->
+    <div class="d-grid mt-3">
+        <button type="button" class="btn btn-gray-800" data-bs-toggle="modal" data-bs-target="#modal-form">Forgot Pin</button>
+    </div>
+</form>
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+             <!-- Modal Content -->
+                          <div class="modal fade" id="modal-form" tabindex="-1" role="dialog" aria-labelledby="modal-form" aria-hidden="true">
+                              <div class="modal-dialog modal-dialog-centered" role="document">
+                                  <div class="modal-content">
+                                      <div class="modal-body p-0">
+                                          <div class="card p-3 p-lg-4">
+                                              <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
+                                              <div class="text-center text-md-center mb-4 mt-md-0">
+                                                  <h1 class="mb-0 h4">Sign in to our platform</h1>
+                                              </div>
+                                              <form action="{{url_for('admin_blueprint.unlock')}}" method="post" class="mt-4">
+                                                  <!-- Form -->
+
+                                                  <!-- End of Form -->
+                                                  <div class="form-group">
+                                                      <!-- Form -->
+                                                      <div class="form-group mb-4">
+                                                          <label for="password">Enter The Password</label>
+                                                          <div class="input-group">
+                                                              <span class="input-group-text" id="basic-addon2">
+                                                                  <svg class="icon icon-xs text-gray-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"></path></svg>
+                                                              </span>
+                                                              <input type="password" placeholder="Password" name="password" class="form-control" id="password" required>
+                                                          </div>
+                                                      </div>
+                                                      <!-- End of Form -->
+                                                      <div class="d-flex justify-content-between align-items-top mb-4">
+                                                          <div class="form-check">
+                                                              <input class="form-check-input" type="checkbox" value="" id="remember">
+                                                              <label class="form-check-label mb-0" for="remember">
+                                                                Remember me
+                                                              </label>
+                                                          </div>
+                                                          <div><a href="./forgot-password.html" class="small text-right">Lost password?</a></div>
+                                                      </div>
+                                                  </div>
+                                                  <div class="d-grid">
+                                                      <button type="submit" class="btn btn-gray-800">Sign in</button>
+                                                  </div>
+                                              </form>
+                                                                                        </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- End of Modal Content -->
+
+    </main>
+<style>
+    .pin-box {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    text-align: center;
+    margin: 0 5px;
+}
+
+</style>
+{% endblock content %}
+
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const flashMessages = {{ get_flashed_messages(with_categories=True) | tojson | safe }};
+
+        // Iterate through all flash messages
+        flashMessages.forEach(function(message) {
+            if (message[0] === 'success') {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Success!',
+                    text: message[1],
+                    confirmButtonText: 'Okay'
+                });
+            } else if (message[0] === 'danger') {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error!',
+                    text: message[1],
+                    confirmButtonText: 'Try Again'
+                });
+            }
+        });
+    });
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const pinBoxes = document.querySelectorAll(".pin-box");
+
+        // Event listener for moving to the next box
+        pinBoxes.forEach((box, index) => {
+            box.addEventListener("input", function() {
+                moveToNextBox(index + 1);
+            });
+        });
+
+        function moveToNextBox(currentBox) {
+            const currentInput = document.getElementById(`pin${currentBox}`);
+            const nextBox = document.getElementById(`pin${currentBox + 1}`);
+            let pinValue = "";
+
+            // Move focus to the next input box if the current one has a valid digit
+            if (currentInput.value && /^\d$/.test(currentInput.value)) {
+                if (nextBox) {
+                    nextBox.focus();
+                }
+            }
+
+            // Collect the PIN from all input boxes
+            pinBoxes.forEach(box => {
+                pinValue += box.value;
+            });
+
+            // Set the fullPin hidden input value
+            document.getElementById("fullPin").value = pinValue;
+
+
+        }
+
+
+
+
+    });
+</script>
+{% endblock javascripts %}

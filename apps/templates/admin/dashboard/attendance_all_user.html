@@ -1,0 +1,120 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Add Details {% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+{% endblock stylesheets %}
+
+{% block content %}
+  <div class="py-4">
+      <nav aria-label="breadcrumb" class="d-none d-md-inline-block">
+          <ol class="breadcrumb breadcrumb-dark breadcrumb-transparent">
+              <li class="breadcrumb-item">
+                  <a href="#">
+                      <svg class="icon icon-xxs" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                  </a>
+              </li>
+              <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Attendance</li>
+          </ol>
+      </nav>
+      <div class="d-flex justify-content-between w-100 flex-wrap">
+          <div class="mb-3 mb-lg-0">
+              <h1 class="h4">Select User For Attendance</h1>
+                  </div>
+
+
+      </div>
+  </div>
+<div class="container py-4">
+
+       <form method="GET" action="{{ url_for('admin_blueprint.attendance_calendar_all_user') }}" class="d-flex mb-3">
+    <!-- User Selection Dropdown -->
+    <select class="form-control me-2" name="user_id" id="user-select" onchange="this.form.submit()">
+        <option value="">Select User...............</option>
+        {% for user in users %}
+            <option value="{{ user.id }}" {% if selected_user_id == user.id %}selected{% endif %}>
+                {{ user.username }}
+            </option>
+        {% endfor %}
+    </select>
+</form>
+
+    <hr>
+     <div class="row">
+ <h3 class="mt-5">Attendance View</h3>
+
+        <div class="col-12 col-sm-6 col-xl-12 mb-2">
+            <div class="card border-0 shadow">
+                <div class="card-body">
+                    <div id="calendar"></div>
+                </div>
+            </div>
+        </div>
+
+     </div>
+</div>
+
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const flashMessages = {{ get_flashed_messages(with_categories=True) | tojson | safe }};
+
+        // Iterate through all flash messages
+        flashMessages.forEach(function(message) {
+            if (message[0] === 'success') {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Success!',
+                    text: message[1],
+                    confirmButtonText: 'Okay'
+                });
+            } else if (message[0] === 'danger') {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error!',
+                    text: message[1],
+                    confirmButtonText: 'Try Again'
+                });
+            }
+        });
+    });
+</script>
+
+
+
+<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth',
+                events: [
+                    {% for record in attendance_data %}
+                    {
+                        title: "{{ record.remark }} ({{ record.total_hours }})",
+                        start: "{{ record.date }}",
+                        color: "{{ 'green' if record.remark == 'Present' else 'red' }}"
+                    },
+                    {% endfor %}
+                ]
+            });
+            calendar.render();
+        });
+    </script>
+
+{% endblock javascripts %}
+
+
+
+
+

@@ -1,0 +1,22 @@
+{
+  "title": "Domestic/Local SEO Services - Improve Local Visibility | Jaikalki Technology Pvt Ltd",
+  "description": "Jaikalki Technology Pvt Ltd offers Domestic/Local SEO services to enhance your business’s visibility and rankings in local search results, driving more customers to your physical or online store.",
+  "keywords": "local SEO, domestic SEO, SEO services, local search engine optimization, Jaikalki Technology, local visibility, SEO for local business",
+  "robots": "index, follow",
+  "canonical": "https://jaikalki.in/domestic-local-seo",
+  "og": {
+    "site_name": "Jaikalki Technology Pvt Ltd",
+    "title": "Domestic/Local SEO Services - Improve Local Visibility",
+    "description": "Enhance your business’s local presence with Jaikalki Technology's expert Domestic/Local SEO services.",
+    "image": "https://jaikalki.in/static/assets_jaikalki/assets/img/jaikalki_local_seo.jpg",
+    "url": "https://jaikalki.in/domestic-local-seo",
+    "type": "website"
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "site": "@JaikalkiTech",
+    "title": "Domestic/Local SEO Services - Improve Local Visibility",
+    "description": "Boost your business’s visibility in local search results with Jaikalki Technology's Domestic/Local SEO services.",
+    "image": "https://jaikalki.in/static/assets_jaikalki/assets/img/jaikalki_local_seo.jpg"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "about": {
+    "meta": "Jaikalki International SEO Services - Rank Boost Solutions by Jaikalki Technology Pvt Ltd",
+    "title": "Global SEO Solutions with Jaikalki Technology Pvt Ltd",
+    "description1": "At Jaikalki Technology Pvt Ltd, we understand the importance of reaching global markets. Our International SEO services under the Rank Boost package are designed to help your website rank well across various countries, languages, and search engines. We focus on optimizing your website for international audiences, ensuring your content is localized and SEO-friendly for global search engine results.",
+    "description2": "In addition to our fast-track website development and API integration services, we provide comprehensive International SEO strategies to help your business expand globally. Our approach includes keyword localization, multi-regional and multilingual SEO, international link building, and optimizing your website for international search engines like Google, Baidu, and Yandex.",
+    "description3": "Our International SEO services are tailored to meet the unique challenges of global SEO. Whether you’re targeting specific countries, regions, or languages, we provide SEO solutions that ensure your website ranks effectively in international markets, driving traffic and increasing conversions worldwide.",
+    "features": [
+      {
+        "name": "Multilingual SEO",
+        "description": "We optimize your website’s content to rank well in multiple languages, ensuring effective communication with international audiences."
+      },
+      {
+        "name": "Geo-Targeted SEO",
+        "description": "Our geo-targeting strategies help you rank in multiple regions, ensuring your website appears in search results for the right geographic locations."
+      },
+      {
+        "name": "International Link Building",
+        "description": "We build high-quality, region-specific backlinks to boost your website’s authority and SEO rankings in international markets."
+      },
+      {
+        "name": "Search Engine Optimization for Global Search Engines",
+        "description": "We optimize your website for international search engines like Google, Yandex, Baidu, and others, ensuring high rankings in global search results."
+      }
+    ]
+  },
+  "features": {
+    "title": "Why Choose Jaikalki Technology Pvt Ltd for International SEO",
+    "subtitle": "Expand your online presence globally with our expert International SEO services under Rank Boost.",
+    "leftColumn": [
+      {
+        "title": "Multilingual SEO Strategies",
+        "description": "We offer multilingual SEO services, optimizing your content for various languages to help you reach and engage international audiences.",
+        "icon": "bi-globe"
+      },
+      {
+        "title": "Geo-Targeted SEO Solutions",
+        "description": "We implement geo-targeting strategies that ensure your website ranks in the correct regions and countries, boosting local visibility.",
+        "icon": "bi-pin-map"
+      },
+      {
+        "title": "International Link Building",
+        "description": "Our link building efforts focus on acquiring region-specific backlinks, which help boost your authority and rankings in global markets.",
+        "icon": "bi-link"
+      },
+      {
+        "title": "Optimized for Global Search Engines",
+        "description": "We optimize your website for international search engines beyond Google, ensuring visibility across multiple search platforms like Baidu and Yandex.",
+        "icon": "bi-search"
+      }
+    ],
+    "rightColumn": [
+      {
+        "title": "Global Reach and Visibility",
+        "description": "Our International SEO strategies help expand your reach to global markets, ensuring your website gets the visibility it deserves.",
+        "icon": "bi-globe2"
+      },
+      {
+        "title": "Increased Organic Traffic Worldwide",
+        "description": "By optimizing for international keywords and search engines, we drive organic traffic from diverse countries and regions to your website.",
+        "icon": "bi-graph-up"
+      },
+      {
+        "title": "Localized SEO for Better Engagement",
+        "description": "We customize SEO strategies based on the cultural and language preferences of your target audience, ensuring higher engagement and conversions.",
+        "icon": "bi-translate"
+      }
+    ]
+  }
+}

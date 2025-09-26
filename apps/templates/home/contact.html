@@ -1,0 +1,146 @@
+
+
+{% extends "layouts/home_layout.html" %}
+
+{% block title %}  {% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header mb-5 wow fadeIn" data-wow-delay="0.1s"
+    style="background:url('{{ url_for('static', filename='assets_new/img/contact_us.jpg') }}'); background-size: cover; background-position: center; position: relative;">
+
+    <!-- Overlay -->
+    <!--div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(128, 128, 128, 0.4);"></div-->
+
+    <div class="container" style="position: relative; z-index: 1;">
+        <h1 class="display-3 mb-1 animated slideInDown ">Contact Us</h1>
+        <nav aria-label="breadcrumb animated slideInDown">
+            <ol class="breadcrumb mb-0">
+                <li class=" breadcrumb-item bold"><a href="/" class="text-dark" >Home</a></li>
+                <li class="breadcrumb-item text-dark active  fw-bold" aria-current="page">Contact</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+ <!-- Page Header End -->
+
+
+    <!-- Contact Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                    <p class="d-inline-block border rounded text-primary fw-semi-bold py-1 px-3">Contact</p>
+                    <h1 class="display-5 mb-4">If You Have Any Query, Please Contact Us</h1>
+
+           {% set math = ''|math_problem %} <!-- Generate the math problem -->
+      <form id="contactForm" action="{{ url_for('home_blueprint.submit_form') }}"  data-aos="fade-up" data-aos-delay="200">
+                  <div class="row g-3">
+                            <div class="col-sm-6">
+                                <div class="form-floating">
+                                   <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                                    <label >Your Name</label>
+
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-floating">
+                                <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+           <label >Your Email</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-floating">
+                                    <input type="number" name="mobile" class="form-control" placeholder="Mobile" required>
+           <label >Your Mobile</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-floating">
+                                      <input type="text" name="subject" class="form-control" placeholder="Subject" required>
+          <label >Subject</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                <textarea name="message" class="form-control" rows="6" placeholder="Message" required></textarea>
+             <label >Message</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+            <label for="mathProblem">Solve this problem to submit the form:</label>
+            <div id="mathProblem">
+                <strong>{{ math.num1 }} + {{ math.num2 }} = ?</strong>
+            </div>
+            <input type="number" name="math_answer" class="form-control" placeholder="Your Answer" required>
+            <input type="hidden" name="correct_answer" value="{{ math.correct_answer }}">
+        </div>
+                            <div class="col-12 text-center">
+                          <button type="submit" class="btn btn-primary">Send Message</button>
+        </div>
+                        </div>
+                    </form>
+
+
+
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s" style="min-height: 450px;">
+                    <div class="position-relative rounded overflow-hidden h-100">
+                        <iframe class="position-relative w-100 h-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d518.7040065376283!2d82.96607581860026!3d25.33073653605263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e2dbfc355d889%3A0xaa55a9ef2b061b79!2sVaranasi%20cantonment%2C%20Varanasi%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1727428617678!5m2!1sen!2sin"
+                               style="min-height: 450px; border:0;"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
+
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+   document.getElementById('contactForm').addEventListener('submit', async function (e) {
+    e.preventDefault(); // Prevent default form submission
+
+    // Get form data
+    const formData = new FormData(this);
+    const jsonData = {};
+    formData.forEach((value, key) => {
+        jsonData[key] = value;
+    });
+
+    try {
+        const response = await fetch(this.action, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(jsonData),
+        });
+
+        if (response.ok) {
+            const data = await response.json();
+            Swal.fire('Success', data.message, 'success');
+            this.reset(); // Reset form after submission
+        } else {
+            const errorData = await response.json();
+            Swal.fire('Error', errorData.error || 'Something went wrong!', 'error');
+        }
+    } catch (error) {
+        Swal.fire('Error', 'Unable to submit your request. Please try again later.', 'error');
+    }
+});
+
+</script>
+
+{% endblock javascripts %}

@@ -1,0 +1,191 @@
+{% extends "layouts/jaikalki_layout.html" %}
+
+{% block title %}
+ <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Meta Tags -->
+  <meta name="description" content="Jaikalki Technology Pvt Ltd offers comprehensive SEO Audit services to identify issues and optimize your website for higher rankings and better user experience.">
+  <meta name="keywords" content="SEO audit, website audit, SEO analysis, SEO services, Jaikalki Technology, website optimization, search engine ranking, on-page SEO, technical SEO">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph (OG) Meta Tags -->
+  <meta property="og:site_name" content="Jaikalki Technology Pvt Ltd">
+  <meta property="og:title" content="SEO Audit Services - Optimize Your Website">
+  <meta property="og:description" content="Get a thorough SEO audit with Jaikalki Technology to identify and resolve issues affecting your website’s SEO performance.">
+  <meta property="og:image" content="https://jaikalki.com/static/assets_jaikalki/assets/img/jaikalki_seo_audit.jpg">
+  <meta property="og:url" content="https://jaikalki.com/seo-audit">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@JaikalkiTech">
+  <meta name="twitter:title" content="SEO Audit Services - Optimize Your Website">
+  <meta name="twitter:description" content="Jaikalki Technology’s SEO Audit service helps optimize your site for better performance and higher rankings.">
+  <meta name="twitter:image" content="https://jaikalki.com/static/assets_jaikalki/assets/img/jaikalki_seo_audit.jpg">
+
+  <!-- Canonical Link -->
+  <link rel="canonical" href="https://jaikalki.com/services/RankBoost/SEO-Audit.html">
+
+  <title>SEO Audit Services - Optimize Your Website with Jaikalki Technology Pvt Ltd</title>
+
+{% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+  <main class="main">
+
+        <!-- Page Title -->
+    <div class="page-title light-background">
+      <div class="container">
+        <h1>SEO-Audit</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="/index.html">Home</a></li>
+                <li><a href="/services.html">services</a></li>
+                  <li><a href="/services/RankBoost.html">RankBoost</a></li>
+            <li class="current">SEO-Audit</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+<section id="about" class="about section">
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="row gy-4 align-items-center justify-content-between">
+      <div class="col-xl-5" data-aos="fade-up" data-aos-delay="200">
+        <span class="about-meta" id="about-meta"></span>
+        <h2 class="about-title" id="about-title"></h2>
+        <p class="about-description" id="about-description-1"></p>
+        <p class="about-description" id="about-description-2"></p>
+
+        <ul class="feature-list" id="feature-list">
+          <!-- Features will be dynamically inserted here -->
+        </ul>
+
+        <p class="about-description" id="about-description-3"></p>
+      </div>
+
+      <div class="col-xl-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="image-wrapper">
+          <div class="images position-relative" data-aos="zoom-out" data-aos-delay="400">
+            <img src="{{ config.JAIKALKI_ROOT }}/assets/img/jaikalki_seo_audit.jpg" alt="Business Meeting" class="img-fluid main-image rounded-4">
+          </div>
+          <div class="experience-badge floating">
+            <h3>2+ <span>Years</span></h3>
+            <p>Of innovation and excellence</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="features-2" class="features-2 section">
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <!-- Section Title -->
+    <div class="section-title text-center" data-aos="fade-up" data-aos-delay="100">
+      <h2 id="features-title"></h2>
+      <p id="features-subtitle"></p>
+    </div>
+
+    <div class="row align-items-center">
+      <div class="col-lg-4" id="features-left-column">
+        <!-- Features will be dynamically inserted here -->
+      </div>
+
+      <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+        <div class="phone-mockup text-center">
+          <img src="{{ config.JAIKALKI_ROOT }}/assets/img/jaikalki_seo_audit2.jpg" style="border: 2px solid white; border-radius: 5%" alt="Phone Mockup" class="img-fluid">
+        </div>
+      </div>
+
+      <div class="col-lg-4" id="features-right-column">
+        <!-- Features will be dynamically inserted here -->
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+  </main>
+
+
+
+ {% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+<script>
+// Fetch the JSON data
+fetch('{{ config.JAIKALKI_ROOT }}/assets/json/SEO_Audit.json')
+  .then(response => response.json())
+  .then(data => {
+    // Populate the About section
+    document.getElementById("about-meta").innerText = data.about.meta;
+    document.getElementById("about-title").innerText = data.about.title;
+    document.getElementById("about-description-1").innerText = data.about.description1;
+    document.getElementById("about-description-2").innerText = data.about.description2;
+    document.getElementById("about-description-3").innerText = data.about.description3;
+
+    // Add features to the About section
+    const featureList = document.getElementById("feature-list");
+    data.about.features.forEach(feature => {
+      const li = document.createElement("li");
+      li.innerHTML = `<i class="bi bi-check-circle-fill"></i> <strong>${feature.name}</strong> – ${feature.description}`;
+      featureList.appendChild(li);
+    });
+
+    // Populate the Features section
+    document.getElementById("features-title").innerText = data.features.title;
+    document.getElementById("features-subtitle").innerText = data.features.subtitle;
+
+    // Add features to the left column
+    const featuresLeftColumn = document.getElementById("features-left-column");
+    data.features.leftColumn.forEach(feature => {
+      const div = document.createElement("div");
+      div.classList.add("feature-item", "text-end", "mb-5");
+      div.innerHTML = `
+        <div class="d-flex align-items-center justify-content-end gap-4">
+          <div class="feature-content">
+            <h3>${feature.title}</h3>
+            <p>${feature.description}</p>
+          </div>
+          <div class="feature-icon flex-shrink-0">
+            <i class="bi ${feature.icon}"></i>
+          </div>
+        </div>
+      `;
+      featuresLeftColumn.appendChild(div);
+    });
+
+    // Add features to the right column
+    const featuresRightColumn = document.getElementById("features-right-column");
+    data.features.rightColumn.forEach(feature => {
+      const div = document.createElement("div");
+      div.classList.add("feature-item", "mb-5");
+      div.innerHTML = `
+        <div class="d-flex align-items-center gap-4">
+          <div class="feature-icon flex-shrink-0">
+            <i class="bi ${feature.icon}"></i>
+          </div>
+          <div class="feature-content">
+            <h3>${feature.title}</h3>
+            <p>${feature.description}</p>
+          </div>
+        </div>
+      `;
+      featuresRightColumn.appendChild(div);
+    });
+  })
+  .catch(error => {
+    console.error('Error loading JSON data:', error);
+  });
+</script>
+{% endblock javascripts %}

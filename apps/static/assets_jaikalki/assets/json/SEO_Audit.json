@@ -1,0 +1,70 @@
+{
+  "about": {
+    "meta": "Jaikalki SEO Audit Services - Rank Boost Solutions by Jaikalki Technology Pvt Ltd",
+    "title": "Comprehensive SEO Audit Services with Jaikalki Technology Pvt Ltd",
+    "description1": "At Jaikalki Technology Pvt Ltd, we offer in-depth SEO audit services under our Rank Boost package to help you identify and resolve issues that could be hindering your website’s search engine performance. Our comprehensive audit provides a detailed analysis of your website’s SEO health, from technical SEO factors to on-page and off-page optimization, helping you improve your rankings and visibility on search engines.",
+    "description2": "Our SEO audit services include a thorough evaluation of your website’s structure, content, backlinks, performance, and user experience. We identify areas of improvement, implement best practices, and provide actionable recommendations that can be executed to enhance your website’s SEO performance. Whether you need to optimize your site for better rankings or identify penalties, our audit service covers all aspects.",
+    "description3": "With our SEO audit, you’ll receive a clear, actionable roadmap to improve your website’s SEO. Our expert team works alongside you to implement the necessary changes and ensure your website is fully optimized for search engine success, giving you a competitive edge in your industry.",
+    "features": [
+      {
+        "name": "Comprehensive Website Analysis",
+        "description": "We analyze every aspect of your website, including technical SEO, on-page SEO, off-page SEO, content quality, and user experience."
+      },
+      {
+        "name": "Keyword Research & Optimization Check",
+        "description": "We evaluate your current keyword strategy, ensuring that you are targeting the right keywords for your industry and audience."
+      },
+      {
+        "name": "Backlink Profile Evaluation",
+        "description": "We assess your backlink profile to identify toxic links, opportunities for high-quality backlinks, and ways to improve link equity."
+      },
+      {
+        "name": "Technical SEO Review",
+        "description": "Our team reviews your website’s technical elements, including site speed, mobile-friendliness, indexability, and structured data, ensuring your site is search engine-friendly."
+      }
+    ]
+  },
+  "features": {
+    "title": "Why Choose Jaikalki Technology Pvt Ltd for SEO Audit Services",
+    "subtitle": "Enhance your website’s SEO performance with our thorough, detailed SEO audit services under Rank Boost.",
+    "leftColumn": [
+      {
+        "title": "Comprehensive Site Health Check",
+        "description": "We provide a full SEO health check, identifying technical issues, on-page weaknesses, and opportunities for improvement in both content and structure.",
+        "icon": "bi-file-earmark-check"
+      },
+      {
+        "title": "Actionable SEO Insights",
+        "description": "Our SEO audits deliver clear, actionable insights that guide the necessary changes to improve your search engine rankings and online visibility.",
+        "icon": "bi-lightbulb"
+      },
+      {
+        "title": "Keyword & Content Optimization",
+        "description": "We evaluate your current content strategy, ensuring your keywords are properly targeted and content is optimized for better performance on search engines.",
+        "icon": "bi-pencil-square"
+      },
+      {
+        "title": "Backlink & Link Equity Analysis",
+        "description": "We provide an in-depth analysis of your backlinks, identifying harmful links and opportunities to build stronger, more relevant backlinks.",
+        "icon": "bi-link-45deg"
+      }
+    ],
+    "rightColumn": [
+      {
+        "title": "Improve Search Engine Rankings",
+        "description": "Our audits help you identify and fix issues that are preventing your website from ranking higher, boosting your visibility on search engines.",
+        "icon": "bi-arrow-up-right-circle"
+      },
+      {
+        "title": "Boost Website Performance",
+        "description": "We identify technical issues that might be affecting your website's performance, from speed to mobile optimization, ensuring your website is fast and responsive.",
+        "icon": "bi-speedometer"
+      },
+      {
+        "title": "Increase Organic Traffic",
+        "description": "Our SEO audit helps you make the necessary changes to attract more organic traffic by improving your website's rankings and overall SEO health.",
+        "icon": "bi-graph-up"
+      }
+    ]
+  }
+}

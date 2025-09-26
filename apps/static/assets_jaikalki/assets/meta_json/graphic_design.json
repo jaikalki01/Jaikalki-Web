@@ -1,0 +1,22 @@
+{
+  "title": "Graphic Design Services - Creative Solutions by Jaikalki Technology Pvt Ltd",
+  "description": "Jaikalki Technology Pvt Ltd offers creative and high-quality graphic design services for businesses to enhance their branding and visual presence.",
+  "keywords": "graphic design, logo design, branding, creative design, visual design, Jaikalki Technology, design services, business branding, marketing materials, digital design",
+  "robots": "index, follow",
+  "canonical": "https://jaikalki.in/graphic-design",
+  "og": {
+    "site_name": "Jaikalki Technology Pvt Ltd",
+    "title": "Graphic Design Services - Creative Solutions for Branding",
+    "description": "Elevate your brand with Jaikalki Technology’s graphic design services, offering innovative solutions for your business’s visual identity.",
+    "image": "https://jaikalki.in/static/assets_jaikalki/assets/img/jaikalki_graphic_design.jpg",
+    "url": "https://jaikalki.in/graphic-design",
+    "type": "website"
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "site": "@JaikalkiTech",
+    "title": "Graphic Design Services - Creative Solutions for Your Brand",
+    "description": "Jaikalki Technology provides creative and professional graphic design services to help your business stand out.",
+    "image": "https://jaikalki.in/static/assets_jaikalki/assets/img/jaikalki_graphic_design.jpg"
+  }
+}

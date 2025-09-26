@@ -1,0 +1,276 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} UI Forms {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+  <div class="py-4">
+      <nav aria-label="breadcrumb" class="d-none d-md-inline-block">
+          <ol class="breadcrumb breadcrumb-dark breadcrumb-transparent">
+              <li class="breadcrumb-item">
+                  <a href="#">
+                      <svg class="icon icon-xxs" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                  </a>
+              </li>
+              <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Phonebook</li>
+          </ol>
+      </nav>
+      <div class="d-flex justify-content-between w-100 flex-wrap">
+          <div class="mb-3 mb-lg-0">
+              <h1 class="h4">Phonebook</h1>
+                  </div>
+
+      </div>
+  </div>
+
+<div class="container py-4">
+
+
+<div class="row mb-3">
+    <!-- "New Add" Button Column (col-md-3) -->
+    <div class="col-md-3 d-flex justify-content-start align-items-center">
+        <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#addPhonebookModal">
+            New Add
+        </button>
+    </div>
+
+    <!-- Search Form Column (col-md-9) -->
+    <div class="col-md-9">
+        <form method="GET" action="{{ url_for('admin_blueprint.phonebook') }}">
+            <div class="row">
+                <!-- Search Bar Column (col-md-8) -->
+                <div class="col-md-8">
+                    <input type="text" class="form-control" id="searchBar" name="query" placeholder="Search by Name, Mobile, or Company Name..." aria-label="Search Users">
+                </div>
+
+                <!-- Search Button Column (col-md-4) -->
+                <div class="col-md-4">
+                    <button type="submit" class="btn btn-primary w-100">Search</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+
+
+  <div class="table-responsive">
+    <table class="table table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Number</th>
+                <th>Company Name</th>
+                <th>Address</th>
+                <th>Create Date</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for entry in phonebook_entries.items %}
+            <tr>
+                <td>{{ entry.id }}</td>
+                <td>{{ entry.name }}</td>
+                <td>{{ entry.number }}</td>
+                <td>{{ entry.company_name }}</td>
+                <td>{{ entry.address }}</td>
+                <td>{{ entry.create_date.strftime('%Y-%m-%d') }}</td> <!-- Use the correct date formatting -->
+                <td>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton{{ entry.id }}" data-bs-toggle="dropdown" aria-expanded="false">
+                            Action
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton{{ entry.id }}">
+                            <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#editModal{{ entry.id }}">Edit</a></li>
+
+            <!-- Delete Option -->
+            <li>
+                <form method="POST" action="{{ url_for('admin_blueprint.delete_phonebook', expense_id=entry.id) }}">
+                    <button type="submit" class="dropdown-item text-danger">Delete</button>
+                </form>
+            </li>
+
+                        </ul>
+                    </div>
+                    <!-- Edit Modal -->
+<div class="modal fade" id="editModal{{ entry.id }}" tabindex="-1" aria-labelledby="editModalLabel{{ entry.id }}" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form method="POST" action="{{ url_for('admin_blueprint.edit_phonebook', expense_id=entry.id) }}">
+        {{ form.hidden_tag() }}
+        <div class="modal-header">
+          <h5 class="modal-title" id="editModalLabel{{ entry.id }}">Edit Entry</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- Include form fields here and set the value to the current entry data -->
+          <div class="mb-3">
+            <label for="name{{ entry.id }}">Name</label>
+            <input type="text" name="name" id="name{{ entry.id }}" class="form-control" value="{{ entry.name }}">
+          </div>
+          <div class="mb-3">
+            <label for="number{{ entry.id }}">Number</label>
+            <input type="text" name="number" id="number{{ entry.id }}" oninput="validateMobile()" class="form-control" value="{{ entry.number }}">
+          </div>
+          <div class="mb-3">
+            <label for="company_name{{ entry.id }}">Company Name</label>
+            <input type="text" name="company_name" id="company_name{{ entry.id }}" class="form-control" value="{{ entry.company_name }}">
+          </div>
+          <div class="mb-3">
+            <label for="address{{ entry.id }}">Address</label>
+            <input type="text" name="address" id="address{{ entry.id }}" class="form-control" value="{{ entry.address }}">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary">Save changes</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+
+
+
+<!-- Pagination Controls -->
+
+<!-- Pagination Controls -->
+<nav aria-label="Phonebook Pagination">
+    <ul class="pagination">
+        {% if phonebook_entries.has_prev %}
+        <li class="page-item">
+            <a class="page-link" href="{{ url_for('admin_blueprint.phonebook', page=phonebook_entries.prev_num) }}">Previous</a>
+        </li>
+        {% endif %}
+        {% for page_num in phonebook_entries.iter_pages() %}
+            {% if page_num %}
+                <li class="page-item {% if phonebook_entries.page == page_num %}active{% endif %}">
+                    <a class="page-link" href="{{ url_for('admin_blueprint.phonebook', page=page_num) }}">{{ page_num }}</a>
+                </li>
+            {% endif %}
+        {% endfor %}
+        {% if phonebook_entries.has_next %}
+        <li class="page-item">
+            <a class="page-link" href="{{ url_for('admin_blueprint.phonebook', page=phonebook_entries.next_num) }}">Next</a>
+        </li>
+        {% endif %}
+    </ul>
+</nav>
+
+<!-- Add New Entry Modal -->
+<div class="modal fade" id="addPhonebookModal" tabindex="-1" aria-labelledby="addPhonebookModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form method="POST" action="{{ url_for('admin_blueprint.phonebook') }}">
+                {{ form.hidden_tag() }}
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addPhonebookModalLabel">Add New Phonebook Entry</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-floating mb-3">
+                        {{ form.name(class="form-control", placeholder="Name", oninput="validateMobile()") }}
+                        <label for="name">Name</label>
+                        {% if form.name.errors %}
+                            <small class="text-danger">{{ form.name.errors[0] }}</small>
+                        {% endif %}
+                    </div>
+                    <div class="form-floating mb-3">
+                        {{ form.number(class="form-control", placeholder="Number") }}
+                        <label for="number">Number</label>
+                        {% if form.number.errors %}
+                            <small class="text-danger">{{ form.number.errors[0] }}</small>
+                        {% endif %}
+                    </div>
+                    <div class="form-floating mb-3">
+                        {{ form.company_name(class="form-control", placeholder="Company Name") }}
+                        <label for="company_name">Company Name</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        {{ form.address(class="form-control", placeholder="Address") }}
+                        <label for="address">Address</label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Save Entry</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+</div>
+<!-- Edit Modal -->
+
+
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const flashMessages = {{ get_flashed_messages(with_categories=True) | tojson | safe }};
+
+        // Iterate through all flash messages
+        flashMessages.forEach(function(message) {
+            if (message[0] === 'success') {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Success!',
+                    text: message[1],
+                    confirmButtonText: 'Okay'
+                });
+            } else if (message[0] === 'danger') {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error!',
+                    text: message[1],
+                    confirmButtonText: 'Try Again'
+                });
+            }
+        });
+    });
+</script>
+
+
+<script>
+
+
+
+
+function validateMobile() {
+    const mobile = document.querySelector('input[name="mobile"]').value;
+    const feedback = document.getElementById('mobileFeedback');
+
+    if (mobile.length === 10) {
+        feedback.innerText = ''; // Clear feedback if valid
+    } else {
+        feedback.innerText = 'Mobile number must be exactly 10 digits.';
+        feedback.className = 'text-danger'; // Ensure it's red for invalid input
+    }
+}
+
+
+
+</script>
+
+
+{% endblock javascripts %}

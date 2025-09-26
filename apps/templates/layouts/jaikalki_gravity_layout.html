@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    {% block title %}
+   <title>JaiKalki Technology offers the services as web design, web development, website design company, programming python, python full stack developer, Python Developers, Software</title>
+
+    <meta name="description" content="Experience top-notch web design and web development services from Jaikalki Technology, your affordable Mumbai-based company. Get superior quality and cost-effective solutions for all your website needs." />
+      <meta name="keywords" content="Jaikalki Technology is your ultimate web design company offering exceptional web development services in Mumbai. We specialize in website design, providing comprehensive web design services and efficient digital marketing solutions. As a leading SEO company and agency in Mumbai, we ensure your online presence is optimized. Our expertise extends to website designing services, digital marketing strategies, and even Android app development. Trust us for all your web-related needs, and experience unmatched quality and professionalism." />
+{% endblock title %}
+  <!-- Favicons -->
+  <link href="{{ config.JAIKALKI_ROOT}}/assets/img/favicon.png" rel="icon">
+  <link href="{{ config.JAIKALKI_ROOT}}/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{{ config.JAIKALKI_ROOT}}/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="{{ config.JAIKALKI_ROOT}}/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="{{ config.JAIKALKI_ROOT}}/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="{{ config.JAIKALKI_ROOT}}/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="{{ config.JAIKALKI_ROOT}}/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="{{ config.JAIKALKI_ROOT}}/assets/css/main.css" rel="stylesheet">
+{% block stylesheets %}{% endblock stylesheets %}
+</head>
+<body class="index-page">
+
+
+
+
+{% include 'includes/jaikalki_navigation_gravity.html' %}
+
+
+      {% block content %}{% endblock content %}
+
+  {% include 'includes/jaikalki_contact_call_to_action_web.html'%}
+      {% include 'includes/jaikalki_footer_gravity.html' %}
+
+
+<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  {% include 'includes/scripts_jaikalki.html' %}
+
+  <!-- Specific Page JS goes HERE  -->
+  {% block javascripts %}{% endblock javascripts %}
+
+</body>
+</html>

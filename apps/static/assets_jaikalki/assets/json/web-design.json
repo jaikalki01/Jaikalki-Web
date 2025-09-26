@@ -1,0 +1,61 @@
+{
+  "about": {
+    "meta": "ABOUT JAIKALKI TECHNOLOGY PVT LTD - WEB DESIGN SERVICES",
+    "title": "Crafting Visually Appealing and User-Centric Web Designs",
+    "description1": "At Jaikalki Technology Pvt Ltd, our journey in web design started with a passion for creating seamless, aesthetically pleasing, and functional websites that elevate our clients' online presence. We began as a small web development unit and have since grown into a Private Limited entity, offering a range of web design and development services.",
+    "description2": "In March 2023, we expanded our expertise to include innovative web design solutions, focusing on user experience (UX), responsive design, and creative visual elements. Today, our web design team is ready to craft websites that not only look stunning but also perform at the highest level.",
+    "description3": "Our team believes that a website is more than just an online presence; it's a powerful marketing tool and a bridge between your business and customers. Our goal is to create web designs that help you connect with your audience and achieve your business goals.",
+    "features": [
+      {
+        "name": "Custom Web Design",
+        "description": "Tailored designs that reflect your brand's identity and engage your audience."
+      },
+      {
+        "name": "Responsive Design",
+        "description": "Websites that perform flawlessly across all devices, ensuring a seamless user experience."
+      },
+      {
+        "name": "SEO-Optimized Web Design",
+        "description": "Web designs optimized for search engines to help you rank higher and reach a broader audience."
+      }
+    ]
+  },
+  "features": {
+    "title": "Why Choose Jaikalki Technology Pvt Ltd for Web Design",
+    "subtitle": "Empower your digital presence with our creative, innovative, and responsive web design solutions.",
+    "leftColumn": [
+      {
+        "title": "Creative & Custom Designs",
+        "description": "We offer creative, tailor-made web design solutions that match your brand’s vision and needs.",
+        "icon": "bi-lightbulb"
+      },
+      {
+        "title": "Mobile-First Approach",
+        "description": "We prioritize mobile users by designing websites that look and function perfectly on smartphones and tablets.",
+        "icon": "bi-phone"
+      },
+      {
+        "title": "User-Centered UX/UI",
+        "description": "Our designs focus on delivering exceptional user experience (UX) with intuitive navigation and engaging interfaces.",
+        "icon": "bi-person-check"
+      }
+    ],
+    "rightColumn": [
+      {
+        "title": "SEO-Ready Designs",
+        "description": "Our designs are built with search engine optimization (SEO) in mind, helping your site rank higher and attract more visitors.",
+        "icon": "bi-search"
+      },
+      {
+        "title": "Fast-Loading Websites",
+        "description": "We create websites that are optimized for speed, ensuring a fast and smooth browsing experience for your users.",
+        "icon": "bi-speedometer"
+      },
+      {
+        "title": "Scalable Solutions",
+        "description": "Our web designs are scalable, meaning your site can grow with your business, adapting to new needs and functionalities.",
+        "icon": "bi-arrow-expand"
+      }
+    ]
+  }
+}

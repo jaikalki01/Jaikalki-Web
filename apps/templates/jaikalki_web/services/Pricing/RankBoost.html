@@ -1,0 +1,77 @@
+{% extends "layouts/jaikalki_layout.html" %}
+
+{% block title %}
+  <meta name="description" content="Enhance your website’s search rankings with Rank Boost SEO services by Jaikalki Technology Pvt Ltd. Get more visibility, traffic, and leads.">
+  <meta name="keywords" content="SEO services, Rank Boost, search engine optimization, website ranking, digital marketing, keyword optimization">
+  <meta property="og:title" content="Rank Boost SEO Services | Jaikalki Technology Pvt Ltd">
+  <meta property="og:description" content="Increase your website’s ranking with our expert Rank Boost SEO services. Optimize keywords, improve performance, and gain more organic traffic.">
+  <meta property="og:image" content="https://jaikalki.com/static/assets_jaikalki/assets/img/rankboost-seo.jpg">
+  <meta property="og:url" content="https://jaikalki.com/rank-boost-seo">
+  <title>Rank Boost SEO Services - Jaikalki Technology Pvt Ltd</title>
+{% endblock %}
+
+{% block content %}
+  <main class="main">
+    <div class="page-title light-background">
+      <div class="container">
+        <h1>Rank Boost SEO Services</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/services.html">Services</a></li>
+            <li class="current">Pricing</li>
+            <li class="current">Rank Boost SEO</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+
+    <section id="features-2" class="features-2 section py-5 bg-light">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title text-center mb-5">
+          <h2 class="fw-bold text-primary">Why Choose Our Rank Boost SEO Services?</h2>
+          <p class="lead text-muted">Improve your website’s ranking with advanced SEO techniques, keyword optimization, and strategic link-building.</p>
+        </div>
+
+        <div class="row align-items-center gy-5">
+          <div class="col-lg-4">
+            <div class="feature-item d-flex flex-column align-items-end text-end mb-4">
+              <h4 class="fw-bold">Advanced Keyword Targeting</h4>
+              <p class="text-muted">Optimize high-traffic keywords to improve your search engine rankings.</p>
+            </div>
+            <div class="feature-item d-flex flex-column align-items-end text-end mb-4">
+              <h4 class="fw-bold">Performance Optimization</h4>
+              <p class="text-muted">Enhance website speed, mobile responsiveness, and SEO performance.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 text-center">
+            <div class="bg-white shadow rounded p-4">
+              <h3 class="fw-bold text-primary mb-3">Rank Boost SEO</h3>
+              <p class="lead text-muted">Boost your search rankings with our specialized Rank Boost SEO package.</p>
+              <h2 class="fw-bold text-success">₹8,000</h2>
+              <button class="btn btn-primary btn-lg" onclick="addToCart()">Buy Now</button>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="feature-item d-flex flex-column align-items-start mb-4">
+              <h4 class="fw-bold">Quality Link Building</h4>
+              <p class="text-muted">Gain high-authority backlinks for better domain strength and rankings.</p>
+            </div>
+            <div class="feature-item d-flex flex-column align-items-start mb-4">
+              <h4 class="fw-bold">Local & Global SEO</h4>
+              <p class="text-muted">Optimize your website for both local and international search visibility.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function addToCart() {
+        alert("Payment Method Coming Soon!!!");
+      }
+    </script>
+  </main>
+{% endblock content %}

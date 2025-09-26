@@ -1,0 +1,61 @@
+{
+  "about": {
+    "meta": "ABOUT JAIKALKI TECHNOLOGY PVT LTD - WEB DEVELOPMENT SERVICES",
+    "title": "Building Dynamic Websites with Database Integration and Powerful Admin Panels",
+    "description1": "At Jaikalki Technology Pvt Ltd, we specialize in developing dynamic websites that are robust, scalable, and interactive. Our journey began with a focus on creating custom websites, and today, we have expanded our services to offer fully integrated web development solutions with powerful backend functionality.",
+    "description2": "In March 2023, we took our expertise to the next level by incorporating dynamic database-driven websites and creating intuitive admin panels. Our goal is to provide seamless integration between the front end and backend, ensuring that your website is not only user-friendly but also easy to manage and scale.",
+    "description3": "Our web development team is committed to delivering dynamic solutions that grow with your business. With our database-powered websites and admin panels, you can easily manage content, user interactions, and more, ensuring a smooth and efficient operation.",
+    "features": [
+      {
+        "name": "Dynamic Web Development",
+        "description": "We develop websites with dynamic features, including content management systems and real-time data integration."
+      },
+      {
+        "name": "Database Integration",
+        "description": "Our websites come with powerful database backends, allowing real-time data storage, retrieval, and management."
+      },
+      {
+        "name": "Admin Panel Integration",
+        "description": "We build intuitive and secure admin panels, giving you full control over your website’s content, user management, and more."
+      }
+    ]
+  },
+  "features": {
+    "title": "Why Choose Jaikalki Technology Pvt Ltd for Web Development",
+    "subtitle": "Leverage our expertise in dynamic web development with seamless database integration and powerful admin panels.",
+    "leftColumn": [
+      {
+        "title": "Custom Dynamic Solutions",
+        "description": "We build dynamic websites tailored to your business needs, integrating custom features and functionalities.",
+        "icon": "bi-layers"
+      },
+      {
+        "title": "Real-Time Database Integration",
+        "description": "Our web development process ensures your site is fully connected to real-time databases for efficient data handling.",
+        "icon": "bi-database"
+      },
+      {
+        "title": "User-Friendly Admin Panel",
+        "description": "We provide easy-to-use admin panels that allow you to manage and update your website’s content effortlessly.",
+        "icon": "bi-house-door"
+      }
+    ],
+    "rightColumn": [
+      {
+        "title": "Secure and Scalable Solutions",
+        "description": "Our web applications are developed with scalability and security in mind, allowing you to grow your business with confidence.",
+        "icon": "bi-shield-lock"
+      },
+      {
+        "title": "Fast and Reliable Performance",
+        "description": "We ensure high-performance websites that load quickly and handle traffic with ease, providing a seamless user experience.",
+        "icon": "bi-speedometer"
+      },
+      {
+        "title": "Flexible & Future-Ready",
+        "description": "Our web development solutions are future-proof and flexible, allowing for continuous updates and improvements as your business evolves.",
+        "icon": "bi-arrow-repeat"
+      }
+    ]
+  }
+}

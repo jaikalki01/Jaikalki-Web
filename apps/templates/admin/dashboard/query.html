@@ -1,0 +1,235 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} B2B Member List {% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+  <div class="py-4">
+      <nav aria-label="breadcrumb" class="d-none d-md-inline-block">
+          <ol class="breadcrumb breadcrumb-dark breadcrumb-transparent">
+              <li class="breadcrumb-item">
+                  <a href="#">
+                      <svg class="icon icon-xxs" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                  </a>
+              </li>
+              <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Query List</li>
+          </ol>
+      </nav>
+
+  </div>
+
+<div class="container py-4">
+
+
+
+
+
+
+
+
+
+
+    <hr>
+ <h3 class="mt-5">Query List</h3>
+
+<div class="row">
+        <div class="col-md-12 mb-3 mx-auto"> <!-- Center the search bar -->
+            <form method="GET" action="{{ url_for('admin_blueprint.query') }}">
+                <div class="input-group">
+                    <input type="text" name="search" class="form-control" placeholder="Search Members by  Email or Mobile Number...." value="{{ request.args.get('search', '') }}">
+                    <button class="btn btn-primary" type="submit">Search</button>
+                </div>
+            </form>
+        </div>
+    </div>
+   <div class="table-responsive">
+    <table class="table table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th>Index</th>
+
+                <th>Name</th>
+
+                <th>Email</th>
+                <th>Mobile</th>
+                <th>subject</th>
+                <th>Msg</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in users.items %}
+            <tr>
+                <td>{{ loop.index }}</td>
+                <td>{{ user.name }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.mobile }}</td>
+                <td>{{ user.subject }}</td>
+                <td>{{ user.message }}</td>
+
+                <td>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton{{ user.id }}" data-bs-toggle="dropdown" aria-expanded="false">
+                            Action
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton{{ user.id }}">
+                            <!-- Delete Button -->
+                            <form method="POST" action="{{ url_for('admin_blueprint.query') }}">
+                                <input type="hidden" name="delete_id" value="{{ user.id }}">
+                                <li><button class="dropdown-item" type="submit">Delete</button></li>
+                            </form>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+    <!-- Pagination Controls -->
+    <nav aria-label="User Pagination">
+        <ul class="pagination">
+            {% if users.has_prev %}
+                <li class="page-item">
+                    <a class="page-link" href="{{ url_for('admin_blueprint.query', page=users.prev_num, per_page=users.per_page) }}">Previous</a>
+                </li>
+            {% endif %}
+
+            {% for page_num in users.iter_pages() %}
+                {% if page_num %}
+                    <li class="page-item {% if users.page == page_num %}active{% endif %}">
+                        <a class="page-link" href="{{ url_for('admin_blueprint.query', page=page_num, per_page=users.per_page) }}">{{ page_num }}</a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+
+            {% if users.has_next %}
+                <li class="page-item">
+                    <a class="page-link" href="{{ url_for('admin_blueprint.query', page=users.next_num, per_page=users.per_page) }}">Next</a>
+                </li>
+            {% endif %}
+        </ul>
+    </nav>
+</div>
+
+
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const successMessages = {{ get_flashed_messages(with_categories=True) | tojson | safe }};
+
+        // Check for success messages
+        successMessages.forEach(function(message) {
+            if (message[0] === 'success') {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Success!',
+                    text: message[1],
+                    confirmButtonText: 'Okay'
+                });
+            }
+        });
+    });
+</script>
+
+<script>
+
+    function validateUsername() {
+    const username = document.querySelector('input[name="username"]').value;
+    const feedback = document.getElementById('usernameFeedback');
+
+    if (username.length > 0) {
+        fetch(`/validate_username?username=${username}`)
+            .then(response => response.json())
+            .then(data => {
+                feedback.innerText = data.message;
+                feedback.className = data.available ? 'text-success' : 'text-danger'; // Correctly sets the class
+            });
+    } else {
+        feedback.innerText = '';
+        feedback.className = ''; // Reset class if input is empty
+    }
+}
+
+function validateEmail() {
+    const email = document.querySelector('input[name="email"]').value;
+    const feedback = document.getElementById('emailFeedback');
+
+    if (email.length > 0) {
+        fetch(`/validate_email?email=${email}`)
+            .then(response => response.json())
+            .then(data => {
+                feedback.innerText = data.message;
+                feedback.className = data.available ? 'text-success' : 'text-danger'; // Correctly sets the class
+            });
+    } else {
+        feedback.innerText = '';
+        feedback.className = ''; // Reset class if input is empty
+    }
+}
+
+function validateMobile() {
+    const mobile = document.querySelector('input[name="mobile"]').value;
+    const feedback = document.getElementById('mobileFeedback');
+
+    if (mobile.length === 10) {
+        feedback.innerText = ''; // Clear feedback if valid
+    } else {
+        feedback.innerText = 'Mobile number must be exactly 10 digits.';
+        feedback.className = 'text-danger'; // Ensure it's red for invalid input
+    }
+}
+
+function checkPasswordStrength() {
+    const password = document.querySelector('input[name="password"]').value;
+    const feedback = document.getElementById('passwordFeedback');
+
+    let strengthMessage = '';
+    let strengthScore = 0;
+
+    if (password.length >= 8) strengthScore++;
+    if (/[A-Z]/.test(password)) strengthScore++;
+    if (/[a-z]/.test(password)) strengthScore++;
+    if (/[0-9]/.test(password)) strengthScore++;
+    if (/[!@#$%^&*(),.?":{}|<>]/.test(password)) strengthScore++;
+
+    switch (strengthScore) {
+        case 0:
+        case 1:
+            strengthMessage = 'Very Weak';
+            feedback.className = 'text-danger';
+            break;
+        case 2:
+            strengthMessage = 'Weak';
+            feedback.className = 'text-danger';
+            break;
+        case 3:
+            strengthMessage = 'Moderate';
+            feedback.className = 'text-danger';
+            break;
+        case 4:
+            strengthMessage = 'Strong';
+            feedback.className = 'text-success';
+            break;
+        case 5:
+            strengthMessage = 'Very Strong';
+            feedback.className = 'text-success';
+            break;
+    }
+
+    feedback.innerText = strengthMessage;
+}
+</script>
+
+
+{% endblock javascripts %}

@@ -1,0 +1,22 @@
+{
+  "title": "Contact Us - Jaikalki Technology Pvt Ltd",
+  "description": "Get in touch with Jaikalki Technology Pvt Ltd for top-notch web design, development, and digital solutions. Reach out to us for inquiries, support, or partnership opportunities.",
+  "keywords": "Contact Jaikalki Technology, Jaikalki Technology contact, web design services, digital solutions, Mumbai, support, inquiries",
+  "robots": "index, follow",
+  "canonical": "https://jaikalki.in/contact-us",
+  "og": {
+    "site_name": "Jaikalki Technology Pvt Ltd",
+    "title": "Contact Us - Jaikalki Technology Pvt Ltd",
+    "description": "Connect with Jaikalki Technology Pvt Ltd to discuss your web design, development, or digital solution needs. We're here to assist you.",
+    "image": "https://jaikalki.in/static/img/contact-us.jpg",
+    "url": "https://jaikalki.in/contact-us",
+    "type": "website"
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "site": "@JaikalkiTech",
+    "title": "Contact Us - Jaikalki Technology Pvt Ltd",
+    "description": "Reach out to Jaikalki Technology Pvt Ltd for expert web design and digital solutions. We're ready to help you.",
+    "image": "https://jaikalki.in/static/img/contact-us.jpg"
+  }
+}

@@ -1,0 +1,176 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} UI Forms {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+  <div class="py-4">
+      <nav aria-label="breadcrumb" class="d-none d-md-inline-block">
+          <ol class="breadcrumb breadcrumb-dark breadcrumb-transparent">
+              <li class="breadcrumb-item">
+                  <a href="#">
+                      <svg class="icon icon-xxs" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                  </a>
+              </li>
+              <li class="breadcrumb-item"><a href="#">Gravity DigiPayments</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Pin Set</li>
+          </ol>
+      </nav>
+
+  </div>
+
+<div class="container mt-5">
+    <h2 class="text-center">Set Your PIN</h2>
+    <form method="POST" action="" id="pinForm">
+        {{ form.hidden_tag() }}
+
+     <div class="form-group mb-4 text-center">
+    <label for="pinInput" class="form-label font-weight-bold">Enter your 6-digit PIN</label>
+    <div id="pinInput" class="d-flex justify-content-center">
+        <input type="password" maxlength="1" class="form-control pin-box" id="pin1" oninput="moveToNextBox(1)" autocomplete="off" />
+        <input type="password" maxlength="1" class="form-control pin-box" id="pin2" oninput="moveToNextBox(2)" autocomplete="off" />
+        <input type="password" maxlength="1" class="form-control pin-box" id="pin3" oninput="moveToNextBox(3)" autocomplete="off" />
+        <input type="password" maxlength="1" class="form-control pin-box" id="pin4" oninput="moveToNextBox(4)" autocomplete="off" />
+        <input type="password" maxlength="1" class="form-control pin-box" id="pin5" oninput="moveToNextBox(5)" autocomplete="off" />
+        <input type="password" maxlength="1" class="form-control pin-box" id="pin6" oninput="moveToNextBox(6)" autocomplete="off" />
+    </div>
+    <input type="hidden" name="pin" id="fullPin" />
+
+    <div id="pinError" class="text-danger mt-2" style="display: none;"></div>
+
+    {% if form.pin.errors %}
+        <div class="text-danger mt-2">
+            {% for error in form.pin.errors %}
+                <span>{{ error }}</span><br>
+            {% endfor %}
+        </div>
+    {% endif %}
+</div>
+
+        <div class="form-group text-center">
+            {{ form.submit(class="btn btn-primary btn-lg") }}
+        </div>
+    </form>
+</div>
+<style>
+
+    .pin-box {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    text-align: center;
+    margin: 0 5px;
+}
+
+</style>
+
+
+
+
+
+
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const flashMessages = {{ get_flashed_messages(with_categories=True) | tojson | safe }};
+
+        // Iterate through all flash messages
+        flashMessages.forEach(function(message) {
+            if (message[0] === 'success') {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Success!',
+                    text: message[1],
+                    confirmButtonText: 'Okay'
+                });
+            } else if (message[0] === 'danger') {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error!',
+                    text: message[1],
+                    confirmButtonText: 'Try Again'
+                });
+            }
+        });
+    });
+</script>
+<script>
+ document.addEventListener("DOMContentLoaded", function() {
+    const pinBoxes = document.querySelectorAll(".pin-box");
+    const pinError = document.getElementById("pinError");
+    const form = document.getElementById("pinForm");
+
+    pinBoxes.forEach((box, index) => {
+        box.addEventListener("input", () => moveToNextBox(index + 1));
+    });
+
+    form.addEventListener("submit", function(event) {
+        const pinValue = getPinValue();
+        if (isSequential(pinValue) || isRepeated(pinValue)) {
+            event.preventDefault(); // Stop form submission
+            pinError.textContent = "Sequential or repeated digits are not allowed.";
+            pinError.style.display = "block";
+        } else {
+            pinError.style.display = "none";
+        }
+    });
+
+    function moveToNextBox(currentBox) {
+        const currentInput = document.getElementById(`pin${currentBox}`);
+        const nextBox = document.getElementById(`pin${currentBox + 1}`);
+
+        // Only move to the next box if the current box is filled with a digit
+        if (currentInput.value && /^\d$/.test(currentInput.value) && nextBox) {
+            nextBox.focus();
+        }
+
+        // Collect values from all boxes
+        const pinValue = getPinValue();
+
+        // Set the full pin value to the hidden input
+        document.getElementById("fullPin").value = pinValue;
+
+        // Validate for sequential or repeated digits in real-time
+        if (isSequential(pinValue) || isRepeated(pinValue)) {
+            pinError.textContent = "Sequential or repeated digits are not allowed.";
+            pinError.style.display = "block";
+        } else {
+            pinError.style.display = "none";
+        }
+    }
+
+    // Function to collect the PIN from all input boxes
+    function getPinValue() {
+        let pinValue = "";
+        pinBoxes.forEach(box => {
+            pinValue += box.value;
+        });
+        return pinValue;
+    }
+
+    // Check if the PIN contains sequential digits (e.g., 123456)
+    function isSequential(pin) {
+        for (let i = 0; i < pin.length - 1; i++) {
+            if (parseInt(pin[i + 1]) !== parseInt(pin[i]) + 1) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    // Check if the PIN contains repeated digits (e.g., 111111)
+    function isRepeated(pin) {
+        return pin.split('').every(digit => digit === pin[0]);
+    }
+});
+
+</script>
+{% endblock javascripts %}

@@ -1,0 +1,359 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} UI Forms {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+  <div class="py-4">
+      <nav aria-label="breadcrumb" class="d-none d-md-inline-block">
+          <ol class="breadcrumb breadcrumb-dark breadcrumb-transparent">
+              <li class="breadcrumb-item">
+                  <a href="#">
+                      <svg class="icon icon-xxs" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                  </a>
+              </li>
+              <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Registration</li>
+          </ol>
+      </nav>
+      <div class="d-flex justify-content-between w-100 flex-wrap">
+          <div class="mb-3 mb-lg-0">
+              <h1 class="h4">Registration</h1>
+                  </div>
+
+      </div>
+  </div>
+
+<div class="container py-4">
+
+
+         <form method="POST" action="">
+    <div class="row">
+        <div class="col-md-6">
+            {{ form.hidden_tag() }}
+
+            <div class="form-group">
+                {{ form.username.label(class="form-label") }}
+                {{ form.username(class="form-control", oninput="validateUsername()") }}
+                <div id="usernameFeedback" class="text-danger"></div>
+                {% if form.username.errors %}
+                    <div class="text-danger">
+                        {% for error in form.username.errors %}
+                            <span>{{ error }}</span><br>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                {{ form.email.label(class="form-label") }}
+                {{ form.email(class="form-control", oninput="validateEmail()") }}
+                <div id="emailFeedback" class="text-danger"></div>
+                {% if form.email.errors %}
+                    <div class="text-danger">
+                        {% for error in form.email.errors %}
+                            <span>{{ error }}</span><br>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="col-md-6 mt-2">
+            <div class="form-group">
+                {{ form.mobile.label(class="form-label") }}
+                {{ form.mobile(class="form-control", oninput="validateMobile()") }}
+                <div id="mobileFeedback" class="text-danger"></div>
+                {% if form.mobile.errors %}
+                    <div class="text-danger">
+                        {% for error in form.mobile.errors %}
+                            <span>{{ error }}</span><br>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="col-md-6 mt-2">
+            <div class="form-group">
+                {{ form.password.label(class="form-label") }}
+                {{ form.password(class="form-control", oninput="checkPasswordStrength()") }}
+                <div id="passwordFeedback" class="text-danger"></div>
+                {% if form.password.errors %}
+                    <div class="text-danger">
+                        {% for error in form.password.errors %}
+                            <span>{{ error }}</span><br>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="col-md-6 mt-2">
+            <div class="form-group">
+                {{ form.access.label(class="form-label") }}
+                {{ form.access(class="form-control") }}
+                {% if form.access.errors %}
+                    <div class="text-danger">
+                        {% for error in form.access.errors %}
+                            <span>{{ error }}</span><br>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+        <div class="col-md-6 mt-2">
+            <div class="form-group">
+                {{ form.b2b_user.label(class="form-label") }}
+                {{ form.b2b_user(class="form-control") }}
+                {% if form.b2b_user.errors %}
+                    <div class="text-danger">
+                        {% for error in form.b2b_user.errors %}
+                            <span>{{ error }}</span><br>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group mt-5 text-center">
+        {{ form.submit(class="btn btn-primary") }}
+    </div>
+</form>
+
+
+
+
+
+    <hr>
+    <h3 class="mt-5">Users List</h3>
+
+    <div class="row mb-3">
+    <div class="col-md-8">
+        <input type="text" class="form-control" id="searchBar" placeholder="Search Users..." aria-label="Search Users">
+    </div>
+    <div class="col-md-4 d-flex align-items-end">
+        <button type="submit" class="btn btn-primary">Search</button>
+    </div>
+</div>
+
+
+
+   <div class="table-responsive">
+        <table class="table table-striped">
+            <thead class="thead-dark">
+                <tr>
+            <th>ID</th>
+            <th>Username</th>
+                    <th>Name</th>
+                    <th>Business Name</th>
+            <th>Email</th>
+            <th>Mobile</th>
+            <th>Access Level</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for user in users.items %}
+        <tr>
+            <td>{{ user.id }}</td>
+            <td>{{ user.username }}</td>
+            <td>{{ user.user_contact.firstName }} {{ user.user_contact.lastName }}</td>
+            <td>{{ user.user_contact.business_name }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.mobile }}</td>
+           <td>
+    {% if user.access == 1 %}
+        Super Admin
+    {% elif user.access == 2 %}
+        B2B
+    {% elif user.access == 3 %}
+        Merchant
+    {% else %}
+        Unknown Access
+    {% endif %}
+</td>
+
+            <td>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton{{ user.user_token }}" data-bs-toggle="dropdown" aria-expanded="false">
+                        Action
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton{{ user.user_token }}">
+                        <li><a class="dropdown-item" href="{{ url_for('admin_blueprint.edit_user', user_token=user.user_token) }}">Edit Member</a></li>
+
+                        <li><a class="dropdown-item" href="{{ url_for('admin_blueprint.add_details', user_token=user.user_token) }}">Add Details</a></li>
+                        <li><a class="dropdown-item" href="{{ url_for('admin_blueprint.add_kyc', user_token=user.user_token) }}">Add KYC</a></li>
+                        <li><a class="dropdown-item" href="{{ url_for('admin_blueprint.add_transaction', user_token=user.user_token) }}">Add Transaction PayIn</a></li>
+                          <li><a class="dropdown-item" href="{{ url_for('admin_blueprint.add_transaction_payout', user_token=user.user_token) }}">Add Transaction PayOut</a></li>
+
+                        <li><a class="dropdown-item" href="{{ url_for('admin_blueprint.view_profile', user_token=user.user_token) }}">View Profile</a></li>
+                        <li><a class="dropdown-item" href="{{ url_for('admin_blueprint.view_transaction_user', user_token=user.user_token) }}">View Transaction PayIn</a></li>
+                        <li><a class="dropdown-item" href="{{ url_for('admin_blueprint.view_transaction_user_payout', user_token=user.user_token) }}">View Transaction PayOut</a></li>
+
+                        <li><a class="dropdown-item" href="{{ url_for('admin_blueprint.view_kyc', user_token=user.user_token) }}">View KYC</a></li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+   </div>
+    <!-- Pagination Controls -->
+    <nav aria-label="User Pagination">
+        <ul class="pagination">
+            {% if users.has_prev %}
+                <li class="page-item">
+                    <a class="page-link" href="{{ url_for('admin_blueprint.register_user', page=users.prev_num, per_page=users.per_page) }}">Previous</a>
+                </li>
+            {% endif %}
+
+            {% for page_num in users.iter_pages() %}
+                {% if page_num %}
+                    <li class="page-item {% if users.page == page_num %}active{% endif %}">
+                        <a class="page-link" href="{{ url_for('admin_blueprint.register_user', page=page_num, per_page=users.per_page) }}">{{ page_num }}</a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+
+            {% if users.has_next %}
+                <li class="page-item">
+                    <a class="page-link" href="{{ url_for('admin_blueprint.register_user', page=users.next_num, per_page=users.per_page) }}">Next</a>
+                </li>
+            {% endif %}
+        </ul>
+    </nav>
+</div>
+
+
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const flashMessages = {{ get_flashed_messages(with_categories=True) | tojson | safe }};
+
+        // Iterate through all flash messages
+        flashMessages.forEach(function(message) {
+            if (message[0] === 'success') {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Success!',
+                    text: message[1],
+                    confirmButtonText: 'Okay'
+                });
+            } else if (message[0] === 'danger') {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error!',
+                    text: message[1],
+                    confirmButtonText: 'Try Again'
+                });
+            }
+        });
+    });
+</script>
+
+
+<script>
+
+    function validateUsername() {
+    const username = document.querySelector('input[name="username"]').value;
+    const feedback = document.getElementById('usernameFeedback');
+
+    if (username.length > 0) {
+        fetch(`/validate_username?username=${username}`)
+            .then(response => response.json())
+            .then(data => {
+                feedback.innerText = data.message;
+                feedback.className = data.available ? 'text-success' : 'text-danger'; // Correctly sets the class
+            });
+    } else {
+        feedback.innerText = '';
+        feedback.className = ''; // Reset class if input is empty
+    }
+}
+
+function validateEmail() {
+    const email = document.querySelector('input[name="email"]').value;
+    const feedback = document.getElementById('emailFeedback');
+
+    if (email.length > 0) {
+        fetch(`/validate_email?email=${email}`)
+            .then(response => response.json())
+            .then(data => {
+                feedback.innerText = data.message;
+                feedback.className = data.available ? 'text-success' : 'text-danger'; // Correctly sets the class
+            });
+    } else {
+        feedback.innerText = '';
+        feedback.className = ''; // Reset class if input is empty
+    }
+}
+
+function validateMobile() {
+    const mobile = document.querySelector('input[name="mobile"]').value;
+    const feedback = document.getElementById('mobileFeedback');
+
+    if (mobile.length === 10) {
+        feedback.innerText = ''; // Clear feedback if valid
+    } else {
+        feedback.innerText = 'Mobile number must be exactly 10 digits.';
+        feedback.className = 'text-danger'; // Ensure it's red for invalid input
+    }
+}
+
+function checkPasswordStrength() {
+    const password = document.querySelector('input[name="password"]').value;
+    const feedback = document.getElementById('passwordFeedback');
+
+    let strengthMessage = '';
+    let strengthScore = 0;
+
+    if (password.length >= 8) strengthScore++;
+    if (/[A-Z]/.test(password)) strengthScore++;
+    if (/[a-z]/.test(password)) strengthScore++;
+    if (/[0-9]/.test(password)) strengthScore++;
+    if (/[!@#$%^&*(),.?":{}|<>]/.test(password)) strengthScore++;
+
+    switch (strengthScore) {
+        case 0:
+        case 1:
+            strengthMessage = 'Very Weak';
+            feedback.className = 'text-danger';
+            break;
+        case 2:
+            strengthMessage = 'Weak';
+            feedback.className = 'text-danger';
+            break;
+        case 3:
+            strengthMessage = 'Moderate';
+            feedback.className = 'text-danger';
+            break;
+        case 4:
+            strengthMessage = 'Strong';
+            feedback.className = 'text-success';
+            break;
+        case 5:
+            strengthMessage = 'Very Strong';
+            feedback.className = 'text-success';
+            break;
+    }
+
+    feedback.innerText = strengthMessage;
+}
+</script>
+
+
+{% endblock javascripts %}

@@ -1,0 +1,320 @@
+
+{% extends "layouts/base.html" %}
+
+{% block title %} Dashboard {% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+  <div class="py-4">
+      <nav aria-label="breadcrumb" class="d-none d-md-inline-block">
+          <ol class="breadcrumb breadcrumb-dark breadcrumb-transparent">
+              <li class="breadcrumb-item">
+                  <a href="#">
+                      <svg class="icon icon-xxs" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                  </a>
+              </li>
+              <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Expanse Tracker</li>
+          </ol>
+      </nav>
+      <div class="d-flex justify-content-between w-100 flex-wrap">
+          <div class="mb-3 mb-lg-0">
+              <h1 class="h4">Role and Permission</h1>
+                  </div>
+<div class="row mb-3">
+
+</div>
+      </div>
+  </div>
+
+<div class="container py-4">
+
+
+        <form method="POST">
+    {{ roleform.hidden_tag() }}
+            <div class="row g-3">
+    <div class="col-md-12">
+        {{ roleform.name.label }} {{ roleform.name(class="form-control", placeholder="Role Name") }}
+    </div>
+             {% if roleform.name.errors %}
+                    <small class="text-danger">{{ form.name.errors[0] }}</small>
+                {% endif %}
+    <div class="col-md-6">
+
+        {{ roleform.submit(class="btn btn-primary") }}
+    </div>
+       </div>
+</form>
+
+     <hr>
+
+ <form method="POST">
+    {{ permissionform.hidden_tag() }}
+            <div class="row g-3">
+    <div class="col-md-12">
+        {{ permissionform.names.label }} {{ permissionform.names(class="form-control", placeholder="Permission Name") }}
+    </div>
+             {% if permissionform.names.errors %}
+                    <small class="text-danger">{{ permissionform.names.errors[0] }}</small>
+                {% endif %}
+    <div class="col-md-6">
+        {{ permissionform.submit(class="btn btn-primary") }}
+    </div>
+       </div>
+</form>
+<hr>
+ <form method="POST">
+    {{ assignPermissionform.hidden_tag() }}
+            <div class="row g-3">
+    <div class="col-md-6">
+        {{ assignPermissionform.role_id.label }} {{ assignPermissionform.role_id(class="form-control") }}
+
+             {% if assignPermissionform.role_id.errors %}
+                    <small class="text-danger">{{ assignPermissionform.role_id.errors[0] }}</small>
+                {% endif %}
+          </div>
+                <div class="col-md-6">
+        {{ assignPermissionform.permission_id.label }} {{ assignPermissionform.permission_id(class="form-control") }}
+
+             {% if assignPermissionform.permission_id.errors %}
+                    <small class="text-danger">{{ assignPermissionform.permission_id.errors[0] }}</small>
+                {% endif %}
+          </div>
+
+    <div class="col-md-4">
+        {{ assignPermissionform.submit(class="btn btn-primary") }}
+    </div>
+       </div>
+</form>
+   <hr>
+
+    <form method="POST">
+    {{ AssignRoleform.hidden_tag() }}
+            <div class="row g-3">
+    <div class="col-md-6">
+        {{ AssignRoleform.user_id.label }} {{ AssignRoleform.user_id(class="form-control") }}
+
+             {% if AssignRoleform.user_id.errors %}
+                    <small class="text-danger">{{ AssignRoleform.user_id.errors[0] }}</small>
+                {% endif %}
+          </div>
+                <div class="col-md-6">
+        {{ AssignRoleform.role_id.label }} {{ AssignRoleform.role_id(class="form-control") }}
+
+             {% if AssignRoleform.role_id.errors %}
+                    <small class="text-danger">{{ AssignRoleform.role_id.errors[0] }}</small>
+                {% endif %}
+          </div>
+
+    <div class="col-md-4">
+        {{ AssignRoleform.submit(class="btn btn-primary") }}
+    </div>
+       </div>
+</form>
+       <hr>
+
+    <h3>Roles and Assigned Permissions</h3>
+
+    <div class="row mb-3">
+    <div class="col-md-8">
+        <input type="text" class="form-control" id="searchBar" placeholder="Search Users..." aria-label="Search Users">
+    </div>
+    <div class="col-md-4 d-flex align-items-end">
+        <button type="submit" class="btn btn-primary">Search</button>
+    </div>
+</div>
+
+
+
+  <div class="table-responsive">
+    <table class="table table-striped">
+        <thead class="thead-dark">
+            <tr>
+                  <th>Role</th>
+            <th>Permissions</th>
+                 <th>Users</th>
+            </tr>
+        </thead>
+        <tbody>
+           {% for role in roles %}
+        <tr>
+            <td>{{ role.name }}</td>
+            <td>
+                {% for permission in role.permissions %}
+                    {{ permission.name }}<br>
+                {% endfor %}
+            </td>
+             <td>
+                {% for user in role.users %}
+                    {{ user.username }}<br>
+                {% endfor %}
+            </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<!-- Pagination Controls -->
+<nav aria-label="Expenses Pagination">
+    <ul class="pagination">
+        {% if pagination.has_prev %}
+        <li class="page-item">
+            <a class="page-link" href="{{ url_for('admin_blueprint.roles_permissions_list', page=pagination.prev_num, user_id=selected_user_id) }}">
+                Previous
+            </a>
+        </li>
+        {% endif %}
+
+        {% for page_num in pagination.iter_pages() %}
+        {% if page_num %}
+        <li class="page-item {% if pagination.page == page_num %}active{% endif %}">
+            <a class="page-link" href="{{ url_for('admin_blueprint.roles_permissions_list', page=page_num, user_id=selected_user_id) }}">
+                {{ page_num }}
+            </a>
+        </li>
+        {% endif %}
+        {% endfor %}
+
+        {% if pagination.has_next %}
+        <li class="page-item">
+            <a class="page-link" href="{{ url_for('admin_blueprint.roles_permissions_list', page=pagination.next_num, user_id=selected_user_id) }}">
+                Next
+            </a>
+        </li>
+        {% endif %}
+    </ul>
+</nav>
+
+
+
+
+</div>
+
+
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const flashMessages = {{ get_flashed_messages(with_categories=True) | tojson | safe }};
+
+        // Iterate through all flash messages
+        flashMessages.forEach(function(message) {
+            if (message[0] === 'success') {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Success!',
+                    text: message[1],
+                    confirmButtonText: 'Okay'
+                });
+            } else if (message[0] === 'danger') {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error!',
+                    text: message[1],
+                    confirmButtonText: 'Try Again'
+                });
+            }
+        });
+    });
+</script>
+
+
+<script>
+
+    function validateUsername() {
+    const username = document.querySelector('input[name="username"]').value;
+    const feedback = document.getElementById('usernameFeedback');
+
+    if (username.length > 0) {
+        fetch(`/validate_username?username=${username}`)
+            .then(response => response.json())
+            .then(data => {
+                feedback.innerText = data.message;
+                feedback.className = data.available ? 'text-success' : 'text-danger'; // Correctly sets the class
+            });
+    } else {
+        feedback.innerText = '';
+        feedback.className = ''; // Reset class if input is empty
+    }
+}
+
+function validateEmail() {
+    const email = document.querySelector('input[name="email"]').value;
+    const feedback = document.getElementById('emailFeedback');
+
+    if (email.length > 0) {
+        fetch(`/validate_email?email=${email}`)
+            .then(response => response.json())
+            .then(data => {
+                feedback.innerText = data.message;
+                feedback.className = data.available ? 'text-success' : 'text-danger'; // Correctly sets the class
+            });
+    } else {
+        feedback.innerText = '';
+        feedback.className = ''; // Reset class if input is empty
+    }
+}
+
+function validateMobile() {
+    const mobile = document.querySelector('input[name="mobile"]').value;
+    const feedback = document.getElementById('mobileFeedback');
+
+    if (mobile.length === 10) {
+        feedback.innerText = ''; // Clear feedback if valid
+    } else {
+        feedback.innerText = 'Mobile number must be exactly 10 digits.';
+        feedback.className = 'text-danger'; // Ensure it's red for invalid input
+    }
+}
+
+function checkPasswordStrength() {
+    const password = document.querySelector('input[name="password"]').value;
+    const feedback = document.getElementById('passwordFeedback');
+
+    let strengthMessage = '';
+    let strengthScore = 0;
+
+    if (password.length >= 8) strengthScore++;
+    if (/[A-Z]/.test(password)) strengthScore++;
+    if (/[a-z]/.test(password)) strengthScore++;
+    if (/[0-9]/.test(password)) strengthScore++;
+    if (/[!@#$%^&*(),.?":{}|<>]/.test(password)) strengthScore++;
+
+    switch (strengthScore) {
+        case 0:
+        case 1:
+            strengthMessage = 'Very Weak';
+            feedback.className = 'text-danger';
+            break;
+        case 2:
+            strengthMessage = 'Weak';
+            feedback.className = 'text-danger';
+            break;
+        case 3:
+            strengthMessage = 'Moderate';
+            feedback.className = 'text-danger';
+            break;
+        case 4:
+            strengthMessage = 'Strong';
+            feedback.className = 'text-success';
+            break;
+        case 5:
+            strengthMessage = 'Very Strong';
+            feedback.className = 'text-success';
+            break;
+    }
+
+    feedback.innerText = strengthMessage;
+}
+</script>
+
+
+{% endblock javascripts %}

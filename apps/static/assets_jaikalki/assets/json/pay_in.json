@@ -1,0 +1,70 @@
+{
+  "about": {
+    "meta": "Jaikalki TSP Services - Gravity DigiPayment by Jaikalki Technology Pvt Ltd",
+    "title": "Efficient MID Solutions through TSP Services for Pay-In and Pay-Out Needs",
+    "description1": "At Jaikalki Technology Pvt Ltd, our Gravity DigiPayment division specializes in offering Technology Service Provider (TSP) solutions to streamline the process of obtaining Merchant Identification Numbers (MIDs). We act as a bridge, connecting businesses with multiple banks and Payment Aggregator & Payment Gateway (PAPG) companies to ensure seamless onboarding and efficient payment processing solutions.",
+    "description2": "Our TSP services simplify the complexities of merchant onboarding by leveraging partnerships with top banks and PAPG companies. Whether you need a Pay-In or Pay-Out solution, we ensure that your business is equipped with the right tools to receive and disburse payments securely and efficiently.",
+    "description3": "With a dedicated Relationship Officer assigned to your business, we guide you through every step of the MID acquisition process. From document submission to integration with payment systems, we provide end-to-end support, ensuring that your business is ready to handle transactions quickly and reliably.",
+    "features": [
+      {
+        "name": "Seamless Bank and PAPG Integration",
+        "description": "We connect your business with top banks and PAPG companies to streamline the MID acquisition process, ensuring smooth onboarding."
+      },
+      {
+        "name": "End-to-End Merchant Onboarding Support",
+        "description": "Our team manages the entire onboarding process, from documentation to integration, saving you time and effort."
+      },
+      {
+        "name": "Dedicated Relationship Officer",
+        "description": "A dedicated officer ensures you get personalized support throughout the MID acquisition journey."
+      },
+      {
+        "name": "Efficient Pay-In and Pay-Out Solutions",
+        "description": "Our TSP services enable secure and efficient payment collection and disbursement tailored to your business needs."
+      }
+    ]
+  },
+  "features": {
+    "title": "Why Choose Jaikalki Technology Pvt Ltd as Your TSP Partner?",
+    "subtitle": "Partner with Gravity DigiPayment to simplify MID acquisition and payment solutions for your business.",
+    "leftColumn": [
+      {
+        "title": "Strong Bank & PAPG Partnerships",
+        "description": "We collaborate with leading banks and PAPG companies to provide robust payment solutions tailored to your needs.",
+        "icon": "bi-bank"
+      },
+      {
+        "title": "Streamlined MID Acquisition",
+        "description": "Our TSP services simplify the process of obtaining Merchant Identification Numbers, ensuring quick and hassle-free onboarding.",
+        "icon": "bi-card-checklist"
+      },
+      {
+        "title": "Flexible Payment Solutions",
+        "description": "We offer flexible Pay-In and Pay-Out solutions that support multiple payment methods and scale with your business.",
+        "icon": "bi-cash-stack"
+      },
+      {
+        "title": "Expert Guidance & Support",
+        "description": "Our experienced Relationship Officers provide expert guidance to ensure a smooth onboarding and payment process.",
+        "icon": "bi-people"
+      }
+    ],
+    "rightColumn": [
+      {
+        "title": "Customized Payment Integration",
+        "description": "Our TSP services integrate seamlessly with your existing systems, allowing for efficient and customized payment flows.",
+        "icon": "bi-plug"
+      },
+      {
+        "title": "Real-Time Monitoring & Reporting",
+        "description": "Track and monitor transactions in real-time with detailed reports for better financial management.",
+        "icon": "bi-bar-chart"
+      },
+      {
+        "title": "24/7 Support for Merchants",
+        "description": "We provide round-the-clock support to resolve issues and ensure uninterrupted payment operations.",
+        "icon": "bi-headset"
+      }
+    ]
+  }
+}
