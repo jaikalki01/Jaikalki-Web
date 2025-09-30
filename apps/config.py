@@ -6,7 +6,7 @@ class Config(object):
     basedir = os.path.abspath(os.path.dirname(__file__))
 
     # MySQL Database URI configuration using 'pymysql'
-    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:Love1718@localhost/society'
+    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:office1234@localhost/jaikalki'
     #SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://gravity_user:Gravity080894@localhost/gravity_db'
 
     SQLALCHEMY_TRACK_MODIFICATIONS = False  # Disable SQLAlchemy modification tracking
