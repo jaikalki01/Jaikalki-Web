@@ -1,209 +1,231 @@
 <!-- Contact Section -->
 <section id="call-to-action-2" class="call-to-action-2 section dark-background" xmlns="http://www.w3.org/1999/html">
-
-    <div class="container">
-        <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
-            <div class="col-xl-10">
-                <div class="text-center">
-                    <h3>Transform Your Business with Jaikalki Technology</h3>
-                    <p>At Jaikalki Technology, we specialize in innovative solutions that help businesses thrive in a
-                        digital-first world. Whether you're looking to improve your IT infrastructure or develop
-                        cutting-edge software, our team is here to help you succeed.</p>
-                    <a class="cta-btn"
-                       href="https://wa.me/919136914963?text=Hi,%20I%20would%20like%20to%20request%20a%20call%20to%20discuss%20my%20requirements."
-                       target="_blank">Get Started Today</a>
-
-                </div>
-            </div>
+  <div class="container">
+    <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
+      <div class="col-xl-10">
+        <div class="text-center">
+          <h3>Transform Your Business with Jaikalki Technology</h3>
+          <p>
+            At Jaikalki Technology, we specialize in innovative solutions that help businesses thrive in a
+            digital-first world. Whether you're looking to improve your IT infrastructure or develop
+            cutting-edge software, our team is here to help you succeed.
+          </p>
+          <a class="cta-btn"
+            href="https://wa.me/919136914963?text=Hi,%20I%20would%20like%20to%20request%20a%20call%20to%20discuss%20my%20requirements."
+            target="_blank">Get Started Today</a>
         </div>
+      </div>
     </div>
+  </div>
+</section>
 
-</section><!-- /Call To Action 2 Section -->
+<!-- /Call To Action 2 Section -->
 <section id="contact" class="contact section light-background">
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Contact Jaikalki Technology</h2>
+    <p>Let us help you build solutions that drive success. Reach out today for a consultation.</p>
+  </div>
 
-    <!-- Section Title -->
-    <div class="container section-title" data-aos="fade-up">
-        <h2>Contact Jaikalki Technology</h2>
-        <p>Let us help you build solutions that drive success. Reach out today for a consultation.</p>
-    </div><!-- End Section Title -->
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="row g-4 g-lg-5">
+      <!-- Left Side Info -->
+      <div class="col-lg-5">
+        <div class="info-box" data-aos="fade-up" data-aos-delay="200">
+          <h3>Our Contact Info</h3>
+          <p>Get in touch with Jaikalki Technology for your digital transformation needs.</p>
 
-    <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row g-4 g-lg-5">
-            <div class="col-lg-5">
-                <div class="info-box" data-aos="fade-up" data-aos-delay="200">
-                    <h3>Our Contact Info</h3>
-                    <p>Get in touch with Jaikalki Technology for your digital transformation needs.</p>
-
-                    <div class="info-item" data-aos="fade-up" data-aos-delay="300">
-                        <div class="icon-box">
-                            <i class="bi bi-geo-alt"></i>
-                        </div>
-                        <div class="content">
-                            <h4>Our Location</h4>
-                            <p>Jaikalki Technology Pvt Ltd</p>
-                            <p>Anand India Business Hub, Mira Road, Mumbai, India</p>
-                        </div>
-                    </div>
-
-                    <div class="info-item" data-aos="fade-up" data-aos-delay="400">
-                        <div class="icon-box">
-                            <i class="bi bi-telephone"></i>
-                        </div>
-                        <div class="content">
-                            <h4>Phone Number</h4>
-                            <p>+91 91 369 14 963</p>
-                            <p>+91 22 350 399 27</p>
-                        </div>
-                    </div>
-
-                    <div class="info-item" data-aos="fade-up" data-aos-delay="500">
-                        <div class="icon-box">
-                            <i class="bi bi-envelope"></i>
-                        </div>
-                        <div class="content">
-                            <h4>Email Address</h4>
-                            <p>info@jaikalki.com</p>
-                            <p>info@jaikalki.in</p>
-                        </div>
-                    </div>
-                </div>
+          <div class="info-item" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon-box"><i class="bi bi-geo-alt"></i></div>
+            <div class="content">
+              <h4>Our Location</h4>
+              <p>Jaikalki Technology Pvt Ltd</p>
+              <p>Anand India Business Hub, Mira Road, Mumbai, India</p>
             </div>
+          </div>
 
-            <div class="col-lg-7">
-                <div class="contact-form" data-aos="fade-up" data-aos-delay="300">
-                    <h3>Get In Touch</h3>
-                    <p>We would love to hear about your project and how we can help you achieve your business goals.
-                        Fill out the form below and our team will reach out to you soon.</p>
-
-                    {% set math = ''|math_problem %} <!-- Generate the math problem -->
-                    <form id="contactForm" action="{{ url_for('home_blueprint.submit_form') }}" class="php-email-form"
-                          data-aos="fade-up" data-aos-delay="200">
-                        <div class="row gy-4">
-                            <div class="col-md-6">
-                                <input type="text" name="name" class="form-control" placeholder="Your Name" required>
-                            </div>
-                            <div class="col-md-6">
-                                <input type="email" name="email" class="form-control" placeholder="Your Email" required>
-                            </div>
-                            <div class="col-12">
-                                <select name="subject" class="form-control" required>
-                                    <option value="" disabled selected>Select Services</option>
-                                    <option value="Web Development">Web Development</option>
-                                    <option value="SEO and Rank Boost">SEO and Rank Boost</option>
-                                    <option value="GurutvaPay - Payment Solutions">GurutvaPay - Payment Solutions</option>
-                                </select>
-                            </div>
-
-                            <div class="col-12">
-    <select name="reference" class="form-control" id="reference" required>
-         <option value="" disabled selected>How did you hear about us?</option>
-        <option value="Google">Google</option>
-        <option value="Facebook">Facebook</option>
-        <option value="Instagram">Instagram</option>
-        <option value="Friend">Friend</option>
-        <option value="Advertisement">Advertisement</option>
-        <option value="Other">Other</option>
-    </select>
-</div>
-                            <div class="col-12">
-                                <input type="number" name="mobile" class="form-control" placeholder="Mobile" required>
-                            </div>
-                             <input type="hidden" id="user_ip" name="user_ip">
-                            <div class="col-12">
-                                <textarea name="message" class="form-control" rows="6" placeholder="Message"
-                                          required></textarea>
-                            </div>
-                            <!-- Math Problem Section -->
-                            <div class="col-12">
-                                <label for="mathProblem">Solve this problem to submit the form:</label>
-                                <div id="mathProblem">
-                                    <strong>{{ math.num1 }} + {{ math.num2 }} = ?</strong>
-                                </div>
-                                <input type="number" name="math_answer" class="form-control" placeholder="Your Answer"
-                                       required>
-                                <input type="hidden" name="correct_answer" value="{{ math.correct_answer }}">
-                            </div>
-
-                             <!-- Checkbox for Updates -->
-                <div class="col-12">
-                    <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="agree_updates" name="agree_updates" value="yes" required>
-                        <label class="form-check-label" for="agree_updates">
-                            I agree to get updates, offer & promos via SMS, RCS & WhatsApp.
-                        </label>
-                    </div>
-                </div>
-
-                            <div class="col-12 text-center">
-
-                                 <div class="col-12 mb-2 text-center">
-
-                        <a href="terms.html" target="_blank">T & C</a> |
-                        <a href="privacy.html" target="_blank">Privacy Policy</a>
-                </div>
-
-                                <button type="submit" class="btn">Send Message</button>
-                            </div>
-                        </div>
-                    </form>
-                    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-                    <script>
-                        document.getElementById('contactForm').addEventListener('submit', async function (e) {
-                         e.preventDefault(); // Prevent default form submission
-
-                         // Get form data
-                         const formData = new FormData(this);
-                         const jsonData = {};
-                         formData.forEach((value, key) => {
-                             jsonData[key] = value;
-                         });
-
-                         try {
-                             const response = await fetch(this.action, {
-                                 method: 'POST',
-                                 headers: {
-                                     'Content-Type': 'application/json',
-                                 },
-                                 body: JSON.stringify(jsonData),
-                             });
-
-                             if (response.ok) {
-                                 const data = await response.json();
-                                 Swal.fire('Success', data.message, 'success');
-                                 this.reset(); // Reset form after submission
-                             } else {
-                                 const errorData = await response.json();
-                                 Swal.fire('Error', errorData.error || 'Something went wrong!', 'error');
-                             }
-                         } catch (error) {
-                             Swal.fire('Error', 'Unable to submit your request. Please try again later.', 'error');
-                         }
-                     });
-
-                    </script>
-
-
-                </div>
+          <div class="info-item" data-aos="fade-up" data-aos-delay="400">
+            <div class="icon-box"><i class="bi bi-telephone"></i></div>
+            <div class="content">
+              <h4>Phone Number</h4>
+              <p>+91 91 369 14 963</p>
+              <p>+91 22 350 399 27</p>
             </div>
+          </div>
 
+          <div class="info-item" data-aos="fade-up" data-aos-delay="500">
+            <div class="icon-box"><i class="bi bi-envelope"></i></div>
+            <div class="content">
+              <h4>Email Address</h4>
+              <p>info@jaikalki.com</p>
+              <p>info@jaikalki.in</p>
+            </div>
+          </div>
         </div>
+      </div>
 
+      <!-- Right Side Form -->
+      <div class="col-lg-7">
+        <div class="contact-form" data-aos="fade-up" data-aos-delay="300">
+          <h3>Get In Touch</h3>
+          <p>We would love to hear about your project and how we can help you achieve your business goals.
+            Fill out the form below and our team will reach out to you soon.</p>
+
+          {% set math = ''|math_problem %}
+          <form id="contactForm" action="{{ url_for('home_blueprint.submit_form') }}" class="php-email-form"
+            data-aos="fade-up" data-aos-delay="200">
+            <div class="row gy-4">
+              <div class="col-md-6">
+                <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+              </div>
+              <div class="col-md-6">
+                <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+              </div>
+              <div class="col-12">
+                <select name="subject" class="form-control" required>
+                  <option value="" disabled selected>Select Services</option>
+                  <option value="Web Development">Web Development</option>
+                  <option value="SEO and Rank Boost">SEO and Rank Boost</option>
+                  <option value="GurutvaPay - Payment Solutions">GurutvaPay - Payment Solutions</option>
+                </select>
+              </div>
+
+              <div class="col-12">
+                <select name="reference" class="form-control" id="reference" required>
+                  <option value="" disabled selected>How did you hear about us?</option>
+                  <option value="Google">Google</option>
+                  <option value="Facebook">Facebook</option>
+                  <option value="Instagram">Instagram</option>
+                  <option value="Friend">Friend</option>
+                  <option value="Advertisement">Advertisement</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+
+              <div class="col-12">
+                <input type="number" name="mobile" class="form-control" placeholder="Mobile" required>
+              </div>
+
+              <input type="hidden" id="user_ip" name="user_ip">
+
+              <div class="col-12">
+                <textarea name="message" class="form-control" rows="6" placeholder="Message" required></textarea>
+              </div>
+
+              <!-- Math Problem -->
+              <div class="col-12">
+                <label for="mathProblem">Solve this problem to submit the form:</label>
+                <div id="mathProblem"><strong>{{ math.num1 }} + {{ math.num2 }} = ?</strong></div>
+                <input type="number" name="math_answer" class="form-control" placeholder="Your Answer" required>
+                <input type="hidden" name="correct_answer" value="{{ math.correct_answer }}">
+              </div>
+
+              <!-- Checkbox -->
+              <div class="col-12">
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="agree_updates" name="agree_updates" value="yes"
+                    required>
+                  <label class="form-check-label" for="agree_updates">
+                    I agree to get updates, offer & promos via SMS, RCS & WhatsApp.
+                  </label>
+                </div>
+              </div>
+
+              <div class="col-12 mb-2 text-center">
+                <a href="terms.html">T & C</a> |
+                <a href="privacy.html">Privacy Policy</a>
+              </div>
+
+              <div class="col-12 text-center">
+                <button type="submit" class="btn">Send Message</button>
+              </div>
+            </div>
+          </form>
+
+          <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+          <!-- ✅ Disable Button Until All Fields Are Filled -->
+          <script>
+            document.addEventListener("DOMContentLoaded", function () {
+              const form = document.getElementById("contactForm");
+              const submitBtn = form.querySelector("button[type='submit']");
+              const requiredFields = form.querySelectorAll("input[required], select[required], textarea[required]");
+
+              // Disable button initially
+              submitBtn.disabled = true;
+              submitBtn.style.opacity = "0.6";
+              submitBtn.style.cursor = "not-allowed";
+
+              function validateForm() {
+                let allFilled = true;
+                requiredFields.forEach(field => {
+                  if ((field.type === "checkbox" && !field.checked) || (field.type !== "checkbox" && !field.value.trim())) {
+                    allFilled = false;
+                  }
+                });
+
+                if (allFilled) {
+                  submitBtn.disabled = false;
+                  submitBtn.style.opacity = "1";
+                  submitBtn.style.cursor = "pointer";
+                } else {
+                  submitBtn.disabled = true;
+                  submitBtn.style.opacity = "0.6";
+                  submitBtn.style.cursor = "not-allowed";
+                }
+              }
+
+              requiredFields.forEach(field => {
+                field.addEventListener("input", validateForm);
+                field.addEventListener("change", validateForm);
+              });
+            });
+          </script>
+
+          <!-- Submit Form -->
+          <script>
+            document.getElementById('contactForm').addEventListener('submit', async function (e) {
+              e.preventDefault();
+              const formData = new FormData(this);
+              const jsonData = {};
+              formData.forEach((value, key) => { jsonData[key] = value; });
+
+              try {
+                const response = await fetch(this.action, {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify(jsonData),
+                });
+
+                if (response.ok) {
+                  const data = await response.json();
+                  Swal.fire('Success', data.message, 'success');
+                  this.reset();
+                } else {
+                  const errorData = await response.json();
+                  Swal.fire('Error', errorData.error || 'Something went wrong!', 'error');
+                }
+              } catch (error) {
+                Swal.fire('Error', 'Unable to submit your request. Please try again later.', 'error');
+              }
+            });
+          </script>
+        </div>
+      </div>
     </div>
+  </div>
+</section>
 
-</section><!-- /Contact Section -->
-
-
+<!-- Get IP Script -->
 <script>
   async function getUserIP() {
-      try {
-          let response = await fetch("https://api64.ipify.org?format=json");
-          let data = await response.json();
-          document.getElementById("user_ip").value = data.ip; // Set IP in hidden field
-      } catch (error) {
-          console.error("Error fetching IP:", error);
-      }
+    try {
+      let response = await fetch("https://api64.ipify.org?format=json");
+      let data = await response.json();
+      document.getElementById("user_ip").value = data.ip;
+    } catch (error) {
+      console.error("Error fetching IP:", error);
+    }
   }
   getUserIP();
 </script>
